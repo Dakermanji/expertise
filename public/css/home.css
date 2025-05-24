@@ -1,0 +1,49 @@
+.video-controls {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video-controls .btn {
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-controls i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.form-range {
+    cursor: pointer;
+}
+
+/* Custom video controls */
+#playPauseBtn {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#playPauseBtn:hover {
+    background-color: var(--color-primary);
+}
+
+#playPauseBtn:hover i {
+    color: #fff;
+}
+
+
+#volumeIcon {
+    color: var(--color-primary);
+}
+
+.form-range::-webkit-slider-thumb {
+    background-color: var(--color-primary);
+}
+
+.form-range::-moz-range-thumb {
+    background-color: var(--color-primary);
+}
