@@ -1,2 +1,43 @@
-<h1><%= title %></h1>
-<p><%= __('book_now') %></p>
+<section class="hero text-center p-3 p-md-5">
+	<video autoplay muted loop playsinline class="w-100 rounded shadow">
+		<source src="/videos/Conduite_Expertise.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+	<h1 class="mt-4"><%= __('book_now') %></h1>
+	<a href="/booking" class="btn btn-primary mt-3">
+		<i class="bi bi-calendar-check me-1"></i> <%= __('booking') %>
+	</a>
+</section>
+
+<section class="container py-5">
+	<div class="row text-center">
+		<div class="col-md-4 mb-4">
+			<i class="bi bi-person-plus display-4 text-brand mb-3"></i>
+			<h4><%= __('full_courses') %></h4>
+			<p><%= __('full_courses_desc') %></p>
+		</div>
+		<div class="col-md-4 mb-4">
+			<i class="bi bi-speedometer2 display-4 text-brand mb-3"></i>
+			<h4><%= __('improvement_lessons') %></h4>
+			<p><%= __('improvement_lessons_desc') %></p>
+		</div>
+		<div class="col-md-4 mb-4">
+			<i class="bi bi-car-front display-4 text-brand mb-3"></i>
+			<h4><%= __('car_rental') %></h4>
+			<p><%= __('car_rental_desc') %></p>
+		</div>
+	</div>
+</section>
+
+<section class="bg-light-custom py-5 text-center">
+	<h3><%= __('reviews') %></h3>
+	<p><%= __('real_reviews') %></p>
+	<div id="google-reviews-widget"></div>
+</section>
+
+<section class="text-center py-5 bg-dark-custom text-white">
+	<h3><%= __('start_today') %></h3>
+	<a href="/booking" class="btn btn-light btn-lg mt-3">
+		<i class="bi bi-calendar-event me-1"></i> <%= __('book_now') %>
+	</a>
+</section>

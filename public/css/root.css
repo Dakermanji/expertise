@@ -32,8 +32,21 @@ body {
 }
 
 /** Navbar tweaks **/
-nav ul {
+nav>.container {
+    max-width: 2000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+nav .container ul {
+    width: 100%;
     align-items: center;
+    justify-content: space-around;
+}
+
+nav ul li {
+    text-align: center;
 }
 
 .navbar-brand img {

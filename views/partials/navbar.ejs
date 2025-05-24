@@ -1,3 +1,5 @@
+<% const languages = {fr: {language: "française", flag: "qc"}, en: {language:
+"English", flag: "ca"} , ar: {language: "عربي", flag: "ae"}}%>
 <nav
 	class="navbar navbar-expand-lg bg-dark-custom border-bottom shadow-sm fixed-top"
 >
@@ -10,7 +12,7 @@
 				src="/images/logo/logo.png"
 				alt="Expertise Logo"
 				height="40"
-				class="me-2"
+				class="mx-2"
 			/>
 			<span class="d-none d-md-inline">Conduite Expertise</span>
 		</a>
@@ -67,33 +69,39 @@
 				</li>
 				<li class="nav-item dropdown">
 					<a
-						class="nav-link dropdown-toggle text-uppercase"
+						class="nav-link dropdown-toggle d-flex align-items-center"
 						href="#"
 						role="button"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
-						<i class="bi bi-translate me-1"></i> <%= currentLang %>
+						<img
+							src="/images/flags/<%= languages[currentLang].flag %>.svg"
+							alt="<%= currentLang %>"
+							width="20"
+							height="20"
+							class="mx-1"
+						/>
+						<span> <%= languages[currentLang].language %></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-end">
+						<% for (let code in languages) { %>
 						<li>
-							<a class="dropdown-item" href="?lang=en"
-								><img src="images/flags/ca.svg" width="25" />
-								English</a
+							<a
+								class="dropdown-item d-flex align-items-center"
+								href="?lang=<%= code %>"
 							>
+								<img
+									src="/images/flags/<%= languages[code].flag %>.svg"
+									alt="<%= code %>"
+									width="20"
+									height="20"
+									class="mx-1"
+								/>
+								<%= languages[code].language %>
+							</a>
 						</li>
-						<li>
-							<a class="dropdown-item" href="?lang=fr"
-								><img src="images/flags/qc.svg" width="25" />
-								française</a
-							>
-						</li>
-						<li>
-							<a class="dropdown-item" href="?lang=AR"
-								><img src="images/flags/ae.svg" width="25" />
-								عربي</a
-							>
-						</li>
+						<% } %>
 					</ul>
 				</li>
 				<li class="nav-item d-none d-lg-block">
