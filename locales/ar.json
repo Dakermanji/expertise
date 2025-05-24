@@ -1,18 +1,34 @@
 {
-	"home": "الرئيسية",
-	"about": "من نحن",
-	"services": "الخدمات",
-	"booking": "الحجز",
-	"contact": "اتصل بنا",
-	"reviews": "التقييمات",
-	"leave_review": "أضف تقييم",
-	"book_now": "احجز الآن",
-	"full_courses": "دورات القيادة الكاملة",
-	"full_courses_desc": "دورات جماعية يقودها مدربون معتمدون، تشمل برنامج SAAQ بالكامل.",
-	"improvement_lessons": "دروس تحسين القيادة",
-	"improvement_lessons_desc": "للسائقين الحاصلين على رخصة والذين يرغبون في استعادة الثقة أو تحسين المهارات.",
-	"car_rental": "تأجير سيارة لاختبار SAAQ",
-	"car_rental_desc": "استأجر سيارة لاختبار القيادة الخاص بك من خلالنا — موثوقة وجاهزة للامتحان.",
-	"real_reviews": "شاهد آراء طلابنا عنا!",
-	"start_today": "هل أنت مستعد لبدء رحلتك في القيادة؟"
+	"navbar": {
+		"home": "الرئيسية",
+		"about": "من نحن",
+		"services": "الخدمات",
+		"booking": "الحجز",
+		"contact": "اتصل بنا",
+		"reviews": "التقييمات"
+	},
+	"home": {
+		"hero": {
+			"video_fallback": "Your browser does not support the video tag.",
+			"book_now": "احجز الآن",
+			"booking": "الحجز"
+		},
+		"services": {
+			"full_courses": "دورات القيادة الكاملة",
+			"full_courses_desc": "دورات جماعية يقودها مدربون معتمدون، تشمل برنامج SAAQ بالكامل.",
+			"improvement_lessons": "دروس تحسين القيادة",
+			"improvement_lessons_desc": "للسائقين الحاصلين على رخصة والذين يرغبون في استعادة الثقة أو تحسين المهارات.",
+			"car_rental": "تأجير سيارة لاختبار SAAQ",
+			"car_rental_desc": "استأجر سيارة لاختبار القيادة الخاص بك من خلالنا — موثوقة وجاهزة للامتحان."
+		},
+		"reviews": {
+			"real_reviews": "شاهد آراء طلابنا عنا!",
+			"reviews": "التقييمات"
+		},
+		"booking": {
+			"book_now": "احجز الآن",
+			"start_today": "هل أنت مستعد لبدء رحلتك في القيادة؟",
+			"booking": "home.booking.booking"
+		}
+	}
 }

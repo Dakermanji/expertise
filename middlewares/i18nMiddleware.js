@@ -18,12 +18,15 @@ export function setupI18n(app) {
 		autoReload: true,
 		syncFiles: true,
 		cookie: 'lang',
+		objectNotation: true,
+		fallbacks: { fr: 'en', ar: 'en' },
 	});
 	app.use(i18n.init);
 
 	// Make current language accessible to views
 	app.use((req, res, next) => {
 		res.locals.currentLang = req.getLocale();
+		res.locals.__ = res.__; // for global access in views
 		next();
 	});
 }

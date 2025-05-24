@@ -2,7 +2,7 @@
 	<div class="custom-video-wrapper position-relative">
 		<video autoplay id="expertiseVideo" class="w-100 rounded shadow">
 			<source src="/videos/Conduite_Expertise.mp4" type="video/mp4" />
-			Your browser does not support the video tag.
+			<%= __('home.hero.video_fallback') %>
 		</video>
 
 		<!-- Custom controls -->
@@ -31,9 +31,10 @@
 		</div>
 	</div>
 
-	<h1 class="mt-4"><%= __('book_now') %></h1>
+	<h1 class="mt-4"><%= __('home.booking.book_now') %></h1>
 	<a href="/booking" class="btn btn-primary mt-3">
-		<i class="bi bi-calendar-check me-1"></i> <%= __('booking') %>
+		<i class="bi bi-calendar-check me-1"></i> <%= __('home.booking.booking')
+		%>
 	</a>
 </section>
 
@@ -41,31 +42,32 @@
 	<div class="row text-center">
 		<div class="col-md-4 mb-4">
 			<i class="bi bi-person-plus display-4 text-brand mb-3"></i>
-			<h4><%= __('full_courses') %></h4>
-			<p><%= __('full_courses_desc') %></p>
+			<h4><%= __('home.services.full_courses') %></h4>
+			<p><%= __('home.services.full_courses_desc') %></p>
 		</div>
 		<div class="col-md-4 mb-4">
 			<i class="bi bi-speedometer2 display-4 text-brand mb-3"></i>
-			<h4><%= __('improvement_lessons') %></h4>
-			<p><%= __('improvement_lessons_desc') %></p>
+			<h4><%= __('home.services.improvement_lessons') %></h4>
+			<p><%= __('home.services.improvement_lessons_desc') %></p>
 		</div>
 		<div class="col-md-4 mb-4">
 			<i class="bi bi-car-front display-4 text-brand mb-3"></i>
-			<h4><%= __('car_rental') %></h4>
-			<p><%= __('car_rental_desc') %></p>
+			<h4><%= __('home.services.car_rental') %></h4>
+			<p><%= __('home.services.car_rental_desc') %></p>
 		</div>
 	</div>
 </section>
 
 <section class="bg-light-custom py-5 text-center">
-	<h3><%= __('reviews') %></h3>
-	<p><%= __('real_reviews') %></p>
+	<h3><%= __('home.reviews.reviews') %></h3>
+	<p><%= __('home.reviews.real_reviews') %></p>
 	<div id="google-reviews-widget"></div>
 </section>
 
 <section class="text-center py-5 bg-dark-custom text-white">
-	<h3><%= __('start_today') %></h3>
+	<h3><%= __('home.booking.start_today') %></h3>
 	<a href="/booking" class="btn btn-light btn-lg mt-3">
-		<i class="bi bi-calendar-event me-1"></i> <%= __('book_now') %>
+		<i class="bi bi-calendar-event me-1"></i> <%=
+		__('home.booking.book_now') %>
 	</a>
 </section>
