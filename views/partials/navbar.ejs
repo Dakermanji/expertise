@@ -1,0 +1,110 @@
+<nav
+	class="navbar navbar-expand-lg bg-dark-custom border-bottom shadow-sm fixed-top"
+>
+	<div class="container">
+		<a
+			class="navbar-brand text-brand d-flex align-items-center fw-bold"
+			href="/"
+		>
+			<img
+				src="/images/logo.png"
+				alt="Expertise Logo"
+				height="40"
+				class="me-2"
+			/>
+			<span class="d-none d-md-inline">Conduite Expertise</span>
+		</a>
+
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#mainNav"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="mainNav">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link" href="/"
+						><i class="bi bi-house-door me-1"></i> <%= __('home')
+						%></a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about"
+						><i class="bi bi-info-circle me-1"></i> <%= __('about')
+						%></a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/services"
+						><i class="bi bi-gear me-1"></i> <%= __('services')
+						%></a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/booking"
+						><i class="bi bi-calendar-check me-1"></i> <%=
+						__('booking') %></a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact"
+						><i class="bi bi-envelope me-1"></i> <%= __('contact')
+						%></a
+					>
+				</li>
+				<li class="nav-item">
+					<a
+						class="nav-link"
+						href="https://www.google.com/maps/place/YOUR_BUSINESS_HERE"
+						target="_blank"
+					>
+						<i class="bi bi-star me-1"></i> <%= __('reviews') %>
+					</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a
+						class="nav-link dropdown-toggle text-uppercase"
+						href="#"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+					>
+						<i class="bi bi-translate me-1"></i> <%= currentLang %>
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end">
+						<li>
+							<a class="dropdown-item" href="?lang=en"
+								><img src="images/flags/ca.svg" width="25" />
+								English</a
+							>
+						</li>
+						<li>
+							<a class="dropdown-item" href="?lang=fr"
+								><img src="images/flags/qc.svg" width="25" />
+								française</a
+							>
+						</li>
+						<li>
+							<a class="dropdown-item" href="?lang=AR"
+								><img src="images/flags/ae.svg" width="25" />
+								عربي</a
+							>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item d-none d-lg-block">
+					<a
+						class="btn btn-outline-danger btn-sm ms-2"
+						href="#review"
+					>
+						<i class="bi bi-heart-fill"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

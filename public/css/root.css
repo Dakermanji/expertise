@@ -1,0 +1,75 @@
+/*! public/css/root.css */
+
+:root {
+    /** Typography **/
+    --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Segoe UI Semibold', sans-serif;
+
+    /** Color palette **/
+    /* Accent red */
+    --color-brand: #da1a1a;
+    --color-brand-hover: #ff0000;
+    /* SAAQ blue-ish */
+    --color-primary: #0054a6;
+
+    --color-secondary: #00bcd4;
+    --color-accent: #ffc107;
+    --color-background-light: #f8f9fa;
+    --color-background-dark: #c9d1da;
+    --color-text: #212529;
+
+    /* Borders and radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+}
+
+/** Global styles **/
+body {
+    font-family: var(--font-base);
+    background-color: var(--color-background-light);
+    color: var(--color-text);
+}
+
+/** Navbar tweaks **/
+nav ul {
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.text-brand {
+    color: var(--color-brand);
+    transition: color 0.5s ease;
+}
+
+.text-brand:hover {
+    color: var(--color-brand-hover);
+}
+
+.bg-dark-custom {
+    background-color: var(--color-background-dark);
+}
+
+.bg-light-custom {
+    background-color: var(--color-background-light);
+}
+
+.border-custom {
+    border-color: var(--color-primary);
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        align-items: start;
+    }
+}
+
+/* Main content spacing (accounts for fixed navbar height) */
+main {
+    margin-top: 77px;
+}
