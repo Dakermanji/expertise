@@ -31,8 +31,8 @@
 		</div>
 	</div>
 
-	<h1 class="mt-4"><%= __('home.hero.book_now') %></h1>
-	<a href="/booking" class="btn btn-primary mt-3">
+	<h2 class="mt-4 display-2"><%= __('home.hero.book_now') %></h2>
+	<a href="/booking" class="btn btn-booking mt-3">
 		<i class="bi bi-calendar-check me-1"></i> <%= __('home.hero.booking') %>
 	</a>
 </section>
@@ -59,7 +59,9 @@
 
 <section id="reviews" class="bg-light-custom py-5 text-center">
 	<div class="container">
-		<h2 class="text-center mb-4"><%= __('home.reviews.title') %></h2>
+		<h2 class="text-center mb-4 display-4"
+			><%= __('home.reviews.title') %></h2
+		>
 
 		<% if (reviews && reviews.length > 0) { %>
 		<div
@@ -147,8 +149,8 @@
 	</div>
 </section>
 
-<section id="booking" class="text-center py-5 bg-dark-custom text-white">
-	<h3><%= __('home.booking.start_today') %></h3>
+<section id="booking" class="text-center bg-dark-custom py-1">
+	<h2 class="text-white"><%= __('home.booking.start_today') %></h2>
 	<a href="/booking" class="btn btn-light btn-lg mt-3">
 		<i class="bi bi-calendar-event me-1"></i> <%=
 		__('home.booking.book_now') %>

@@ -1,3 +1,6 @@
+/*! public/css/home.css */
+
+/** === Hero Section === **/
 .video-controls {
     max-width: 700px;
     margin: 0 auto;
@@ -48,7 +51,20 @@
     background-color: var(--color-primary);
 }
 
-/* === Reviews Section === */
+/* Booking button */
+#hero .btn-booking {
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+}
+
+#hero .btn-booking:hover {
+    color: var(--color-primary);
+    background-color: white;
+}
+
+/** === Reviews Section === **/
 
 #reviews {
     background-color: var(--color-background-light);
@@ -121,4 +137,15 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+/** === Booking Section === **/
+/* Booking button */
+#booking .btn {
+    color: var(--color-primary);
+}
+
+#booking .btn:hover {
+    color: white;
+    background-color: var(--color-primary);
 }

@@ -10,7 +10,7 @@
 	"home": {
 		"hero": {
 			"video_fallback": "Your browser does not support the video tag.",
-			"book_now": "book now",
+			"book_now": "Book Now",
 			"booking": "Booking"
 		},
 
@@ -23,11 +23,11 @@
 			"car_rental_desc": "Rent a car for your road test directly through us — reliable and exam-ready."
 		},
 		"reviews": {
-			"title": "Student Testimonials",
+			"title": "What Our Students Say",
 			"none": "No reviews available at the moment."
 		},
 		"booking": {
-			"book_now": "book now",
+			"book_now": "Book Now",
 			"start_today": "Ready to start your driving journey?"
 		}
 	},
