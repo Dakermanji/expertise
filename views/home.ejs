@@ -30,29 +30,38 @@
 			</div>
 		</div>
 	</div>
+	<div class="booking-action">
+		<h2 class="display-4"><%= __('home.hero.book_now') %></h2>
 
-	<h2 class="mt-4 display-2"><%= __('home.hero.book_now') %></h2>
-	<a href="/booking" class="btn btn-booking mt-3">
-		<i class="bi bi-calendar-check me-1"></i> <%= __('home.hero.booking') %>
-	</a>
+		<a href="/booking" class="btn btn-booking mb-5 px-4 py-2">
+			<i class="bi bi-calendar-check me-1"></i>
+			<%= __('home.hero.booking') %>
+		</a>
+	</div>
 </section>
 
 <section id="services" class="container py-5">
-	<div class="row text-center">
-		<div class="col-md-4 mb-4">
-			<i class="bi bi-person-plus display-4 text-brand mb-3"></i>
-			<h4><%= __('home.services.full_courses') %></h4>
-			<p><%= __('home.services.full_courses_desc') %></p>
+	<div class="row g-4 mt-2">
+		<div class="col-md-4">
+			<div class="service-card p-4 h-100 text-center">
+				<i class="bi bi-person-plus display-4 text-brand mb-3"></i>
+				<h5><%= __('home.services.full_courses') %></h5>
+				<p><%= __('home.services.full_courses_desc') %></p>
+			</div>
 		</div>
-		<div class="col-md-4 mb-4">
-			<i class="bi bi-speedometer2 display-4 text-brand mb-3"></i>
-			<h4><%= __('home.services.improvement_lessons') %></h4>
-			<p><%= __('home.services.improvement_lessons_desc') %></p>
+		<div class="col-md-4">
+			<div class="service-card p-4 h-100 text-center">
+				<i class="bi bi-speedometer2 display-4 text-brand mb-3"></i>
+				<h5><%= __('home.services.improvement_lessons') %></h5>
+				<p><%= __('home.services.improvement_lessons_desc') %></p>
+			</div>
 		</div>
-		<div class="col-md-4 mb-4">
-			<i class="bi bi-car-front display-4 text-brand mb-3"></i>
-			<h4><%= __('home.services.car_rental') %></h4>
-			<p><%= __('home.services.car_rental_desc') %></p>
+		<div class="col-md-4">
+			<div class="service-card p-4 h-100 text-center">
+				<i class="bi bi-car-front display-4 text-brand mb-3"></i>
+				<h5><%= __('home.services.car_rental') %></h5>
+				<p><%= __('home.services.car_rental_desc') %></p>
+			</div>
 		</div>
 	</div>
 </section>
