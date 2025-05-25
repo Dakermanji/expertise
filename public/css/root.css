@@ -81,8 +81,12 @@ nav ul li {
 }
 
 @media (max-width: 992px) {
-    nav ul {
+    nav .container ul {
         align-items: start;
+    }
+
+    nav .container li {
+        margin: 2px 20px;
     }
 }
 

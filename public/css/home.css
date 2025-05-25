@@ -110,12 +110,17 @@
 }
 
 #reviews img.rounded-circle {
-    margin-left: auto;
-    margin-right: auto;
     width: 60px;
     height: 60px;
     object-fit: cover;
     border: 2px solid var(--color-primary);
+}
+
+.star-rating {
+    font-size: 1.2rem;
+    color: #ffc107;
+    /* Bootstrap's warning/yellow */
+    white-space: nowrap;
 }
 
 #reviews blockquote {
