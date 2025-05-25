@@ -53,48 +53,6 @@
 	<p class="mb-0"><%= __('about.areas.list') %></p>
 </section>
 
-<section id="reviews" class="py-5">
-	<div class="container">
-		<h2 class="text-center mb-4"><%= __('about.testimonials.title') %></h2>
-
-		<% if (reviews && reviews.length > 0) { %>
-		<div class="row justify-content-center">
-			<% reviews.forEach((review) => { %>
-			<div class="col-md-5 mb-4">
-				<div class="card p-3 shadow-sm h-100 text-center">
-					<img
-						src="<%= review.profile_photo_url %>"
-						alt="<%= review.author_name %>"
-						class="rounded-circle mx-auto mb-3"
-						width="60"
-						height="60"
-						loading="lazy"
-						referrerpolicy="no-referrer"
-					/>
-					<blockquote class="blockquote">
-						<p class="mb-2">“<%= review.text %>”</p>
-					</blockquote>
-					<footer class="blockquote-footer">
-						<%= review.author_name %>
-						<img
-							src="/images/icons/google.svg"
-							alt="Google"
-							width="16"
-							class="ms-1"
-						/>
-					</footer>
-				</div>
-			</div>
-			<% }) %>
-		</div>
-		<% } else { %>
-		<p class="text-center text-muted"
-			><%= __('about.testimonials.none') %></p
-		>
-		<% } %>
-	</div>
-</section>
-
 <section id="contact" class="text-center py-5 bg-dark-custom">
 	<h2 class="mb-3 text-dark"><%= __('about.contact.title') %></h2>
 	<div class="text-muted">

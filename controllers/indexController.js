@@ -1,7 +1,10 @@
 //! controllers/indexController.js
 
-export function getHome(req, res) {
+import { GoogleReview } from '../models/GoogleReview.js';
+
+export async function getHome(req, res) {
 	res.render('home', {
+		reviews: await GoogleReview.fetchRecent(),
 		title: 'Welcome to Expertise',
 		styles: ['home'],
 		scripts: ['home'],

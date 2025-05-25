@@ -58,10 +58,44 @@
 	</div>
 </section>
 
-<section class="bg-light-custom py-5 text-center">
-	<h3><%= __('home.reviews.reviews') %></h3>
-	<p><%= __('home.reviews.real_reviews') %></p>
-	<div id="google-reviews-widget"></div>
+<section id="reviews" class="bg-light-custom py-5 text-center">
+	<div class="container">
+		<h2 class="text-center mb-4"><%= __('home.reviews.title') %></h2>
+
+		<% if (reviews && reviews.length > 0) { %>
+		<div class="row justify-content-center">
+			<% reviews.forEach((review) => { %>
+			<div class="col-md-5 mb-4">
+				<div class="card p-3 shadow-sm h-100 text-center">
+					<img
+						src="<%= review.profile_photo_url %>"
+						alt="<%= review.author_name %>"
+						class="rounded-circle mx-auto mb-3"
+						width="60"
+						height="60"
+						loading="lazy"
+						referrerpolicy="no-referrer"
+					/>
+					<blockquote class="blockquote">
+						<p class="mb-2">“<%= review.text %>”</p>
+					</blockquote>
+					<footer class="blockquote-footer">
+						<%= review.author_name %>
+						<img
+							src="/images/icons/google.svg"
+							alt="Google"
+							width="16"
+							class="ms-1"
+						/>
+					</footer>
+				</div>
+			</div>
+			<% }) %>
+		</div>
+		<% } else { %>
+		<p class="text-center text-muted"><%= __('home.reviews.none') %></p>
+		<% } %>
+	</div>
 </section>
 
 <section class="text-center py-5 bg-dark-custom text-white">

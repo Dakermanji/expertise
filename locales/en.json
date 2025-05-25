@@ -22,8 +22,8 @@
 			"car_rental_desc": "Rent a car for your road test directly through us — reliable and exam-ready."
 		},
 		"reviews": {
-			"reviews": "Reviews",
-			"real_reviews": "See what our students say about us!"
+			"title": "Student Testimonials",
+			"none": "No reviews available at the moment."
 		},
 		"booking": {
 			"book_now": "book now",
@@ -55,10 +55,6 @@
 		"areas": {
 			"title": "We Serve Students Across",
 			"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray, and more."
-		},
-		"testimonials": {
-			"title": "Student Testimonials",
-			"none": "No reviews available at the moment."
 		},
 		"contact": {
 			"title": "Have Questions? We're Here to Help.",

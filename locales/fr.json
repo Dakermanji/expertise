@@ -22,8 +22,8 @@
 			"car_rental_desc": "Louez une voiture pour votre examen routier directement chez nous — fiable et prête pour l’épreuve."
 		},
 		"reviews": {
-			"real_reviews": "Découvrez ce que disent nos élèves !",
-			"reviews": "Avis"
+			"title": "Témoignages d'élèves",
+			"none": "Aucun avis disponible pour le moment."
 		},
 		"booking": {
 			"book_now": "Réserver maintenant",
@@ -55,10 +55,6 @@
 		"areas": {
 			"title": "Nous desservons les régions de",
 			"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
-		},
-		"testimonials": {
-			"title": "Témoignages d'élèves",
-			"none": "Aucun avis disponible pour le moment."
 		},
 		"contact": {
 			"title": "Des questions ? Nous sommes là pour vous aider.",
