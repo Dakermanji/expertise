@@ -30,5 +30,41 @@
 			"start_today": "Ready to start your driving journey?",
 			"booking": "home.booking.booking"
 		}
+	},
+	"about": {
+		"mission": {
+			"title": "Our Mission",
+			"text": "To help you become a confident, skilled driver through personalized instruction, structured courses, and multilingual support."
+		},
+		"why_us": {
+			"title": "Why Choose Us?",
+			"certified": "Certified by the SAAQ",
+			"guidance": "Personalized coaching & local route prep",
+			"booking": "Flexible online and in-person scheduling",
+			"multilingual": "Training in FR, EN, AR, GR, ES, and DE"
+		},
+		"offer": {
+			"title": "What We Offer",
+			"full_courses": "Full Driving Courses",
+			"full_courses_desc": "Group-based courses led by certified instructors, covering the full SAAQ program.",
+			"improvement_lessons": "Improvement Lessons",
+			"improvement_lessons_desc": "For licensed drivers looking to regain confidence or sharpen their skills.",
+			"car_rental": "Car Rental for SAAQ",
+			"car_rental_desc": "Rent a car for your road test directly through us — reliable and exam-ready."
+		},
+		"areas": {
+			"title": "We Serve Students Across",
+			"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray, and more."
+		},
+		"testimonials": {
+			"title": "Student Testimonials",
+			"testimonial_1": "Passed on my first try! Their Laval route practice was exactly what I needed.",
+			"testimonial_2": "The team is patient, professional, and supportive. Highly recommended!"
+		},
+		"contact": {
+			"title": "Have Questions? We're Here to Help.",
+			"description": "Call us or visit our office to speak directly with an instructor.",
+			"text_only": "Text only"
+		}
 	}
 }

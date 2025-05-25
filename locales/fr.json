@@ -30,5 +30,41 @@
 			"start_today": "Prêt à commencer votre parcours de conduite ?",
 			"booking": "home.booking.booking"
 		}
+	},
+	"about": {
+		"mission": {
+			"title": "Notre mission",
+			"text": "Vous aider à devenir un conducteur confiant et compétent grâce à une formation personnalisée, des cours structurés et un soutien multilingue."
+		},
+		"why_us": {
+			"title": "Pourquoi nous choisir ?",
+			"certified": "Certifié par la SAAQ",
+			"guidance": "Encadrement personnalisé et préparation aux parcours d'examen",
+			"booking": "Planification flexible en ligne ou en personne",
+			"multilingual": "Cours en FR, EN, AR, GR, ES et DE"
+		},
+		"offer": {
+			"title": "Ce que nous offrons",
+			"full_courses": "Cours de conduite complets",
+			"full_courses_desc": "Cours en groupe dirigés par des moniteurs certifiés, couvrant tout le programme de la SAAQ.",
+			"improvement_lessons": "Leçons de perfectionnement",
+			"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis qui souhaitent reprendre confiance ou perfectionner leurs compétences.",
+			"car_rental": "Location de voiture pour la SAAQ",
+			"car_rental_desc": "Louez une voiture pour votre examen routier directement chez nous — fiable et prête pour l’épreuve."
+		},
+		"areas": {
+			"title": "Nous desservons les régions de",
+			"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
+		},
+		"testimonials": {
+			"title": "Témoignages d'élèves",
+			"testimonial_1": "Réussi du premier coup ! Leur préparation au parcours de Laval était parfaite.",
+			"testimonial_2": "Équipe patiente, professionnelle et encourageante. Je recommande fortement !"
+		},
+		"contact": {
+			"title": "Des questions ? Nous sommes là pour vous aider.",
+			"description": "Appelez-nous ou visitez notre bureau pour parler avec un instructeur.",
+			"text_only": "Texte seulement"
+		}
 	}
 }
