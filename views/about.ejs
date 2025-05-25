@@ -53,61 +53,45 @@
 	<p class="mb-0"><%= __('about.areas.list') %></p>
 </section>
 
-<section id="testimonials" class="py-5">
+<section id="reviews" class="py-5">
 	<div class="container">
 		<h2 class="text-center mb-4"><%= __('about.testimonials.title') %></h2>
+
+		<% if (reviews && reviews.length > 0) { %>
 		<div class="row justify-content-center">
+			<% reviews.forEach((review) => { %>
 			<div class="col-md-5 mb-4">
 				<div class="card p-3 shadow-sm h-100 text-center">
 					<img
-						src="https://lh3.googleusercontent.com/a-/example1"
-						alt="Fatima Z."
+						src="<%= review.profile_photo_url %>"
+						alt="<%= review.author_name %>"
 						class="rounded-circle mx-auto mb-3"
 						width="60"
 						height="60"
+						loading="lazy"
+						referrerpolicy="no-referrer"
 					/>
 					<blockquote class="blockquote">
-						<p class="mb-2"
-							>“Very professional instructors. Highly
-							recommend!”</p
-						>
+						<p class="mb-2">“<%= review.text %>”</p>
 					</blockquote>
 					<footer class="blockquote-footer">
-						Fatima Z.
+						<%= review.author_name %>
 						<img
 							src="/images/icons/google.svg"
 							alt="Google"
 							width="16"
+							class="ms-1"
 						/>
 					</footer>
 				</div>
 			</div>
-			<div class="col-md-5 mb-4">
-				<div class="card p-3 shadow-sm h-100 text-center">
-					<img
-						src="https://lh3.googleusercontent.com/a-/example2"
-						alt="Omar M."
-						class="rounded-circle mx-auto mb-3"
-						width="60"
-						height="60"
-					/>
-					<blockquote class="blockquote">
-						<p class="mb-2"
-							>“Passed my SAAQ exam thanks to them. Great support
-							and training.”</p
-						>
-					</blockquote>
-					<footer class="blockquote-footer">
-						Omar M.
-						<img
-							src="/images/icons/google.svg"
-							alt="Google"
-							width="16"
-						/>
-					</footer>
-				</div>
-			</div>
+			<% }) %>
 		</div>
+		<% } else { %>
+		<p class="text-center text-muted"
+			><%= __('about.testimonials.none') %></p
+		>
+		<% } %>
 	</div>
 </section>
 

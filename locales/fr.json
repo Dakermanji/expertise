@@ -58,8 +58,7 @@
 		},
 		"testimonials": {
 			"title": "Témoignages d'élèves",
-			"testimonial_1": "Réussi du premier coup ! Leur préparation au parcours de Laval était parfaite.",
-			"testimonial_2": "Équipe patiente, professionnelle et encourageante. Je recommande fortement !"
+			"none": "Aucun avis disponible pour le moment."
 		},
 		"contact": {
 			"title": "Des questions ? Nous sommes là pour vous aider.",

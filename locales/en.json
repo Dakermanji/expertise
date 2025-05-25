@@ -58,8 +58,7 @@
 		},
 		"testimonials": {
 			"title": "Student Testimonials",
-			"testimonial_1": "Passed on my first try! Their Laval route practice was exactly what I needed.",
-			"testimonial_2": "The team is patient, professional, and supportive. Highly recommended!"
+			"none": "No reviews available at the moment."
 		},
 		"contact": {
 			"title": "Have Questions? We're Here to Help.",
