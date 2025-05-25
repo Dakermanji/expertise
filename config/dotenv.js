@@ -23,16 +23,21 @@ function optionalEnv(variable, defaultValue) {
 }
 
 const env = {
+	// Server
 	PORT: optionalEnv('PORT', 3000),
 	HOST: optionalEnv('HOST', 'localhost'),
 	SESSION_SECRET: requireEnv('SESSION_SECRET'),
 
-	// DB Config
+	// Database
 	DB_HOST: optionalEnv('DB_HOST', 'localhost'),
 	DB_USER: optionalEnv('DB_USER', 'root'),
 	DB_PASSWORD: requireEnv('DB_PASSWORD'),
 	DB_NAME: requireEnv('DB_NAME'),
 	DB_PORT: optionalEnv('DB_PORT', 3305),
+
+	// Google
+	GOOGLE_PLACE_ID: requireEnv('GOOGLE_PLACE_ID'),
+	GOOGLE_API_KEY: requireEnv('GOOGLE_API_KEY'),
 };
 
 export default env;

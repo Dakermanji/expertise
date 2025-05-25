@@ -3,6 +3,8 @@
 // Load environment variables
 import env from './config/dotenv.js';
 
+import { startGoogleReviewsCron } from './cron/reviewsCron.js';
+
 // Load the Express app with all middlewares and routes
 import app from './config/express.js';
 
@@ -15,3 +17,6 @@ const server = http.createServer(app);
 server.listen(env.PORT, () => {
 	console.log(`🚀 Server running at http://${env.HOST}:${env.PORT}`);
 });
+
+// Apply Google Reviews Cron
+startGoogleReviewsCron();
