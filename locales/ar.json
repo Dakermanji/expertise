@@ -27,8 +27,7 @@
 		},
 		"booking": {
 			"book_now": "احجز الآن",
-			"start_today": "هل أنت مستعد لبدء رحلتك في القيادة؟",
-			"booking": "home.booking.booking"
+			"start_today": "هل أنت مستعد لبدء رحلتك في القيادة؟"
 		}
 	},
 	"about": {

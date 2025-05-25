@@ -13,6 +13,7 @@
 			"book_now": "book now",
 			"booking": "Booking"
 		},
+
 		"services": {
 			"full_courses": "Full Driving Courses",
 			"full_courses_desc": "Group-based courses led by certified instructors, covering the full SAAQ program.",
@@ -27,8 +28,7 @@
 		},
 		"booking": {
 			"book_now": "book now",
-			"start_today": "Ready to start your driving journey?",
-			"booking": "home.booking.booking"
+			"start_today": "Ready to start your driving journey?"
 		}
 	},
 	"about": {

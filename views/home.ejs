@@ -1,4 +1,4 @@
-<section class="hero text-center p-3 p-md-5">
+<section id="hero" class="hero text-center p-3 p-md-5">
 	<div class="custom-video-wrapper position-relative">
 		<video autoplay id="expertiseVideo" class="w-100 rounded shadow">
 			<source src="/videos/Conduite_Expertise.mp4" type="video/mp4" />
@@ -31,14 +31,13 @@
 		</div>
 	</div>
 
-	<h1 class="mt-4"><%= __('home.booking.book_now') %></h1>
+	<h1 class="mt-4"><%= __('home.hero.book_now') %></h1>
 	<a href="/booking" class="btn btn-primary mt-3">
-		<i class="bi bi-calendar-check me-1"></i> <%= __('home.booking.booking')
-		%>
+		<i class="bi bi-calendar-check me-1"></i> <%= __('home.hero.booking') %>
 	</a>
 </section>
 
-<section class="container py-5">
+<section id="services" class="container py-5">
 	<div class="row text-center">
 		<div class="col-md-4 mb-4">
 			<i class="bi bi-person-plus display-4 text-brand mb-3"></i>
@@ -63,42 +62,92 @@
 		<h2 class="text-center mb-4"><%= __('home.reviews.title') %></h2>
 
 		<% if (reviews && reviews.length > 0) { %>
-		<div class="row justify-content-center">
-			<% reviews.forEach((review) => { %>
-			<div class="col-md-5 mb-4">
-				<div class="card p-3 shadow-sm h-100 text-center">
-					<img
-						src="<%= review.profile_photo_url %>"
-						alt="<%= review.author_name %>"
-						class="rounded-circle mx-auto mb-3"
-						width="60"
-						height="60"
-						loading="lazy"
-						referrerpolicy="no-referrer"
-					/>
-					<blockquote class="blockquote">
-						<p class="mb-2">“<%= review.text %>”</p>
-					</blockquote>
-					<footer class="blockquote-footer">
-						<%= review.author_name %>
-						<img
-							src="/images/icons/google.svg"
-							alt="Google"
-							width="16"
-							class="ms-1"
-						/>
-					</footer>
-				</div>
+		<div
+			id="reviewsCarousel"
+			class="carousel slide"
+			data-bs-ride="carousel"
+		>
+			<!-- Indicators -->
+			<div class="carousel-indicators">
+				<% reviews.forEach((_, index) => { %>
+				<button
+					type="button"
+					data-bs-target="#reviewsCarousel"
+					data-bs-slide-to="<%= index %>"
+					class="<%= index === 0 ? 'active' : '' %>"
+					aria-label="Slide <%= index + 1 %>"
+				></button>
+				<% }) %>
 			</div>
-			<% }) %>
+
+			<!-- Review Slides -->
+			<div class="carousel-inner">
+				<% reviews.forEach((review, index) => { %>
+				<div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+					<div
+						class="card p-4 shadow-sm text-center mx-auto"
+						style="max-width: 600px"
+					>
+						<img
+							src="<%= review.profile_photo_url %>"
+							alt="<%= review.author_name %>"
+							class="rounded-circle mb-3"
+							width="60"
+							height="60"
+							referrerpolicy="no-referrer"
+							loading="lazy"
+						/>
+						<blockquote class="blockquote mb-2">
+							<p>“<%= review.text %>”</p>
+						</blockquote>
+						<footer class="blockquote-footer">
+							<%= review.author_name %>
+							<img
+								src="/images/icons/google.svg"
+								alt="Google"
+								width="16"
+								class="ms-1"
+							/>
+						</footer>
+					</div>
+				</div>
+				<% }) %>
+			</div>
+
+			<!-- Controls -->
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#reviewsCarousel"
+				data-bs-slide="prev"
+			>
+				<span
+					class="carousel-control-prev-icon"
+					aria-hidden="true"
+				></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#reviewsCarousel"
+				data-bs-slide="next"
+			>
+				<span
+					class="carousel-control-next-icon"
+					aria-hidden="true"
+				></span>
+				<span class="visually-hidden">Next</span>
+			</button>
 		</div>
+
 		<% } else { %>
 		<p class="text-center text-muted"><%= __('home.reviews.none') %></p>
 		<% } %>
 	</div>
 </section>
 
-<section class="text-center py-5 bg-dark-custom text-white">
+<section id="booking" class="text-center py-5 bg-dark-custom text-white">
 	<h3><%= __('home.booking.start_today') %></h3>
 	<a href="/booking" class="btn btn-light btn-lg mt-3">
 		<i class="bi bi-calendar-event me-1"></i> <%=

@@ -9,9 +9,9 @@
 	},
 	"home": {
 		"hero": {
-			"book_now": "Réserver maintenant",
-			"booking": "Booking",
-			"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
+			"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo.",
+			"book_now": "home.booking.book_now",
+			"booking": "home.booking.booking"
 		},
 		"services": {
 			"full_courses": "Cours de conduite complets",
@@ -26,9 +26,8 @@
 			"none": "Aucun avis disponible pour le moment."
 		},
 		"booking": {
-			"book_now": "Réserver maintenant",
-			"start_today": "Prêt à commencer votre parcours de conduite ?",
-			"booking": "home.booking.booking"
+			"book_now": "home.booking.book_now",
+			"start_today": "home.booking.start_today"
 		}
 	},
 	"about": {
