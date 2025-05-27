@@ -13,20 +13,24 @@ export function setupI18n(app) {
 	i18n.configure({
 		locales: ['en', 'fr', 'ar'],
 		defaultLocale: 'en',
-		queryParameter: 'lang',
 		directory: path.join(__dirname, '..', 'locales'),
 		autoReload: true,
 		syncFiles: true,
-		cookie: 'lang',
 		objectNotation: true,
 		fallbacks: { fr: 'en', ar: 'en' },
 	});
 	app.use(i18n.init);
 
-	// Make current language accessible to views
+	// Set locale from session (not query or cookie)
 	app.use((req, res, next) => {
+		if (req.session.lang) {
+			req.setLocale(req.session.lang);
+		} else {
+			// Fallback to default or browser
+			req.session.lang = req.getLocale();
+		}
 		res.locals.currentLang = req.getLocale();
-		res.locals.__ = res.__; // for global access in views
+		res.locals.__ = res.__;
 		next();
 	});
 }
