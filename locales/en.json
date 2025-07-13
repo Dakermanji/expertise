@@ -1,4 +1,8 @@
 {
+	"common": {
+		"book_now": "Book Now",
+		"booking": "Booking"
+	},
 	"navbar": {
 		"home": "Home",
 		"about": "About",
@@ -10,27 +14,13 @@
 	},
 	"home": {
 		"hero": {
-			"video_fallback": "Your browser does not support the video tag.",
-			"book_now": "Book Now",
-			"booking": "Booking"
-		},
-
-		"services": {
-			"full_courses": "Full Driving Courses",
-			"full_courses_desc": "Group-based courses led by certified instructors, covering the full SAAQ program.",
-			"improvement_lessons": "Improvement Lessons",
-			"improvement_lessons_desc": "For licensed drivers looking to regain confidence or sharpen their skills.",
-			"car_rental": "Car Rental for SAAQ",
-			"car_rental_desc": "Rent a car for your road test directly through us — reliable and exam-ready."
+			"video_fallback": "Your browser does not support the video tag."
 		},
 		"reviews": {
 			"title": "What Our Students Say",
 			"none": "No reviews available at the moment."
 		},
-		"booking": {
-			"book_now": "Book Now",
-			"start_today": "Ready to start your driving journey?"
-		}
+		"booking": { "start_today": "Ready to start your driving journey?" }
 	},
 	"about": {
 		"mission": {
@@ -45,13 +35,7 @@
 			"multilingual": "Training in FR, EN, AR, GR, ES, and DE"
 		},
 		"offer": {
-			"title": "What We Offer",
-			"full_courses": "Full Driving Courses",
-			"full_courses_desc": "Group-based courses led by certified instructors, covering the full SAAQ program.",
-			"improvement_lessons": "Improvement Lessons",
-			"improvement_lessons_desc": "For licensed drivers looking to regain confidence or sharpen their skills.",
-			"car_rental": "Car Rental for SAAQ",
-			"car_rental_desc": "Rent a car for your road test directly through us — reliable and exam-ready."
+			"title": "What We Offer"
 		},
 		"areas": {
 			"title": "We Serve Students Across",

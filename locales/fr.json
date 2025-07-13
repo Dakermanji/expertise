@@ -1,4 +1,8 @@
 {
+	"common": {
+		"book_now": "Réserver maintenant",
+		"booking": "Réservation"
+	},
 	"navbar": {
 		"home": "Accueil",
 		"about": "À propos",
@@ -10,15 +14,13 @@
 	},
 	"home": {
 		"hero": {
-			"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo.",
-			"book_now": "Réserver maintenant",
-			"booking": "Réservation"
+			"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
 		},
 		"services": {
 			"full_courses": "Cours de conduite complets",
 			"full_courses_desc": "Cours en groupe dirigés par des moniteurs certifiés, couvrant tout le programme de la SAAQ.",
 			"improvement_lessons": "Leçons de perfectionnement",
-			"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis qui souhaitent reprendre confiance ou perfectionner leurs compétences.",
+			"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent perfectionner leurs compétences et se préparer à l’examen routier de la SAAQ.",
 			"car_rental": "Location de voiture pour la SAAQ",
 			"car_rental_desc": "Louez une voiture pour votre examen routier directement chez nous — fiable et prête pour l’épreuve."
 		},
@@ -44,13 +46,7 @@
 			"multilingual": "Cours en FR, EN, AR, GR, ES et DE"
 		},
 		"offer": {
-			"title": "Ce que nous offrons",
-			"full_courses": "Cours de conduite complets",
-			"full_courses_desc": "Cours en groupe dirigés par des moniteurs certifiés, couvrant tout le programme de la SAAQ.",
-			"improvement_lessons": "Leçons de perfectionnement",
-			"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis qui souhaitent reprendre confiance ou perfectionner leurs compétences.",
-			"car_rental": "Location de voiture pour la SAAQ",
-			"car_rental_desc": "Louez une voiture pour votre examen routier directement chez nous — fiable et prête pour l’épreuve."
+			"title": "Ce que nous offrons"
 		},
 		"areas": {
 			"title": "Nous desservons les régions de",
