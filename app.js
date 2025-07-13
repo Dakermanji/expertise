@@ -18,5 +18,13 @@ server.listen(env.PORT, () => {
 	console.log(`🚀 Server running at http://${env.HOST}:${env.PORT}`);
 });
 
+server.on('error', (err) => {
+	console.error(`❌ Server error:`, err);
+});
+
 // Apply Google Reviews Cron
-startGoogleReviewsCron();
+try {
+	startGoogleReviewsCron();
+} catch (err) {
+	console.error(`❌ Failed to start Google Reviews cron:`, err);
+}
