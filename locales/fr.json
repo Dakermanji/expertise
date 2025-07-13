@@ -5,7 +5,8 @@
 		"services": "Services",
 		"booking": "Réservation",
 		"contact": "Contact",
-		"reviews": "Avis"
+		"reviews": "Avis",
+		"faq": "FAQ"
 	},
 	"home": {
 		"hero": {
@@ -60,5 +61,25 @@
 			"description": "Appelez-nous ou visitez notre bureau pour parler avec un instructeur.",
 			"text_only": "Texte seulement"
 		}
+	},
+	"services": {
+		"title": "Nos services",
+		"subtitle": "Nous proposons des solutions complètes de conduite pour tous les niveaux.",
+		"full_courses": "Cours de conduite complets",
+		"full_courses_desc": "Cours collectifs accrédités par la SAAQ, vous préparant des bases à l'examen routier.",
+		"improvement_lessons": "Leçons de perfectionnement",
+		"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent perfectionner leurs compétences et se préparer à l’examen routier de la SAAQ.",
+		"car_rental": "Location de voiture pour l'examen SAAQ",
+		"car_rental_desc": "Louez un véhicule certifié pour votre examen routier, avec préparation en option.",
+		"book_now": "Réserver maintenant"
+	},
+	"faq": {
+		"faq_title": "Questions fréquentes",
+		"faq_q1": "faq.faq_q1",
+		"faq_a1": "faq.faq_a1",
+		"faq_q2": "faq.faq_q2",
+		"faq_a2": "faq.faq_a2",
+		"faq_q3": "faq.faq_q3",
+		"faq_a3": "faq.faq_a3"
 	}
 }

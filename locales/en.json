@@ -5,7 +5,8 @@
 		"services": "Services",
 		"booking": "Booking",
 		"contact": "Contact Us",
-		"reviews": "Reviews"
+		"reviews": "Reviews",
+		"faq": "FAQ"
 	},
 	"home": {
 		"hero": {
@@ -61,5 +62,25 @@
 			"description": "Call us or visit our office to speak directly with an instructor.",
 			"text_only": "Text only"
 		}
+	},
+	"services": {
+		"title": "Our Services",
+		"subtitle": "We offer complete driving solutions for every level.",
+		"full_courses": "Full Driving Courses",
+		"full_courses_desc": "SAQ-accredited group lessons that prepare you from the basics to the road exam.",
+		"improvement_lessons": "Improvement Lessons",
+		"improvement_lessons_desc": "For drivers with a foreign license or learner’s permit who want to refine their skills and prepare for the SAAQ road test.",
+		"car_rental": "Car Rental for SAAQ Exam",
+		"car_rental_desc": "Rent a certified vehicle for your road test, with optional prep support.",
+		"book_now": "Book Now"
+	},
+	"faq": {
+		"faq_title": "Frequently Asked Questions",
+		"faq_q1": "Do I need a learner’s permit to book lessons?",
+		"faq_a1": "This is a placeholder answer you can replace later.",
+		"faq_q2": "Can I book in advance?",
+		"faq_a2": "This is a placeholder answer you can replace later.",
+		"faq_q3": "Is the car rental included in the lessons?",
+		"faq_a3": "This is a placeholder answer you can replace later."
 	}
 }

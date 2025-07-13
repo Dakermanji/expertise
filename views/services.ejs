@@ -1,0 +1,114 @@
+<section class="py-5 text-center container">
+	<h1 class="display-4 mb-4"><%= __('services.title') %></h1>
+	<p class="lead"><%= __('services.subtitle') %></p>
+
+	<div class="row mt-4 g-4">
+		<div id="our_services" class="col-md-4">
+			<div class="card h-100 p-3">
+				<img src="/images/services/driving_courses.png" class="mb-2" />
+				<i class="bi bi-person-plus display-4 text-brand mb-2"></i>
+				<h5><%= __('services.full_courses') %></h5>
+				<p><%= __('services.full_courses_desc') %></p>
+				<a href="/booking/driving_courses" class="btn btn-booking">
+					<i class="bi bi-calendar-check me-1"></i>
+					<%= __('services.book_now') %>
+				</a>
+			</div>
+		</div>
+		<div id="our_services" class="col-md-4">
+			<div class="card h-100 p-3">
+				<img
+					src="/images/services/improvement_lessons.png"
+					class="mb-2"
+				/>
+				<i class="bi bi-speedometer2 display-4 text-brand mb-2"></i>
+				<h5><%= __('services.improvement_lessons') %></h5>
+				<p><%= __('services.improvement_lessons_desc') %></p>
+				<a href="/booking/improvement_lessons" class="btn btn-booking">
+					<i class="bi bi-calendar-check me-1"></i>
+					<%= __('services.book_now') %>
+				</a>
+			</div>
+		</div>
+		<div id="our_services" class="col-md-4">
+			<div class="card h-100 p-3">
+				<img src="/images/services/car_rental.png" class="mb-2" />
+				<i class="bi bi-car-front display-4 text-brand mb-2"></i>
+				<h5><%= __('services.car_rental') %></h5>
+				<p><%= __('services.car_rental_desc') %></p>
+				<a href="/booking/car_rental" class="btn btn-booking">
+					<i class="bi bi-calendar-check me-1"></i>
+					<%= __('services.book_now') %>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="faq" class="py-5">
+	<div class="container">
+		<h2 class="text-center mb-4"><%= __('faq.faq_title') %></h2>
+
+		<div class="accordion" id="faqAccordion">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq1">
+					<button
+						class="accordion-button collapsed question"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapse1"
+					>
+						<%= __('faq.faq_q1') %>
+					</button>
+				</h2>
+				<div
+					id="collapse1"
+					class="accordion-collapse collapse answer"
+					data-bs-parent="#faqAccordion"
+				>
+					<div class="accordion-body">- <%= __('faq.faq_a1') %> </div>
+				</div>
+			</div>
+
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq2">
+					<button
+						class="accordion-button collapsed question"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapse2"
+					>
+						<%= __('faq.faq_q2') %>
+					</button>
+				</h2>
+				<div
+					id="collapse2"
+					class="accordion-collapse collapse answer"
+					data-bs-parent="#faqAccordion"
+				>
+					<div class="accordion-body">- <%= __('faq.faq_a2') %> </div>
+				</div>
+			</div>
+
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="faq3">
+					<button
+						class="accordion-button collapsed question"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#collapse3"
+					>
+						<%= __('faq.faq_q3') %>
+					</button>
+				</h2>
+				<div
+					id="collapse3"
+					class="accordion-collapse collapse answer"
+					data-bs-parent="#faqAccordion"
+				>
+					<div class="accordion-body">- <%= __('faq.faq_a3') %> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
