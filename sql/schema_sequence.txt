@@ -1,6 +1,5 @@
-# sql/schema_sequence.txt
+#! sql/schema_sequence.txt
+
 1. google_reviews
 2. improvement_lessons
 3. car_rentals
-4. courses
-5. full_driving_courses
