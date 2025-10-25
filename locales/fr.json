@@ -12,70 +12,101 @@
 		"reviews": "Avis",
 		"faq": "FAQ"
 	},
-	"home": {
-		"hero": {
-			"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
-		},
-		"services": {
-			"full_courses": "Cours de conduite complets",
-			"full_courses_desc": "Cours en groupe dirigés par des moniteurs certifiés, couvrant tout le programme de la SAAQ.",
-			"improvement_lessons": "Leçons de perfectionnement",
-			"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent perfectionner leurs compétences et se préparer à l’examen routier de la SAAQ.",
-			"car_rental": "Location de voiture pour la SAAQ",
-			"car_rental_desc": "Louez une voiture pour votre examen routier directement chez nous — fiable et prête pour l’épreuve."
-		},
-		"reviews": {
-			"title": "Ce que disent nos élèves",
-			"none": "Aucun avis disponible pour le moment."
-		},
-		"booking": {
-			"book_now": "Réserver maintenant",
-			"start_today": "Prêt à commencer votre parcours de conduite ?"
-		}
+	"hero": {
+		"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
 	},
-	"about": {
-		"mission": {
-			"title": "Notre mission",
-			"text": "Vous aider à devenir un conducteur confiant et compétent grâce à une formation personnalisée, des cours structurés et un soutien multilingue."
-		},
-		"why_us": {
-			"title": "Pourquoi nous choisir ?",
-			"certified": "Certifié par la SAAQ",
-			"guidance": "Encadrement personnalisé et préparation aux parcours d'examen",
-			"booking": "Planification flexible en ligne ou en personne",
-			"multilingual": "Cours en FR, EN, AR, GR, ES et DE"
-		},
-		"offer": {
-			"title": "Ce que nous offrons"
-		},
-		"areas": {
-			"title": "Nous desservons les régions de",
-			"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
-		},
-		"contact": {
-			"title": "Des questions ? Nous sommes là pour vous aider.",
-			"description": "Appelez-nous ou visitez notre bureau pour parler avec un instructeur.",
-			"text_only": "Texte seulement"
-		}
+	"booking": {
+		"start_today": "Prêt à commencer votre parcours de conduite ?"
 	},
 	"services": {
 		"title": "Nos services",
 		"subtitle": "Nous proposons des solutions complètes de conduite pour tous les niveaux.",
 		"full_courses": "Cours de conduite complets",
-		"full_courses_desc": "Cours collectifs accrédités par la SAAQ, vous préparant des bases à l'examen routier.",
+		"full_courses_desc": "Cours en groupe accrédités par la SAAQ, vous préparant des bases jusqu’à l’examen pratique.",
 		"improvement_lessons": "Leçons de perfectionnement",
-		"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent perfectionner leurs compétences et se préparer à l’examen routier de la SAAQ.",
+		"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent améliorer leurs compétences et se préparer à l’examen routier de la SAAQ.",
 		"car_rental": "Location de voiture pour l'examen SAAQ",
-		"car_rental_desc": "Louez un véhicule certifié pour votre examen routier, avec préparation en option.",
-		"book_now": "Réserver maintenant"
+		"car_rental_desc": "Louez un véhicule certifié pour votre examen routier, avec une préparation optionnelle."
+	},
+	"about": {
+		"mission": {
+			"title": "Notre mission",
+			"text": "Aider les conducteurs à réussir l'examen routier de la SAAQ et à gagner en confiance au volant grâce à la location de voitures certifiées et à des leçons de perfectionnement personnalisées."
+		},
+		"why_us": {
+			"title": "Pourquoi nous choisir ?",
+			"certified": "Certifié par la SAAQ",
+			"guidance": "Encadrement personnalisé et préparation aux parcours d'examen",
+			"booking": "Réservation flexible par téléphone, WhatsApp ou via notre site web",
+			"multilingual": "Formation en français, anglais et arabe"
+		},
+		"who_we_serve": {
+			"title": "À qui s’adressent nos services",
+			"text": "Nous nous adressons aux personnes âgées de 16 ans et plus résidant au Québec, qui sont autorisées à conduire en présence d’un instructeur certifié. Que vous prépariez votre examen de la SAAQ, que vous souhaitiez améliorer vos compétences avec un permis d’apprenti, ou que vous convertissiez un permis étranger — nous sommes là pour vous accompagner vers la réussite."
+		}
+	},
+	"sister_school": {
+		"through": "par une école sœur",
+		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :"
 	},
 	"faq": {
 		"faq_title": "Questions fréquentes",
-		"faq_q1": "faq.faq_q1",
-		"faq_a1": "faq.faq_a1",
-		"faq_q2": "faq.faq_q2",
-		"faq_a2": "faq.faq_a2",
-		"faq_q3": "faq.faq_q3",
-		"faq_a3": "faq.faq_a3"
+		"list": {
+			"faq_1": {
+				"q": "Ai-je besoin d’un permis d’apprenti pour réserver des leçons ?",
+				"a": "Oui — au Québec, vous devez détenir un permis d’apprenti valide ou un permis étranger pour suivre des leçons de perfectionnement. Cela garantit que vous êtes autorisé à conduire avec un instructeur."
+			},
+			"faq_2": {
+				"q": "Puis-je réserver à l’avance ?",
+				"a": "Absolument. Nous vous recommandons de réserver au moins 5 à 7 jours à l’avance, surtout pendant les périodes d’examen de la SAAQ."
+			},
+			"faq_3": {
+				"q": "Puis-je louer une voiture pour l’examen de la SAAQ sans suivre de cours ?",
+				"a": "Oui ! Vous pouvez louer un véhicule certifié même sans suivre de cours, tant que vous répondez aux exigences de la SAAQ et que votre rendez-vous est confirmé."
+			},
+			"faq_4": {
+				"q": "Quel est l’âge minimum pour suivre des leçons ?",
+				"a": "Vous devez avoir au moins 16 ans et être autorisé à conduire avec un instructeur certifié au Québec. Une autorisation parentale est nécessaire si vous avez moins de 18 ans."
+			},
+			"faq_5": {
+				"q": "J’ai un permis étranger — puis-je quand même suivre des leçons ?",
+				"a": "Bien sûr. Nous aidons régulièrement les conducteurs titulaires d’un permis international à se préparer à l’examen de conversion de la SAAQ."
+			},
+			"faq_6": {
+				"q": "Combien coûtent les leçons ou la location de voiture ?",
+				"a": "Les prix varient selon le service et la région. Vous pouvez consulter les tarifs de base sur notre page de réservation ou nous contacter pour un devis personnalisé."
+			},
+			"faq_7": {
+				"q": "Qu’est-ce qui est inclus dans la location pour l’examen de la SAAQ ?",
+				"a": "La location comprend un véhicule certifié, le temps nécessaire pour passer l’examen, et une séance d’échauffement en option selon le forfait choisi."
+			},
+			"faq_8": {
+				"q": "Comment réserver un service ?",
+				"a": "Rendez-vous sur notre page de réservation, choisissez un service, remplissez le formulaire, et nous vous contacterons pour confirmer les détails. Vous pouvez aussi nous appeler directement."
+			},
+			"faq_9": {
+				"q": "Puis-je annuler ou reporter une réservation ?",
+				"a": "Oui, mais nous demandons un préavis d’au moins 24 heures. Les annulations tardives peuvent entraîner des frais."
+			},
+			"faq_10": {
+				"q": "Offrez-vous des leçons dans d’autres langues ?",
+				"a": "Oui ! Les leçons sont actuellement offertes en français, anglais et arabe — selon la disponibilité de l’instructeur. N’hésitez pas à indiquer votre langue préférée lors de la réservation."
+			}
+		}
+	},
+	"areas": {
+		"title": "Nous desservons des étudiants dans tout Montréal",
+		"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
+	},
+	"reviews": {
+		"title": "Ce que disent nos élèves"
+	},
+	"contact": {
+		"title": "Des questions ? Nous sommes là pour vous aider.",
+		"description": "Appelez-nous ou envoyez-nous un message sur WhatsApp pour parler directement avec un instructeur.",
+		"text_only": "Texte seulement"
+	},
+	"footer": {
+		"built_by": "Site web par"
 	}
 }

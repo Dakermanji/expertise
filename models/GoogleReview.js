@@ -27,7 +27,7 @@ export class GoogleReview {
 
 	static async fetchRecent(limit = 5) {
 		const [rows] = await promisePool.query(
-			'SELECT * FROM google_reviews ORDER BY retrieved_at DESC LIMIT ?',
+			'SELECT * FROM google_reviews WHERE rating > 3 ORDER BY retrieved_at DESC LIMIT ?',
 			[limit]
 		);
 		return rows;

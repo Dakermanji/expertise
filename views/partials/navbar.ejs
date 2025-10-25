@@ -1,7 +1,7 @@
 <% const languages = {fr: {language: "française", flag: "qc"}, en: {language:
 "English", flag: "ca"} , ar: {language: "عربي", flag: "ae"}}%>
 <nav
-	class="navbar navbar-expand-lg bg-dark-custom border-bottom shadow-sm fixed-top"
+	class="navbar navbar-expand-lg bg-light-custom border-bottom shadow-sm fixed-top"
 >
 	<div class="container">
 		<a
@@ -14,7 +14,7 @@
 				height="40"
 				class="mx-2"
 			/>
-			<span class="d-none d-md-inline">Conduite Expertise</span>
+			<span class="d-none d-md-inline">Expertise Pro</span>
 		</a>
 
 		<button
@@ -35,31 +35,19 @@
 					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/about"
-						><i class="bi bi-info-circle me-1"></i> <%=
-						__('navbar.about') %></a
-					>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/services"
+					<a class="nav-link" href="/#services"
 						><i class="bi bi-gear me-1"></i> <%=
 						__('navbar.services') %></a
 					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/booking"
-						><i class="bi bi-calendar-check me-1"></i> <%=
-						__('navbar.booking') %></a
+					<a class="nav-link" href="#about"
+						><i class="bi bi-info-circle me-1"></i> <%=
+						__('navbar.about') %></a
 					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/contact"
-						><i class="bi bi-envelope me-1"></i> <%=
-						__('navbar.contact') %></a
-					>
-				</li>
-				<li class="nav-item">
-					<a href="/services/#faq" class="nav-link">
+					<a href="/#faq" class="nav-link">
 						<i class="bi bi-question-circle"></i>
 						<%= __('navbar.faq') %>
 					</a>
@@ -69,6 +57,18 @@
 						<i class="bi bi-star me-1"></i> <%= __('navbar.reviews')
 						%>
 					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-danger" href="/booking"
+						><i class="bi bi-calendar-check me-1"></i> <%=
+						__('navbar.booking') %></a
+					>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/contact"
+						><i class="bi bi-envelope me-1"></i> <%=
+						__('navbar.contact') %></a
+					>
 				</li>
 				<li class="nav-item dropdown">
 					<a

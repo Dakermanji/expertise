@@ -14,8 +14,8 @@
 
     --color-secondary: #00bcd4;
     --color-accent: #ffc107;
-    --color-background-light: #f8f9fa;
-    --color-background-dark: #c9d1da;
+    --color-background-lighter: #f8f9fa;
+    --color-background-light: #c9d1da;
     --color-text: #212529;
 
     /* Borders and radius */
@@ -27,7 +27,7 @@
 /** Global styles **/
 body {
     font-family: var(--font-base);
-    background-color: var(--color-background-light);
+    background-color: var(--color-background-lighter);
     color: var(--color-text);
 }
 
@@ -68,12 +68,12 @@ nav ul li {
     color: var(--color-brand-hover);
 }
 
-.bg-dark-custom {
-    background-color: var(--color-background-dark);
-}
-
 .bg-light-custom {
     background-color: var(--color-background-light);
+}
+
+.bg-lighter-custom {
+    background-color: var(--color-background-lighter);
 }
 
 .border-custom {
@@ -93,4 +93,9 @@ nav ul li {
 /* Main content spacing (accounts for fixed navbar height) */
 main {
     margin-top: 77px;
+}
+
+.orange {
+    color: #fa6806;
+    /* color: #ff7f27; */
 }
