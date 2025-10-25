@@ -16,6 +16,7 @@
 		"video_fallback": "Your browser does not support the video tag."
 	},
 	"booking": {
+		"title": "يرجى اختيار الخدمة",
 		"start_today": "هل أنت مستعد لبدء رحلتك في القيادة؟"
 	},
 	"services": {

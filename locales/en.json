@@ -16,6 +16,7 @@
 		"video_fallback": "Your browser does not support the video tag."
 	},
 	"booking": {
+		"title": "Please select a service",
 		"start_today": "Ready to start your driving journey?"
 	},
 	"services": {

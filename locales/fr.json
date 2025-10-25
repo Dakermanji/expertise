@@ -16,6 +16,7 @@
 		"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
 	},
 	"booking": {
+		"title": "Veuillez sélectionner un service",
 		"start_today": "Prêt à commencer votre parcours de conduite ?"
 	},
 	"services": {

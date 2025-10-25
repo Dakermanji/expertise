@@ -1,0 +1,48 @@
+<!-- Book a Service -->
+<h1 class="display-4 text-center"><%= __('booking.title') %></h1>
+
+<!-- Option buttons -->
+<div class="row justify-content-center gap-3">
+	<div class="col-md-5">
+		<div
+			class="card service-card h-100 text-center p-3 select-service overflow-hidden"
+			data-form="rental"
+		>
+			<img
+				src="/images/services/car_rental.png"
+				class="card-img-top mb-3 rounded-4 mx-auto"
+				alt="Car Rental"
+			/>
+			<h5 class="card-title"><%= __('services.car_rental') %></h5>
+			<p class="card-text"><%= __('services.car_rental_desc') %></p>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<div
+			class="card service-card h-100 text-center p-3 select-service overflow-hidden"
+			data-form="improvement"
+		>
+			<img
+				src="/images/services/improvement_lessons.png"
+				class="card-img-top mb-3 rounded-4 mx-auto"
+				alt="Improvement Lessons"
+			/>
+			<h5 class="card-title"
+				><%= __('services.improvement_lessons') %></h5
+			>
+			<p class="card-text"
+				><%= __('services.improvement_lessons_desc') %></p
+			>
+		</div>
+	</div>
+</div>
+
+<!-- Forms: toggle visibility -->
+<div id="improvement-form" class="booking-form mt-4 d-none">
+	<!-- Improvement form fields -->
+</div>
+
+<div id="rental-form" class="booking-form mt-4 d-none">
+	<!-- Car rental form fields -->
+</div>
