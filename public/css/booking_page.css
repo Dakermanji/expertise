@@ -26,3 +26,18 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f8f9fa;
 }
+
+.card-img-top {
+    max-width: 350px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+    display: block;
+}
+
+.select-service:hover .card-img-top {
+    transform: scale(1.03) rotateX(1deg) rotateY(-1deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
