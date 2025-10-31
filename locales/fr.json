@@ -17,7 +17,8 @@
 	},
 	"booking": {
 		"title": "Veuillez sélectionner un service",
-		"start_today": "Prêt à commencer votre parcours de conduite ?"
+		"start_today": "Prêt à commencer votre parcours de conduite ?",
+		"disclaimer": "<strong>Envoyer ce formulaire ne garantit pas votre réservation</strong>. Nous vous contacterons par téléphone ou par e-mail pour confirmer. Si vous n’avez pas de nouvelles dans les 12 heures, veuillez nous recontacter. Pendant les heures de travail, nous répondons généralement en moins de 60 minutes."
 	},
 	"services": {
 		"title": "Nos services",
@@ -109,5 +110,24 @@
 	},
 	"footer": {
 		"built_by": "Site web par"
+	},
+	"form": {
+		"name": "Nom complet",
+		"phone": "Numéro de téléphone",
+		"email": "Adresse e-mail",
+		"region": "Région",
+		"preferred_language": "Langue préférée",
+		"notes": "Notes supplémentaires",
+		"exam_date": "Date de l'examen",
+		"exam_time": "Heure de l'examen",
+		"preferred_date": "Date préférée",
+		"preferred_time": "Heure préférée",
+		"submit": "Envoyer"
+	},
+	"regions": {
+		"montreal": "Montréal",
+		"laval": "Laval",
+		"dorval": "Dorval",
+		"lasalle": "LaSalle"
 	}
 }

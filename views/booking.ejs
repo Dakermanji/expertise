@@ -1,7 +1,5 @@
-<!-- Book a Service -->
 <h1 class="display-4 text-center"><%= __('booking.title') %></h1>
 
-<!-- Option buttons -->
 <div class="row justify-content-center gap-3">
 	<div class="col-md-5">
 		<div
@@ -38,11 +36,12 @@
 	</div>
 </div>
 
-<!-- Forms: toggle visibility -->
-<div id="improvement-form" class="booking-form mt-4 d-none">
-	<!-- Improvement form fields -->
-</div>
+<div class="container">
+	<div id="form-rental" class="booking-form mt-4 d-none">
+		<%- include('partials/bookings/car_rental_form') %>
+	</div>
 
-<div id="rental-form" class="booking-form mt-4 d-none">
-	<!-- Car rental form fields -->
+	<div id="form-improvement" class="booking-form mt-4 d-none">
+		<%- include('partials/bookings/improvement_lessons_form') %>
+	</div>
 </div>

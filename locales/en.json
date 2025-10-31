@@ -17,7 +17,8 @@
 	},
 	"booking": {
 		"title": "Please select a service",
-		"start_today": "Ready to start your driving journey?"
+		"start_today": "Ready to start your driving journey?",
+		"disclaimer": "<strong>Submitting this form does not guarantee your booking</strong>. We will contact you by phone or email to confirm. If you haven’t heard from us within 12 hours, please reach out again. During working hours, we usually respond within 60 minutes."
 	},
 	"services": {
 		"title": "Our Services",
@@ -111,5 +112,24 @@
 	},
 	"footer": {
 		"built_by": "Website by"
+	},
+	"form": {
+		"name": "Full Name",
+		"phone": "Phone Number",
+		"email": "Email Address",
+		"region": "Region",
+		"preferred_language": "Preferred Language",
+		"notes": "Additional Notes",
+		"exam_date": "Exam Date",
+		"exam_time": "Exam Time",
+		"preferred_date": "Preferred Date",
+		"preferred_time": "Preferred Time",
+		"submit": "Submit"
+	},
+	"regions": {
+		"montreal": "Montreal",
+		"laval": "Laval",
+		"dorval": "Dorval",
+		"lasalle": "Lasalle"
 	}
 }
