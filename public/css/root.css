@@ -93,9 +93,14 @@ nav ul li {
 /* Main content spacing (accounts for fixed navbar height) */
 main {
     margin-top: 77px;
+    min-height: calc(100vh - 190px);
 }
 
 .orange {
     color: #fa6806;
     /* color: #ff7f27; */
+}
+
+.cookies {
+    font-size: 0.8rem;
 }

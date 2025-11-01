@@ -46,7 +46,7 @@
 			</select>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<label for="exam_date" class="form-label fw-bold">
 				<%= __('form.exam_date') %>
 			</label>
@@ -59,7 +59,7 @@
 			/>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<label for="exam_time" class="form-label fw-bold">
 				<%= __('form.exam_time') %>
 			</label>
@@ -71,7 +71,7 @@
 			/>
 		</div>
 
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<label for="preferred_language" class="form-label fw-bold">
 				<%= __('form.preferred_language') %>
 			</label>
@@ -105,7 +105,9 @@
 		<%- __('booking.disclaimer') %>
 	</div>
 
-	<button type="submit" class="btn btn-primary mt-3">
-		<i class="bi bi-send me-1"></i> <%= __('form.submit') %>
-	</button>
+	<div class="text-center mb-4">
+		<button type="submit" class="btn btn-primary mt-3">
+			<i class="bi bi-send me-1"></i> <%= __('form.submit') %>
+		</button>
+	</div>
 </form>

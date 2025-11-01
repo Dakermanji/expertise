@@ -41,3 +41,13 @@ h1 {
     transform: scale(1.03) rotateX(1deg) rotateY(-1deg);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
 }
+
+.booking_forms,
+.booking_forms .row .col-12 {
+    max-width: 800px;
+}
+
+.booking_forms .row div {
+    max-width: 400px;
+    margin: 1rem auto;
+}
