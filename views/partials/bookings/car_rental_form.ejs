@@ -1,6 +1,7 @@
-<form action="/booking/rental" method="POST">
+<form action="/booking" method="POST">
 	<div class="row g-3">
 		<div class="col-md-6">
+			<input type="hidden" name="serviceType" value="car_rental" />
 			<label for="student_name" class="form-label fw-bold">
 				<%= __('form.name') %>
 			</label>

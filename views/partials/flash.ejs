@@ -1,0 +1,35 @@
+<% const { success, error } = messages; %> <% if ((success && success.length) ||
+(error && error.length)) { %>
+<div
+	class="position-fixed top-50 start-50 translate-middle w-100 px-3 z-3"
+	style="max-width: 500px"
+>
+	<% if (error && error.length) { %>
+	<div
+		class="alert alert-danger alert-dismissible fade show text-center"
+		role="alert"
+	>
+		<%= __(error[0]) %>
+		<button
+			type="button"
+			class="btn-close"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+	<% } %> <% if (success && success.length) { %>
+	<div
+		class="alert alert-success alert-dismissible fade show text-center"
+		role="alert"
+	>
+		<%- __(success[0]) %>
+		<button
+			type="button"
+			class="btn-close"
+			data-bs-dismiss="alert"
+			aria-label="Close"
+		></button>
+	</div>
+	<% } %>
+</div>
+<% } %>

@@ -1,15 +1,16 @@
 //! middlewares/flashMiddleware.js
 
-import flash from 'express-flash';
+import flash from 'connect-flash';
 
-// Adds flash() method to req and exposes res.locals.{success,error}
 export function initializeFlash(app) {
 	app.use(flash());
 
-	// Custom: expose to views
 	app.use((req, res, next) => {
-		res.locals.success = req.flash('success');
-		res.locals.error = req.flash('error');
+		if (req.method === 'GET') {
+			const success = req.flash('success');
+			const error = req.flash('error');
+			res.locals.messages = { success, error };
+		}
 		next();
 	});
 }

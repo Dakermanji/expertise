@@ -6,6 +6,10 @@
     font-size: 0.95rem;
 }
 
+#contact .contact_details {
+    max-width: 500px;
+}
+
 #contact h2 {
     color: var(--color-text);
     font-weight: 600;

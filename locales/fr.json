@@ -1,35 +1,4 @@
 {
-	"common": {
-		"book_now": "Réserver maintenant",
-		"booking": "Réservation"
-	},
-	"navbar": {
-		"home": "Accueil",
-		"about": "À propos",
-		"services": "Services",
-		"booking": "Réservation",
-		"contact": "Contact",
-		"reviews": "Avis",
-		"faq": "FAQ"
-	},
-	"hero": {
-		"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
-	},
-	"booking": {
-		"title": "Veuillez sélectionner un service",
-		"start_today": "Prêt à commencer votre parcours de conduite ?",
-		"disclaimer": "<strong>Envoyer ce formulaire ne garantit pas votre réservation</strong>. Nous vous contacterons par téléphone ou par e-mail pour confirmer. Si vous n’avez pas de nouvelles dans les 12 heures, veuillez nous recontacter. Pendant les heures de travail, nous répondons généralement en moins de 60 minutes."
-	},
-	"services": {
-		"title": "Nos services",
-		"subtitle": "Nous proposons des solutions complètes de conduite pour tous les niveaux.",
-		"full_courses": "Cours de conduite complets",
-		"full_courses_desc": "Cours en groupe accrédités par la SAAQ, vous préparant des bases jusqu’à l’examen pratique.",
-		"improvement_lessons": "Leçons de perfectionnement",
-		"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent améliorer leurs compétences et se préparer à l’examen routier de la SAAQ.",
-		"car_rental": "Location de voiture pour l'examen SAAQ",
-		"car_rental_desc": "Louez un véhicule certifié pour votre examen routier, avec une préparation optionnelle."
-	},
 	"about": {
 		"mission": {
 			"title": "Notre mission",
@@ -47,9 +16,23 @@
 			"text": "Nous nous adressons aux personnes âgées de 16 ans et plus résidant au Québec, qui sont autorisées à conduire en présence d’un instructeur certifié. Que vous prépariez votre examen de la SAAQ, que vous souhaitiez améliorer vos compétences avec un permis d’apprenti, ou que vous convertissiez un permis étranger — nous sommes là pour vous accompagner vers la réussite."
 		}
 	},
-	"sister_school": {
-		"through": "par une école sœur",
-		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :"
+	"areas": {
+		"title": "Nous desservons des étudiants dans tout Montréal",
+		"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
+	},
+	"booking": {
+		"title": "Veuillez sélectionner un service",
+		"start_today": "Prêt à commencer votre parcours de conduite ?",
+		"disclaimer": "<strong>Envoyer ce formulaire ne garantit pas votre réservation</strong>. Nous vous contacterons par téléphone ou par e-mail pour confirmer. Si vous n’avez pas de nouvelles dans les 12 heures, veuillez nous recontacter. Pendant les heures de travail, nous répondons généralement en moins de 60 minutes."
+	},
+	"common": {
+		"book_now": "Réserver maintenant",
+		"booking": "Réservation"
+	},
+	"contact": {
+		"title": "Des questions ? Nous sommes là pour vous aider.",
+		"description": "Appelez-nous ou envoyez-nous un message sur WhatsApp pour parler directement avec un instructeur.",
+		"text_only": "Texte seulement"
 	},
 	"faq": {
 		"faq_title": "Questions fréquentes",
@@ -96,17 +79,11 @@
 			}
 		}
 	},
-	"areas": {
-		"title": "Nous desservons des étudiants dans tout Montréal",
-		"list": "Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore."
-	},
-	"reviews": {
-		"title": "Ce que disent nos élèves"
-	},
-	"contact": {
-		"title": "Des questions ? Nous sommes là pour vous aider.",
-		"description": "Appelez-nous ou envoyez-nous un message sur WhatsApp pour parler directement avec un instructeur.",
-		"text_only": "Texte seulement"
+	"flash": {
+		"booking": {
+			"sent": "Votre demande a été envoyée avec succès !<br /></strong>Nous vous contacterons bientôt pour confirmer.</strong>",
+			"error": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ou nous contacter directement."
+		}
 	},
 	"footer": {
 		"built_by": "Site web par"
@@ -124,10 +101,39 @@
 		"preferred_time": "Heure préférée",
 		"submit": "Envoyer"
 	},
+	"hero": {
+		"video_fallback": "Votre navigateur ne prend pas en charge la balise vidéo."
+	},
+	"navbar": {
+		"home": "Accueil",
+		"about": "À propos",
+		"services": "Services",
+		"booking": "Réservation",
+		"contact": "Contact",
+		"reviews": "Avis",
+		"faq": "FAQ"
+	},
 	"regions": {
 		"montreal": "Montréal",
 		"laval": "Laval",
 		"dorval": "Dorval",
 		"lasalle": "LaSalle"
+	},
+	"reviews": {
+		"title": "Ce que disent nos élèves"
+	},
+	"services": {
+		"title": "Nos services",
+		"subtitle": "Nous proposons des solutions complètes de conduite pour tous les niveaux.",
+		"full_courses": "Cours de conduite complets",
+		"full_courses_desc": "Cours en groupe accrédités par la SAAQ, vous préparant des bases jusqu’à l’examen pratique.",
+		"improvement_lessons": "Leçons de perfectionnement",
+		"improvement_lessons_desc": "Pour les conducteurs titulaires d’un permis étranger ou d’un permis d’apprenti qui souhaitent améliorer leurs compétences et se préparer à l’examen routier de la SAAQ.",
+		"car_rental": "Location de voiture pour l'examen SAAQ",
+		"car_rental_desc": "Louez un véhicule certifié pour votre examen routier, avec une préparation optionnelle."
+	},
+	"sister_school": {
+		"through": "par une école sœur",
+		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :"
 	}
 }

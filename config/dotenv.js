@@ -38,6 +38,11 @@ const env = {
 	// Google
 	GOOGLE_PLACE_ID: requireEnv('GOOGLE_PLACE_ID'),
 	GOOGLE_API_KEY: requireEnv('GOOGLE_API_KEY'),
+
+	// Email
+	EMAIL_SERVICE: optionalEnv('EMAIL_SERVICE', 'gmail'),
+	EMAIL_USER: requireEnv('EMAIL_USER'),
+	EMAIL_PASS: requireEnv('EMAIL_PASS'),
 };
 
 export default env;
