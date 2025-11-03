@@ -93,7 +93,8 @@ nav ul li {
 /* Main content spacing (accounts for fixed navbar height) */
 main {
     margin-top: 77px;
-    min-height: calc(100vh - 190px);
+    min-height: calc(100vh - 153px);
+    overflow-x: hidden;
 }
 
 .orange {
@@ -103,4 +104,19 @@ main {
 
 .cookies {
     font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.cookies a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+html[dir="rtl"] .modal-header .btn-close {
+    margin-left: calc(-.5 * var(--bs-modal-header-padding-x));
+    margin-right: auto;
+}
+
+.text-begin {
+    text-align: start;
 }

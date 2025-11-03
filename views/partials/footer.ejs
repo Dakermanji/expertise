@@ -8,8 +8,15 @@
 		<span class="orange">D</span>akermanji <span class="orange">W</span>eb
 		<span class="orange">D</span>ev
 	</a>
-	<p class="cookies small fw-light"
-		>This site uses essential cookies for functionality.
-		<a>Privacy Policy</a></p
-	>
+	<p class="cookies text-muted">
+		<%= __('footer.cookies_text') %>
+		<a
+			href="#"
+			data-bs-toggle="modal"
+			class="link-danger"
+			data-bs-target="#privacyModal"
+		>
+			<%= __('footer.privacy_title') %></a
+		>
+	</p>
 </footer>

@@ -27,7 +27,8 @@
 	},
 	"common": {
 		"book_now": "Book Now",
-		"booking": "Booking"
+		"booking": "Booking",
+		"close": "close"
 	},
 	"contact": {
 		"title": "Have Questions? We're Here to Help.",
@@ -86,7 +87,10 @@
 		}
 	},
 	"footer": {
-		"built_by": "Website by"
+		"built_by": "Website by",
+		"cookies_text": "This site uses essential cookies for functionality.",
+		"privacy_content": "We only collect personal information submitted through booking forms. No tracking or third-party cookies are used. Your data is used solely to contact you regarding your request. For any concerns, contact location.que.ca@gmail.com.",
+		"privacy_title": "Privacy Policy"
 	},
 	"form": {
 		"name": "Full Name",

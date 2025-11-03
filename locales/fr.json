@@ -27,7 +27,8 @@
 	},
 	"common": {
 		"book_now": "Réserver maintenant",
-		"booking": "Réservation"
+		"booking": "Réservation",
+		"close": "fermer"
 	},
 	"contact": {
 		"title": "Des questions ? Nous sommes là pour vous aider.",
@@ -86,7 +87,10 @@
 		}
 	},
 	"footer": {
-		"built_by": "Site web par"
+		"built_by": "Site web par",
+		"cookies_text": "Ce site utilise des cookies essentiels pour assurer son bon fonctionnement.",
+		"privacy_content": "Nous ne recueillons que les informations personnelles soumises via les formulaires de réservation. Aucun suivi ni cookies tiers ne sont utilisés. Vos données sont uniquement utilisées pour vous contacter concernant votre demande. Pour toute question, contactez-nous à l’adresse location.que.ca@gmail.com.",
+		"privacy_title": "Politique de confidentialité"
 	},
 	"form": {
 		"name": "Nom complet",
