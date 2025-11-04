@@ -1,5 +1,6 @@
 //! controllers/indexController.js
 
+import env from '../config/dotenv.js';
 import { GoogleReview } from '../models/GoogleReview.js';
 
 export async function getHome(req, res) {
@@ -17,5 +18,6 @@ export async function getHome(req, res) {
 			'contact',
 		],
 		scripts: ['home'],
+		google_place_id: env.GOOGLE_PLACE_ID,
 	});
 }

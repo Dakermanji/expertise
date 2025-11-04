@@ -118,10 +118,15 @@
 		"faq": "أسئلة شائعة"
 	},
 	"regions": {
-		"montreal": "مونتريال",
-		"laval": "لافال",
+		"ahuntsic": "أهونتسيك",
 		"dorval": "دورفال",
-		"lasalle": "لاسال"
+		"langelier": "لانجيلييه",
+		"lasalle": "لاسال",
+		"laval": "لافال",
+		"montreal": "مونتريال",
+		"saint-laurent": "سان لوران",
+		"villeray": "فيلاري",
+		"other": "منطقة أخرى"
 	},
 	"reviews": {
 		"title": "ماذا يقول طلابنا عنا",

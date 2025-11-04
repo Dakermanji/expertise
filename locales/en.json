@@ -118,10 +118,15 @@
 		"faq": "FAQ"
 	},
 	"regions": {
-		"montreal": "Montreal",
-		"laval": "Laval",
+		"ahuntsic": "Ahuntsic",
 		"dorval": "Dorval",
-		"lasalle": "Lasalle"
+		"laval": "Laval",
+		"langelier": "Langelier",
+		"lasalle": "Lasalle",
+		"montreal": "Montreal",
+		"saint-laurent": "Saint-Laurent",
+		"villeray": "Villeray",
+		"other": "Other"
 	},
 	"reviews": {
 		"title": "What Our Students Say",

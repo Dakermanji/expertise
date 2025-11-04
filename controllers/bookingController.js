@@ -1,5 +1,6 @@
 //! controllers/bookingController.js
 
+import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';
 
 export async function getBooking(req, res) {
@@ -7,6 +8,7 @@ export async function getBooking(req, res) {
 		title: 'Booking',
 		styles: ['booking_page'],
 		scripts: ['booking'],
+		google_place_id: env.GOOGLE_PLACE_ID,
 	});
 }
 

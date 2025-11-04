@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 export function setupI18n(app) {
 	i18n.configure({
 		locales: ['en', 'fr', 'ar'],
-		defaultLocale: 'en',
+		defaultLocale: 'fr',
 		directory: path.join(__dirname, '..', 'locales'),
 		autoReload: true,
 		syncFiles: true,
@@ -21,7 +21,7 @@ export function setupI18n(app) {
 	});
 	app.use(i18n.init);
 
-	// Set locale from session (not query or cookie)
+	// Set locale from session
 	app.use((req, res, next) => {
 		if (req.session.lang) {
 			req.setLocale(req.session.lang);

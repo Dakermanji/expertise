@@ -39,10 +39,8 @@
 				<%= __('form.region') %>
 			</label>
 			<select name="region" id="region" class="form-select" required>
-				<% const regions = __('regions'); for (const key in regions) {
-				%>
-				<option value="<%= key %>"><%= regions[key] %></option>
-				<% } %>
+				<option value="montreal"><%= __('regions.montreal') %></option>
+				<option value="laval"><%= __('regions.laval') %></option>
 			</select>
 		</div>
 
@@ -83,6 +81,8 @@
 				<option value="en">English</option>
 				<option value="fr">Français</option>
 				<option value="ar">العربية</option>
+				<option value="es">Español</option>
+				<option value="de">Deutsch</option>
 			</select>
 		</div>
 

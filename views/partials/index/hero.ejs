@@ -7,7 +7,10 @@
 			id="expertiseVideo"
 			class="w-100 rounded shadow"
 		>
-			<source src="/videos/Conduite_Expertise.mp4" type="video/mp4" />
+			<source
+				src="/videos/Expertise-Pro-<%= currentLang.toUpperCase() %>.mp4"
+				type="video/mp4"
+			/>
 			<%= __('hero.video_fallback') %>
 		</video>
 
@@ -20,7 +23,6 @@
 
 			<input id="seekBar" type="range" class="form-range" value="0" />
 
-			<!-- Volume section -->
 			<div class="d-flex align-items-center gap-2">
 				<i id="volumeIcon" class="bi bi-volume-up-fill"></i>
 				<input

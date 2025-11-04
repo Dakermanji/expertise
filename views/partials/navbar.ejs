@@ -1,5 +1,5 @@
 <% const languages = {fr: {language: "française", flag: "qc"}, en: {language:
-"English", flag: "ca"} , ar: {language: "عربي", flag: "ae"}}%>
+"English", flag: "ca"} , ar: {language: "عربي", flag: "lb"}}%>
 <nav
 	class="navbar navbar-expand-lg bg-light-custom border-bottom shadow-sm fixed-top"
 >
@@ -110,7 +110,8 @@
 				<li class="nav-item d-none d-lg-block">
 					<a
 						class="btn btn-outline-danger btn-sm ms-2"
-						href="#review"
+						target="_blank"
+						href="https://search.google.com/local/writereview?placeid=<%= google_place_id %>"
 					>
 						<i class="bi bi-heart-fill"></i>
 					</a>
