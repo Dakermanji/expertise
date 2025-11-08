@@ -5,7 +5,7 @@ import { sendBookingEmail } from '../utils/bookingMailer.js';
 
 export async function getBooking(req, res) {
 	res.render('booking', {
-		title: 'Booking',
+		title: 'booking',
 		styles: ['booking_page'],
 		scripts: ['booking'],
 		google_place_id: env.GOOGLE_PLACE_ID,

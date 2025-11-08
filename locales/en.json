@@ -108,6 +108,14 @@
 	"hero": {
 		"video_fallback": "Your browser does not support the video tag."
 	},
+	"meta": {
+		"titles": {
+			"home": "Home",
+			"booking": "Booking",
+			"rest": "Expertise Pro - Car Rents for SAAQ Exams and Driving Lessons Montreal"
+		},
+		"description": "Certified car rentals and improvement lessons for your SAAQ road exam in Montreal, Laval and more"
+	},
 	"navbar": {
 		"home": "Home",
 		"about": "About",

@@ -108,6 +108,15 @@
 	"hero": {
 		"video_fallback": "Your browser does not support the video tag."
 	},
+	"meta": {
+		"titles": {
+			"Home": "الرئيسية",
+			"booking": "الحجز",
+			"rest": "Expertise Pro - تأجير سيارات لامتحانات SAAQ ودروس القيادة في مونتريال",
+			"home": "meta.titles.home"
+		},
+		"description": "تقدّم Expertise Pro خدمات تأجير سيارات معتمدة لامتحانات SAAQ ودروس تحسين القيادة في مونتريال، لافال، والمزيد. دعم متعدّد اللغات متوفّر."
+	},
 	"navbar": {
 		"home": "الرئيسية",
 		"about": "من نحن",

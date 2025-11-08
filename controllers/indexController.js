@@ -6,7 +6,7 @@ import { GoogleReview } from '../models/GoogleReview.js';
 export async function getHome(req, res) {
 	res.render('home', {
 		reviews: await GoogleReview.fetchRecent(),
-		title: 'Welcome to Expertise',
+		title: 'home',
 		styles: [
 			'hero',
 			'booking',

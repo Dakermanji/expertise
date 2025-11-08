@@ -3,7 +3,43 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title><%= title %> | Expertise</title>
+
+		<!-- Meta Description -->
+		<meta name="description" content="Expertise Pro offers certified car rentals for SAAQ exams and driving improvement lessons in Montreal, Laval, and more. Multilingual support available." />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="<%= fullUrl %>" />
+
+		<!-- Language and Region (optional but helpful) -->
+		<meta name="language" content="<%= currentLang %>" />
+		<meta name="geo.region" content="CA-QC" />
+		<meta name="geo.placename" content="Montreal" />
+		<meta name="geo.position" content="45.5017;-73.5673" />
+
+		<!-- Open Graph for social sharing -->
+		<meta property="og:title" content="<%= __('meta.titles.' + title) %> | <%= __('meta.titles.rest') %>" />
+		<meta property="og:description" content="<%= __('meta.description') %>" />
+		<meta property="og:image" content="https://location-ca.com/images/logo/logo.png" />
+		<meta property="og:url" content="<%= fullUrl %>" />
+		<meta property="og:type" content="website" />
+
+		<!--  -->
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Expertise Pro",
+			"url": "https://expertise-pro.ca",
+			"telephone": "+1-514-246-4688",
+				"address": {
+					"addressLocality": "Montreal",
+					"addressRegion": "QC",
+					"addressCountry": "CA"
+				}
+			}
+		</script>
+
+		<title><%= __('meta.titles.' + title) %> | <%= __('meta.titles.rest') %></title>
 
 		<link
 			rel="icon"
