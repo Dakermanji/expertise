@@ -1,30 +1,26 @@
 //! app.js
 
-// Load environment variables
 import env from './config/dotenv.js';
-
-import { startGoogleReviewsCron } from './cron/reviewsCron.js';
-
-// Load the Express app with all middlewares and routes
 import app from './config/express.js';
-
+import { logger } from './utils/logger.js';
+import { registerProcessHandlers } from './config/errorHandler.js';
+import { startGoogleReviewsCron } from './cron/reviewsCron.js';
 import http from 'http';
-// Socket.io will be connected here later
-// import { initSocket } from './config/socket.js';
 
-// Create and start the HTTP server
 const server = http.createServer(app);
+
 server.listen(env.PORT, () => {
-	console.log(`🚀 Server running at http://${env.HOST}:${env.PORT}`);
+	logger.info(`🚀 Server running at http://${env.HOST}:${env.PORT}`);
 });
 
-server.on('error', (err) => {
-	console.error(`❌ Server error:`, err);
-});
+server.on('error', (err) => logger.error(err));
 
-// Apply Google Reviews Cron
+// Capture fatal/unhandled process errors
+registerProcessHandlers();
+
+// Start scheduled cron safely
 try {
 	startGoogleReviewsCron();
 } catch (err) {
-	console.error(`❌ Failed to start Google Reviews cron:`, err);
+	logger.error(`Failed to start Google Reviews cron: ${err}`);
 }

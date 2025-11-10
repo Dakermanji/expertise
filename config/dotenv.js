@@ -43,6 +43,10 @@ const env = {
 	EMAIL_SERVICE: optionalEnv('EMAIL_SERVICE', 'gmail'),
 	EMAIL_USER: requireEnv('EMAIL_USER'),
 	EMAIL_PASS: requireEnv('EMAIL_PASS'),
+
+	// Sentry
+	SENTRY_DSN: optionalEnv('SENTRY_DSN', ''),
+	SENTRY_PROJECT_ID: optionalEnv('SENTRY_PROJECT_ID', ''),
 };
 
 export default env;
