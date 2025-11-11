@@ -3,7 +3,7 @@
 import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';
 
-export async function getBooking(req, res) {
+export function getBooking(req, res) {
 	res.render('booking', {
 		title: 'booking',
 		styles: ['booking_page'],

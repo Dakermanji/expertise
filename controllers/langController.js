@@ -3,7 +3,7 @@
 import express from 'express';
 const router = express.Router();
 
-export async function setLang(req, res) {
+export function setLang(req, res) {
 	const supported = ['en', 'fr', 'ar'];
 	const code = req.params.code;
 
