@@ -9,7 +9,10 @@ export function registerErrorHandlers(app) {
 		reportError(err);
 
 		if (res.headersSent) return next(err);
-		res.status(500).render('error', { message: 'Internal Server Error' });
+		res.status(500).render('error', {
+			title: '',
+			message: 'Internal Server Error',
+		});
 	});
 }
 
