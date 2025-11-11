@@ -10,7 +10,7 @@ import http from 'http';
 const server = http.createServer(app);
 
 server.listen(env.PORT, () => {
-	logger.info(`🚀 Server running at http://${env.HOST}:${env.PORT}`);
+	logger.info(`Server running at http://${env.HOST}:${env.PORT}`);
 });
 
 server.on('error', (err) => logger.error(err));

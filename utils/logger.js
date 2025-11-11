@@ -13,16 +13,16 @@ function writeLog(file, message) {
 }
 
 export const logger = {
-	info: (msg) => console.log(`ℹ️ ${msg}`),
-	warn: (msg) => console.warn(`⚠️ ${msg}`),
+	info: (msg) => console.log(`${msg}`),
+	warn: (msg) => console.warn(`${msg}`),
 	error: (err) => {
 		const text = err?.stack || err?.message || String(err);
 		writeLog('errors.log', text);
-		console.error(`❌ ${text}`);
+		console.error(`${text}`);
 	},
 	fatal: (err) => {
 		const text = err?.stack || err?.message || String(err);
 		writeLog('fatal.log', text);
-		console.error(`🚨 FATAL: ${text}`);
+		console.error(`FATAL: ${text}`);
 	},
 };
