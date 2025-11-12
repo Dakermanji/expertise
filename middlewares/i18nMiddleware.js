@@ -17,6 +17,9 @@ import i18n from 'i18n';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Supported locales
+export const SUPPORTED_LANGS = ['en', 'fr', 'ar'];
+
 // Setup __dirname since ES Modules don’t support it natively
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,7 +33,7 @@ const __dirname = path.dirname(__filename);
 export function setupI18n(app) {
 	i18n.configure({
 		// Supported locales
-		locales: ['en', 'fr', 'ar'],
+		locales: SUPPORTED_LANGS,
 
 		// Default language (French preferred for Montreal)
 		defaultLocale: 'fr',
@@ -42,8 +45,8 @@ export function setupI18n(app) {
 		syncFiles: true,
 		objectNotation: true,
 
-		// Fallbacks to English if key or language missing
-		fallbacks: { fr: 'en', ar: 'en' },
+		// Fallbacks to French if key or language missing
+		fallbacks: { en: 'fr', ar: 'fr' },
 	});
 
 	app.use(i18n.init);
