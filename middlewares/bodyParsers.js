@@ -1,9 +1,28 @@
 //! middlewares/bodyParsers.js
 
+/**
+ * Body parsing middleware
+ * -----------------------
+ * Adds support for parsing incoming request bodies in various formats.
+ *
+ * Features:
+ *  - Parses JSON payloads (for APIs or fetch requests)
+ *  - Parses URL-encoded form data (for HTML form submissions)
+ *
+ * This middleware must be applied early in the stack — before routes and sessions.
+ */
+
 import express from 'express';
 
-// Middleware to parse form and JSON bodies
+/**
+ * Registers body parser middleware on the Express app.
+ *
+ * @param {import('express').Express} app - The Express application instance.
+ */
 export function bodyParsers(app) {
-	app.use(express.urlencoded({ extended: false })); // Parses URL-encoded forms
-	app.use(express.json()); // Parses JSON payloads (e.g. from API clients)
+	// Parse application/x-www-form-urlencoded (form submissions)
+	app.use(express.urlencoded({ extended: false }));
+
+	// Parse application/json (AJAX or API requests)
+	app.use(express.json({ limit: '1mb' })); // optional limit to prevent abuse
 }
