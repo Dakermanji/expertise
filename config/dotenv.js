@@ -1,9 +1,20 @@
 //! config/dotenv.js
 
+/**
+ * Loads environment variables and provides a strict, validated configuration object.
+ * -------------------------------------------------------------------------------
+ * - Throws on missing required variables to prevent silent misconfigurations.
+ * - Provides default values for optional variables with a clear console warning.
+ * - Centralized configuration for server, database, Google APIs, email, and Sentry.
+ */
+
 import dotenv from 'dotenv';
 dotenv.config();
 
-// Utility to throw errors for required variables
+/**
+ * Throws an error if a required environment variable is missing.
+ * Helps catch deployment issues early.
+ */
 function requireEnv(variable) {
 	const value = process.env[variable];
 	if (!value) {
@@ -12,7 +23,10 @@ function requireEnv(variable) {
 	return value;
 }
 
-// Utility for optional envs
+/**
+ * Returns the value of an optional environment variable.
+ * Falls back to a default value if not found and logs a warning.
+ */
 function optionalEnv(variable, defaultValue) {
 	if (!process.env[variable]) {
 		console.warn(
@@ -22,8 +36,13 @@ function optionalEnv(variable, defaultValue) {
 	return process.env[variable] || defaultValue;
 }
 
+/**
+ * Main environment configuration object.
+ * Centralizes access to all application-level variables.
+ */
 const env = {
 	// Server
+	PROTOCOL: optionalEnv('PROTOCOL', 'http'), // corrected key here
 	PORT: optionalEnv('PORT', 3000),
 	HOST: optionalEnv('HOST', 'localhost'),
 	SESSION_SECRET: requireEnv('SESSION_SECRET'),
