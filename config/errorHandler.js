@@ -2,12 +2,12 @@
 
 import env from '../config/dotenv.js';
 import { logger } from '../utils/logger.js';
-import { reportError } from './sentry.js';
+import { captureError } from './sentry.js';
 
 export function registerErrorHandlers(app) {
 	app.use((err, req, res, next) => {
 		logger.error(err);
-		reportError(err);
+		captureError(err);
 
 		if (res.headersSent) return next(err);
 		res.status(500).render('error', {
@@ -23,10 +23,10 @@ export function registerErrorHandlers(app) {
 export function registerProcessHandlers() {
 	process.on('uncaughtException', (err) => {
 		logger.fatal(err);
-		reportError(err);
+		captureError(err);
 	});
 	process.on('unhandledRejection', (reason) => {
 		logger.fatal(reason);
-		reportError(reason);
+		captureError(reason);
 	});
 }
