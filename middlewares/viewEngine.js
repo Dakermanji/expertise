@@ -18,6 +18,7 @@
 import path from 'path';
 import expressLayouts from 'express-ejs-layouts';
 import { fileURLToPath } from 'url';
+import { logger } from '../utils/logger.js';
 
 /**
  * Resolve directory for ES Modules
@@ -41,13 +42,12 @@ export function viewEngine(app) {
 		// Set default layout file (views/layout.ejs)
 		app.set('layout', 'layout');
 
-		console.log(
-			'🟢🎨 [ViewEngine] EJS with layouts initialized successfully.'
+		logger.info(
+			'🎨 [ViewEngine] EJS with layouts initialized successfully.'
 		);
 	} catch (err) {
-		console.error(
-			'🔴🎨 [ViewEngine] Failed to initialize EJS:',
-			err.message
+		logger.error(
+			`🎨 [ViewEngine] Failed to initialize EJS: ${err.message}`
 		);
 	}
 }

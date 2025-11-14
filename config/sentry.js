@@ -16,6 +16,7 @@
 
 import * as Sentry from '@sentry/node';
 import env from './dotenv.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Initialize Sentry with environment-specific settings.
@@ -23,7 +24,7 @@ import env from './dotenv.js';
  */
 export const initSentry = (app) => {
 	if (!env.SENTRY_DSN) {
-		console.warn('🟡🎯 [Sentry] DSN not found — skipping initialization.');
+		logger.warn('🎯 [Sentry] DSN not found — skipping initialization.');
 		return;
 	}
 
@@ -35,9 +36,9 @@ export const initSentry = (app) => {
 			integrations: [],
 		});
 
-		console.log('🟢🎯 [Sentry] Initialized successfully.');
+		logger.info('🎯 [Sentry] Initialized successfully.');
 	} catch (err) {
-		console.error('🔴🎯 [Sentry] Initialization failed:', err.message);
+		logger.error(`🎯 [Sentry] Initialization failed: ${err.message}`);
 	}
 };
 
@@ -49,9 +50,9 @@ export const captureError = (err) => {
 	try {
 		Sentry.captureException(err);
 	} catch (captureErr) {
-		console.error(
-			'[Sentry] Failed to capture exception:',
-			captureErr.message
+		logger.error(
+			`🎯 [Sentry] Failed to capture exception:,
+			${captureErr.message}`
 		);
 	}
 };
@@ -85,9 +86,8 @@ export const captureWithContext = (err, context = {}) => {
 			Sentry.captureException(err);
 		});
 	} catch (captureErr) {
-		console.error(
-			'[Sentry] Failed to capture contextual exception:',
-			captureErr.message
+		logger.error(
+			`🎯 [Sentry] Failed to capture contextual exception: ${captureErr.message}`
 		);
 	}
 };

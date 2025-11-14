@@ -9,6 +9,7 @@
  */
 
 import dotenv from 'dotenv';
+import { logger } from '../utils/logger.js';
 dotenv.config();
 
 /**
@@ -18,7 +19,8 @@ dotenv.config();
 function requireEnv(variable) {
 	const value = process.env[variable];
 	if (!value) {
-		throw new Error(`[Missing Env]: ${variable} is required`);
+		logger.fatal(`⚙️ [Missing Env]: ${variable} is required`);
+		throw new Error(`☠️⚙️ [Missing Env]: ${variable} is required`);
 	}
 	return value;
 }
@@ -29,8 +31,8 @@ function requireEnv(variable) {
  */
 function optionalEnv(variable, defaultValue) {
 	if (!process.env[variable]) {
-		console.warn(
-			`🟡⚙️ [Default Env]: ${variable} not found, using ${defaultValue}`
+		logger.warn(
+			`⚙️ [Default Env]: ${variable} not found, using ${defaultValue}`
 		);
 	}
 	return process.env[variable] || defaultValue;
@@ -42,7 +44,7 @@ function optionalEnv(variable, defaultValue) {
  */
 const env = {
 	// Server
-	PROTOCOL: optionalEnv('PROTOCOL', 'http'), // corrected key here
+	PROTOCOL: optionalEnv('PROTOCOL', 'http'),
 	PORT: optionalEnv('PORT', 3000),
 	HOST: optionalEnv('HOST', 'localhost'),
 	SESSION_SECRET: requireEnv('SESSION_SECRET'),

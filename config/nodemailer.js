@@ -19,6 +19,7 @@
 
 import nodemailer from 'nodemailer';
 import env from './dotenv.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Create the email transporter using credentials from .env.
@@ -41,12 +42,11 @@ const transporter = nodemailer.createTransport({
 transporter
 	.verify()
 	.then(() =>
-		console.log('🟢✉️ [Nodemailer] Transporter verified successfully.')
+		logger.info('✉️ [Nodemailer] Transporter verified successfully.')
 	)
 	.catch((err) =>
-		console.error(
-			'🔴✉️ [Nodemailer] Transporter verification failed:',
-			err.message
+		logger.error(
+			`✉️ [Nodemailer] Transporter verification failed: ${err.message}`
 		)
 	);
 

@@ -16,6 +16,7 @@
 import i18n from 'i18n';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { logger } from '../utils/logger.js';
 
 // Supported locales
 export const SUPPORTED_LANGS = ['en', 'fr', 'ar'];
@@ -81,7 +82,7 @@ export function setupI18n(app) {
 		next();
 	});
 
-	console.log('🟢🌐 [i18n] Multilingual support initialized.');
+	logger.info('🌐 [i18n] Multilingual support initialized.');
 }
 
 /**

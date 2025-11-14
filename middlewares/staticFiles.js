@@ -15,6 +15,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { logger } from '../utils/logger.js';
 
 /**
  * Resolve the current file path since ES Modules do not support __dirname natively.
@@ -36,5 +37,5 @@ export function staticFiles(app) {
 		})
 	);
 
-	console.log(`🟢📁 [Static] Serving files from: ${publicPath}`);
+	logger.info(`📁 [Static] Serving files from: ${publicPath}`);
 }

@@ -13,6 +13,7 @@
  */
 
 import { SUPPORTED_LANGS } from '../middlewares/i18nMiddleware.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Sets the session language and redirects user back to previous page.
@@ -27,9 +28,9 @@ export function setLang(req, res) {
 	if (SUPPORTED_LANGS.includes(code)) {
 		req.session.lang = code;
 		req.setLocale(code);
-		console.log(`🟢🌐 [i18n] Language switched to: ${code}`);
+		logger.info(`🌐 [i18n] Language switched to: ${code}`);
 	} else {
-		console.warn(`🟡🌐 [i18n] Unsupported language attempted: ${code}`);
+		logger.warn(`🌐 [i18n] Unsupported language attempted: ${code}`);
 	}
 
 	// Redirect back to previous page or home

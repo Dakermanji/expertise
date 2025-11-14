@@ -19,6 +19,7 @@
 
 import session from 'express-session';
 import env from '../config/dotenv.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Initialize and attach the session middleware.
@@ -42,12 +43,16 @@ export function initializeSession(app) {
 			},
 		})
 	);
-	const status = isProduction ? '🟢' : '🟡';
-	const mode = isProduction ? 'secure' : 'dev';
 
-	console.log(
-		`${status}🔐 [Session] Initialized (${mode} mode, 2h lifetime)`
-	);
+	const mode = isProduction ? 'secure' : 'dev';
+	const message = `🔐 [Session] Initialized (${mode} mode, 2h lifetime)`;
+
+	// Production → info, Development → warn
+	if (isProduction) {
+		logger.info(message);
+	} else {
+		logger.warn(message);
+	}
 }
 
 /**

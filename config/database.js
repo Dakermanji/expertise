@@ -14,6 +14,7 @@
 
 import mysql from 'mysql2';
 import dotenv from './dotenv.js';
+import { logger } from '../utils/logger.js';
 
 /**
  * Create a connection pool for reusing MySQL connections.
@@ -44,10 +45,10 @@ const promisePool = pool.promise();
 (async () => {
 	try {
 		const connection = await promisePool.getConnection();
-		console.log('🟢💾 [Database] Connected successfully.');
+		logger.info('💾 [Database] Connected successfully.');
 		connection.release();
 	} catch (err) {
-		console.error('🔴💾 [Database] Connection failed:', err.message);
+		logger.error(`💾 [Database] Connection failed: ${err.message}`);
 	}
 })();
 
