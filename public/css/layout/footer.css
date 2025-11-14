@@ -1,0 +1,28 @@
+/*! public/css/layout/footer.css */
+
+/* ---------------------------------------------------------
+   🔻 Footer Styling
+--------------------------------------------------------- */
+footer {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/* Orange branding accents */
+.orange {
+    color: #fa6806;
+}
+
+/* ---------------------------------------------------------
+   🍪 Cookies Text (shared)
+--------------------------------------------------------- */
+.cookies {
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.cookies a {
+    text-decoration: none;
+    font-weight: normal;
+}

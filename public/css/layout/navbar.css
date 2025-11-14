@@ -1,0 +1,50 @@
+/*! public/css/layout/navbar.css */
+
+/* ---------------------------------------------------------
+   🧭 Navbar Layout
+--------------------------------------------------------- */
+.navbar .container {
+    max-width: 2000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Nav items alignment */
+nav .container ul {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Center icon + label */
+nav ul li {
+    text-align: center;
+}
+
+/* Logo size */
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ---------------------------------------------------------
+   📱 Responsive Adjustments
+--------------------------------------------------------- */
+@media (max-width: 992px) {
+    nav .container ul {
+        align-items: start;
+    }
+
+    nav .container .nav-item {
+        margin: 2px 20px;
+    }
+}
+
+/* ---------------------------------------------------------
+   ❤️ Booking Button Highlight
+--------------------------------------------------------- */
+.nav-booking {
+    font-weight: 600;
+    color: var(--color-brand) !important;
+}
