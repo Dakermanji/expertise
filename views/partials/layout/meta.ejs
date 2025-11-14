@@ -1,0 +1,43 @@
+<!-- views/partials/layout/meta.ejs -->
+
+<!-- 🔍 SEO & META TAGS -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- 📝 Meta Description -->
+<meta name="description" content="<%= __('meta.description', 'Certified car rentals and improvement lessons for your SAAQ road exam in Montreal, Laval and more.') %>" />
+
+<!-- 🔗 Canonical -->
+<link rel="canonical" href="<%= fullUrl %>" />
+
+<!-- 🌍 Language and Geo -->
+<meta name="language" content="<%= currentLang %>" />
+<meta name="geo.region" content="CA-QC" />
+<meta name="geo.placename" content="Montreal" />
+<meta name="geo.position" content="45.5017;-73.5673" />
+
+<!-- 📲 Open Graph for Social -->
+<meta property="og:title" content="<%= __('meta.titles.' + title, 'Bienvenue') %> | <%= __('meta.titles.rest', 'Expertise Pro') %>" />
+<meta property="og:description" content="<%= __('meta.description') %>" />
+<meta property="og:image" content="https://location-ca.com/images/logo/logo.png" />
+<meta property="og:url" content="<%= fullUrl %>" />
+<meta property="og:type" content="website" />
+
+<!-- 🧾 JSON-LD (Schema.org) -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "LocalBusiness",
+	"name": "Expertise Pro",
+	"url": "https://expertise-pro.ca",
+	"telephone": "+1-514-246-4688",
+	"address": {
+		"addressLocality": "Montreal",
+		"addressRegion": "QC",
+		"addressCountry": "CA"
+	}
+}
+</script>
+
+<!-- 🏷️ Title -->
+<title><%= __('meta.titles.' + title, title, 'Bienvenue') %> | <%= __('meta.titles.rest', 'Expertise Pro') %></title>

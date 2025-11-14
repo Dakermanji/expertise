@@ -1,0 +1,13 @@
+<!-- views/partials/layout/scripts.ejs -->
+
+<!-- ⚙️ CORE SCRIPTS -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+	crossorigin="anonymous"
+	defer
+></script>
+
+<!-- ⚙️ PAGE SCRIPTS -->
+<% if (scripts) { scripts.forEach(script => { %>
+<script src="/js/<%= script %>.js" defer></script>
+<% }) } %>
