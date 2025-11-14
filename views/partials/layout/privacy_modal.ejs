@@ -1,18 +1,36 @@
-<div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+<!-- views/partials/layout/privacy_modal.ejs -->
+<!-- 🔒 Privacy / Cookies Modal -->
+<div
+	class="modal fade"
+	id="privacyModal"
+	tabindex="-1"
+	aria-hidden="true"
+	role="dialog"
+	aria-modal="true"
+	aria-labelledby="privacyModalLabel"
+>
 	<div class="modal-dialog modal-lg modal-dialog-centered">
 		<div class="modal-content shadow">
+
+			<!-- 🔹 Modal Header -->
 			<div class="modal-header">
-				<h5 class="modal-title"><%= __('footer.privacy_title') %></h5>
+				<h5 class="modal-title" id="privacyModalLabel">
+					<%= __('footer.privacy_title', 'Politique de confidentialité') %>
+				</h5>
+
 				<button
 					type="button"
 					class="btn-close"
 					data-bs-dismiss="modal"
-					aria-label="<%= __('common.close') %>"
+					aria-label="<%= __('common.close', 'Fermer') %>"
 				></button>
 			</div>
-			<div class="modal-body text-begin small">
-				<%= __('footer.privacy_content') %>
+
+			<!-- 📄 Modal Body -->
+			<div class="modal-body small text-<%= currentLang === 'ar' ? 'end' : 'start' %>">
+				<%= __('footer.privacy_content', 'Nous ne recueillons que les informations personnelles soumises via les formulaires de réservation. Aucun suivi ni cookies tiers ne sont utilisés. Vos données sont uniquement utilisées pour vous contacter concernant votre demande. Pour toute question, contactez-nous à l’adresse location.que.ca@gmail.com.') %>
 			</div>
+
 		</div>
 	</div>
 </div>

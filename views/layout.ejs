@@ -2,20 +2,27 @@
 <!DOCTYPE html>
 <html lang="<%= currentLang %>" dir="<%= currentLang === 'ar' ? 'rtl' : 'ltr' %>">
 	<head>
+
 		<%- include('partials/layout/meta') %>
+
 		<%- include('partials/layout/favicons') %>
+
 		<%- include('partials/layout/styles') %>
 	</head>
 
 	<body>
 		<%- include('partials/layout/navbar') %>
+
 		<%- include('partials/layout/flash') %>
+
+		<!-- 🧱 Body -->
 
 		<main>
 			<%- body %>
 		</main>
 
 		<%- include('partials/layout/footer') %>
+
 		<%- include('partials/layout/privacy_modal') %>
 
 		<%- include('partials/layout/scripts') %>
