@@ -1,7 +1,7 @@
-<% const languages = {fr: {language: "française", flag: "qc"}, en: {language:
-"English", flag: "ca"} , ar: {language: "عربي", flag: "lb"}}%>
+<!-- views/partials/layout/navbar.ejs -->
 <nav
 	class="navbar navbar-expand-lg bg-light-custom border-bottom shadow-sm fixed-top"
+	aria-label="Main Navigation"
 >
 	<div class="container">
 		<a
@@ -31,43 +31,43 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/"
 						><i class="bi bi-house-door me-1"></i> <%=
-						__('navbar.home') %></a
+						__('navbar.home', 'Accueil') %></a
 					>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/#services"
 						><i class="bi bi-gear me-1"></i> <%=
-						__('navbar.services') %></a
+						__('navbar.services', 'Services') %></a
 					>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#about"
+					<a class="nav-link" href="/#about"
 						><i class="bi bi-info-circle me-1"></i> <%=
-						__('navbar.about') %></a
+						__('navbar.about', 'À propos') %></a
 					>
 				</li>
 				<li class="nav-item">
 					<a href="/#faq" class="nav-link">
 						<i class="bi bi-question-circle"></i>
-						<%= __('navbar.faq') %>
+						<%= __('navbar.faq', 'FAQ') %>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/#reviews">
-						<i class="bi bi-star me-1"></i> <%= __('navbar.reviews')
+						<i class="bi bi-star me-1"></i> <%= __('navbar.reviews', 'Avis')
 						%>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link text-danger" href="/booking"
+					<a class="nav-link nav-booking" href="/booking"
 						><i class="bi bi-calendar-check me-1"></i> <%=
-						__('navbar.booking') %></a
+						__('navbar.booking','Réservation') %></a
 					>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="/#contact"
 						><i class="bi bi-envelope me-1"></i> <%=
-						__('navbar.contact') %></a
+						__('navbar.contact', 'Contact') %></a
 					>
 				</li>
 				<li class="nav-item dropdown">
@@ -79,29 +79,29 @@
 						aria-expanded="false"
 					>
 						<img
-							src="/images/flags/<%= languages[currentLang].flag %>.svg"
+							src="/images/flags/<%= LANG_DATA[currentLang].flag %>.svg"
 							alt="<%= currentLang %>"
 							width="20"
 							height="20"
 							class="mx-1"
 						/>
-						<span> <%= languages[currentLang].language %></span>
+						<span> <%= LANG_DATA[currentLang].label %></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-end">
-						<% for (let code in languages) { %>
+						<% for (let code in LANG_DATA) { %>
 						<li>
 							<a
-								class="dropdown-item d-flex align-items-center"
+								class="dropdown-item d-flex"
 								href="/lang/<%= code %>"
 							>
 								<img
-									src="/images/flags/<%= languages[code].flag %>.svg"
+									src="/images/flags/<%= LANG_DATA[code].flag %>.svg"
 									alt="<%= code %>"
 									width="20"
 									height="20"
-									class="mx-1"
+									class="mx-2"
 								/>
-								<%= languages[code].language %>
+								<%= LANG_DATA[code].label %>
 							</a>
 						</li>
 						<% } %>
@@ -112,6 +112,7 @@
 						class="btn btn-outline-danger btn-sm ms-2"
 						target="_blank"
 						href="https://search.google.com/local/writereview?placeid=<%= google_place_id %>"
+						data-bs-toggle="tooltip" title="<%= __('navbar.leave_review', 'Laisser un avis') %>"
 					>
 						<i class="bi bi-heart-fill"></i>
 					</a>

@@ -18,7 +18,7 @@ import { initializeFlash } from '../middlewares/flash.js';
 import { setupI18n } from '../middlewares/i18n.js';
 import { bodyParsers } from '../middlewares/bodyParsers.js';
 import { staticFiles } from '../middlewares/staticFiles.js';
-import { initializeFullUrl } from '../middlewares/fullUrl.js';
+import { initializeCustoms } from '../middlewares/customs.js';
 
 /**
  * Apply all global middlewares to the Express app.
@@ -37,7 +37,7 @@ const applyMiddlewares = (app) => {
 	initializeFlash(app);
 
 	// Compute full URL info
-	initializeFullUrl(app);
+	initializeCustoms(app);
 
 	// Setup multilingual support (English, French, Arabic)
 	setupI18n(app);
