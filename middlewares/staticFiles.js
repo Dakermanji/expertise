@@ -36,5 +36,5 @@ export function staticFiles(app) {
 		})
 	);
 
-	console.log(`[Static] Serving files from: ${publicPath}`);
+	console.log(`🟢📁 [Static] Serving files from: ${publicPath}`);
 }

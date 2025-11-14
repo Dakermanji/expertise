@@ -42,11 +42,11 @@ export function initializeSession(app) {
 			},
 		})
 	);
+	const status = isProduction ? '🟢' : '🟡';
+	const mode = isProduction ? 'secure' : 'dev';
 
 	console.log(
-		`[Session] Initialized (${
-			isProduction ? 'secure' : 'dev'
-		} mode, 2h lifetime)`
+		`${status}🔐 [Session] Initialized (${mode} mode, 2h lifetime)`
 	);
 }
 

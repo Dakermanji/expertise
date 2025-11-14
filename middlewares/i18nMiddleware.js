@@ -81,7 +81,7 @@ export function setupI18n(app) {
 		next();
 	});
 
-	console.log('[i18n] Multilingual support initialized.');
+	console.log('🟢🌐 [i18n] Multilingual support initialized.');
 }
 
 /**

@@ -41,9 +41,14 @@ export function viewEngine(app) {
 		// Set default layout file (views/layout.ejs)
 		app.set('layout', 'layout');
 
-		console.log('[ViewEngine] EJS with layouts initialized successfully.');
+		console.log(
+			'🟢🎨 [ViewEngine] EJS with layouts initialized successfully.'
+		);
 	} catch (err) {
-		console.error('[ViewEngine] Failed to initialize EJS:', err.message);
+		console.error(
+			'🔴🎨 [ViewEngine] Failed to initialize EJS:',
+			err.message
+		);
 	}
 }
 

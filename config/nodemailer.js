@@ -40,10 +40,12 @@ const transporter = nodemailer.createTransport({
  */
 transporter
 	.verify()
-	.then(() => console.log('[Nodemailer] Transporter verified successfully.'))
+	.then(() =>
+		console.log('🟢✉️ [Nodemailer] Transporter verified successfully.')
+	)
 	.catch((err) =>
 		console.error(
-			'[Nodemailer] Transporter verification failed:',
+			'🔴✉️ [Nodemailer] Transporter verification failed:',
 			err.message
 		)
 	);

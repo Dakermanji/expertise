@@ -23,7 +23,7 @@ import env from './dotenv.js';
  */
 export const initSentry = (app) => {
 	if (!env.SENTRY_DSN) {
-		console.warn('[Sentry] DSN not found — skipping initialization.');
+		console.warn('🟡🎯 [Sentry] DSN not found — skipping initialization.');
 		return;
 	}
 
@@ -35,9 +35,9 @@ export const initSentry = (app) => {
 			integrations: [],
 		});
 
-		console.log('[Sentry] Initialized successfully.');
+		console.log('🟢🎯 [Sentry] Initialized successfully.');
 	} catch (err) {
-		console.error('[Sentry] Initialization failed:', err.message);
+		console.error('🔴🎯 [Sentry] Initialization failed:', err.message);
 	}
 };
 

@@ -28,7 +28,9 @@ const server = http.createServer(app);
  * Logs the URL for quick reference.
  */
 server.listen(env.PORT, () => {
-	logger.info(`Server running at ${env.PROTOCOL}://${env.HOST}:${env.PORT}`);
+	logger.info(
+		`🟢💻 [Server] Server is running at ${env.PROTOCOL}://${env.HOST}:${env.PORT}`
+	);
 });
 
 /**
@@ -52,7 +54,7 @@ registerProcessHandlers();
 try {
 	startGoogleReviewsCron();
 } catch (err) {
-	logger.error(`Failed to start Google Reviews cron: ${err}`);
+	logger.error(`⭐ [Cron] Failed to start Google Reviews cron: ${err}`);
 }
 
 /**
@@ -60,9 +62,9 @@ try {
  * for WHC or any shared hosting that might send SIGTERM.
  */
 process.on('SIGTERM', () => {
-	logger.info('SIGTERM received, shutting down gracefully...');
+	logger.info('🚩💻 [Process] SIGTERM received, shutting down gracefully...');
 	server.close(() => {
-		logger.info('Server closed.');
+		logger.info('🟢💻 [Server] Closed successfully.');
 		process.exit(0);
 	});
 });

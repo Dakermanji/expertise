@@ -30,7 +30,7 @@ function requireEnv(variable) {
 function optionalEnv(variable, defaultValue) {
 	if (!process.env[variable]) {
 		console.warn(
-			`[Default Env]: ${variable} not found, using ${defaultValue}`
+			`🟡⚙️ [Default Env]: ${variable} not found, using ${defaultValue}`
 		);
 	}
 	return process.env[variable] || defaultValue;

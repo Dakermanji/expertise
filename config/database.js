@@ -44,10 +44,10 @@ const promisePool = pool.promise();
 (async () => {
 	try {
 		const connection = await promisePool.getConnection();
-		console.log('[Database] Connected successfully.');
+		console.log('🟢💾 [Database] Connected successfully.');
 		connection.release();
 	} catch (err) {
-		console.error('[Database] Connection failed:', err.message);
+		console.error('🔴💾 [Database] Connection failed:', err.message);
 	}
 })();
 

@@ -27,9 +27,9 @@ export function setLang(req, res) {
 	if (SUPPORTED_LANGS.includes(code)) {
 		req.session.lang = code;
 		req.setLocale(code);
-		console.log(`[i18n] Language switched to: ${code}`);
+		console.log(`🟢🌐 [i18n] Language switched to: ${code}`);
 	} else {
-		console.warn(`[i18n] Unsupported language attempted: ${code}`);
+		console.warn(`🟡🌐 [i18n] Unsupported language attempted: ${code}`);
 	}
 
 	// Redirect back to previous page or home
