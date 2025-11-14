@@ -1,22 +1,33 @@
-<footer class="text-center text-muted text-center bg-light-custom pt-2 pb-2">
-	<%= __('footer.built_by') %>
-	<a
-		href="https://dakermanji.com"
-		class="text-decoration-none fw-bold"
-		target="_blank"
-	>
-		<span class="orange">D</span>akermanji <span class="orange">W</span>eb
-		<span class="orange">D</span>ev
-	</a>
-	<p class="cookies text-muted">
-		<%= __('footer.cookies_text') %>
+<!-- views/partials/layout/footer.ejs -->
+<!-- 🔻 Footer Section -->
+<footer class="text-center text-muted bg-light-custom pt-2 pb-2" aria-label="Footer">
+
+	<!-- 🛠 Built By Signature -->
+	<span>
+		<%= __('footer.built_by', 'Site web par') %>
+		<a
+			href="https://dakermanji.com"
+			class="text-decoration-none fw-bold"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			<span class="orange">D</span>akermanji
+			<span class="orange">W</span>eb
+			<span class="orange">D</span>ev
+		</a>
+	</span>
+
+	<!-- 🍪 Cookies / Privacy Link -->
+	<p class="cookies text-muted mb-0">
+		<%= __('footer.cookies_text','Ce site utilise des cookies essentiels pour assurer son bon fonctionnement.','Nous ne recueillons que les informations personnelles soumises via les formulaires de réservation. Aucun suivi ni cookies tiers ne sont utilisés. Vos données sont uniquement utilisées pour vous contacter concernant votre demande. Pour toute question, contactez-nous à l’adresse location.que.ca@gmail.com.') %>
 		<a
 			href="#"
-			data-bs-toggle="modal"
 			class="link-danger"
+			data-bs-toggle="modal"
 			data-bs-target="#privacyModal"
 		>
-			<%= __('footer.privacy_title') %></a
-		>
+			<%= __('footer.privacy_title','Politique de confidentialité') %>
+		</a>
 	</p>
+
 </footer>
