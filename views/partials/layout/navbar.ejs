@@ -1,13 +1,13 @@
 <!-- views/partials/layout/navbar.ejs -->
+<!-- 🔹 Main Navigation Bar -->
 <nav
 	class="navbar navbar-expand-lg bg-light-custom border-bottom shadow-sm fixed-top"
 	aria-label="Main Navigation"
 >
 	<div class="container">
-		<a
-			class="navbar-brand text-brand d-flex align-items-center fw-bold"
-			href="/"
-		>
+
+		<!-- 🔹 Brand / Logo -->
+		<a class="navbar-brand text-brand d-flex align-items-center fw-bold" href="/">
 			<img
 				src="/images/logo/logo.png"
 				alt="Expertise Logo"
@@ -17,6 +17,7 @@
 			<span class="d-none d-md-inline">Expertise Pro</span>
 		</a>
 
+		<!-- 🔹 Mobile Menu Toggle -->
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -26,50 +27,67 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 
+		<!-- 🔹 Collapsible Navigation Items -->
 		<div class="collapse navbar-collapse" id="mainNav">
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+				<!-- 🔸 Home -->
 				<li class="nav-item">
-					<a class="nav-link" href="/"
-						><i class="bi bi-house-door me-1"></i> <%=
-						__('navbar.home', 'Accueil') %></a
-					>
+					<a class="nav-link" href="/">
+						<i class="bi bi-house-door me-1"></i>
+						<%= __('navbar.home', 'Accueil') %>
+					</a>
 				</li>
+
+				<!-- 🔸 Services -->
 				<li class="nav-item">
-					<a class="nav-link" href="/#services"
-						><i class="bi bi-gear me-1"></i> <%=
-						__('navbar.services', 'Services') %></a
-					>
+					<a class="nav-link" href="/#services">
+						<i class="bi bi-gear me-1"></i>
+						<%= __('navbar.services', 'Services') %>
+					</a>
 				</li>
+
+				<!-- 🔸 About -->
 				<li class="nav-item">
-					<a class="nav-link" href="/#about"
-						><i class="bi bi-info-circle me-1"></i> <%=
-						__('navbar.about', 'À propos') %></a
-					>
+					<a class="nav-link" href="/#about">
+						<i class="bi bi-info-circle me-1"></i>
+						<%= __('navbar.about', 'À propos') %>
+					</a>
 				</li>
+
+				<!-- 🔸 FAQ -->
 				<li class="nav-item">
-					<a href="/#faq" class="nav-link">
+					<a class="nav-link" href="/#faq">
 						<i class="bi bi-question-circle"></i>
 						<%= __('navbar.faq', 'FAQ') %>
 					</a>
 				</li>
+
+				<!-- 🔸 Reviews Section -->
 				<li class="nav-item">
 					<a class="nav-link" href="/#reviews">
-						<i class="bi bi-star me-1"></i> <%= __('navbar.reviews', 'Avis')
-						%>
+						<i class="bi bi-star me-1"></i>
+						<%= __('navbar.reviews', 'Avis') %>
 					</a>
 				</li>
+
+				<!-- 🔸 Booking Button (highlighted separately in CSS) -->
 				<li class="nav-item">
-					<a class="nav-link nav-booking" href="/booking"
-						><i class="bi bi-calendar-check me-1"></i> <%=
-						__('navbar.booking','Réservation') %></a
-					>
+					<a class="nav-link nav-booking" href="/booking">
+						<i class="bi bi-calendar-check me-1"></i>
+						<%= __('navbar.booking','Réservation') %>
+					</a>
 				</li>
+
+				<!-- 🔸 Contact -->
 				<li class="nav-item">
-					<a class="nav-link" href="/#contact"
-						><i class="bi bi-envelope me-1"></i> <%=
-						__('navbar.contact', 'Contact') %></a
-					>
+					<a class="nav-link" href="/#contact">
+						<i class="bi bi-envelope me-1"></i>
+						<%= __('navbar.contact', 'Contact') %>
+					</a>
 				</li>
+
+				<!-- 🔻 Language Selector Dropdown -->
 				<li class="nav-item dropdown">
 					<a
 						class="nav-link dropdown-toggle d-flex align-items-center"
@@ -78,6 +96,7 @@
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
+						<!-- Current Language Flag -->
 						<img
 							src="/images/flags/<%= LANG_DATA[currentLang].flag %>.svg"
 							alt="<%= currentLang %>"
@@ -85,15 +104,14 @@
 							height="20"
 							class="mx-1"
 						/>
-						<span> <%= LANG_DATA[currentLang].label %></span>
+						<span><%= LANG_DATA[currentLang].label %></span>
 					</a>
+
+					<!-- Dropdown list of languages -->
 					<ul class="dropdown-menu dropdown-menu-end">
 						<% for (let code in LANG_DATA) { %>
 						<li>
-							<a
-								class="dropdown-item d-flex"
-								href="/lang/<%= code %>"
-							>
+							<a class="dropdown-item d-flex" href="/lang/<%= code %>">
 								<img
 									src="/images/flags/<%= LANG_DATA[code].flag %>.svg"
 									alt="<%= code %>"
@@ -107,16 +125,20 @@
 						<% } %>
 					</ul>
 				</li>
+
+				<!-- ❤️ Google Review Button -->
 				<li class="nav-item d-none d-lg-block">
 					<a
 						class="btn btn-outline-danger btn-sm ms-2"
 						target="_blank"
 						href="https://search.google.com/local/writereview?placeid=<%= google_place_id %>"
-						data-bs-toggle="tooltip" title="<%= __('navbar.leave_review', 'Laisser un avis') %>"
+						data-bs-toggle="tooltip"
+						title="<%= __('navbar.leave_review', 'Laisser un avis') %>"
 					>
 						<i class="bi bi-heart-fill"></i>
 					</a>
 				</li>
+
 			</ul>
 		</div>
 	</div>
