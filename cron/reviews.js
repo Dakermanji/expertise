@@ -1,4 +1,4 @@
-//! cron/reviewsCron.js
+//! cron/reviews.js
 
 import cron from 'node-cron';
 import { fetchGoogleReviews } from '../utils/googleReviews.js';

@@ -1,4 +1,4 @@
-//! controllers/bookingController.js
+//! controllers/booking.js
 
 import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';

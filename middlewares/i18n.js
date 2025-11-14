@@ -1,4 +1,4 @@
-//! middlewares/i18nMiddleware.js
+//! middlewares/i18n.js
 
 /**
  * Internationalization (i18n) middleware

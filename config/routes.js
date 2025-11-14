@@ -14,9 +14,9 @@
  *   export default router;
  */
 
-import indexRoutes from '../routes/indexRoutes.js';
-import langRoutes from '../routes/langRoutes.js';
-import bookingRoutes from '../routes/bookingRoutes.js';
+import indexRoutes from '../routes/index.js';
+import langRoutes from '../routes/lang.js';
+import bookingRoutes from '../routes/booking.js';
 
 /**
  * Registers all route groups on the provided Express app instance.

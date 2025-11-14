@@ -1,4 +1,4 @@
-//! middlewares/sessionMiddleware.js
+//! middlewares/session.js
 
 /**
  * Session middleware

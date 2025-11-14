@@ -1,4 +1,4 @@
-//! middlewares/fullUrlMiddleware.js
+//! middlewares/fullUrl.js
 
 /**
  * Full URL middleware

@@ -1,4 +1,4 @@
-//! routes/langRoutes.js
+//! routes/lang.js
 
 /**
  * Language routes
@@ -15,7 +15,7 @@
  */
 
 import express from 'express';
-import { setLang } from '../controllers/langController.js';
+import { setLang } from '../controllers/lang.js';
 
 const router = express.Router();
 

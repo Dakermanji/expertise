@@ -1,4 +1,4 @@
-//! controllers/indexController.js
+//! controllers/index.js
 
 import env from '../config/dotenv.js';
 import { GoogleReview } from '../models/GoogleReview.js';

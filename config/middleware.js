@@ -13,12 +13,12 @@
  */
 
 import { viewEngine } from '../middlewares/viewEngine.js';
-import { initializeSession } from '../middlewares/sessionMiddleware.js';
-import { initializeFlash } from '../middlewares/flashMiddleware.js';
-import { setupI18n } from '../middlewares/i18nMiddleware.js';
+import { initializeSession } from '../middlewares/session.js';
+import { initializeFlash } from '../middlewares/flash.js';
+import { setupI18n } from '../middlewares/i18n.js';
 import { bodyParsers } from '../middlewares/bodyParsers.js';
 import { staticFiles } from '../middlewares/staticFiles.js';
-import { initializeFullUrl } from '../middlewares/fullUrlMiddleware.js';
+import { initializeFullUrl } from '../middlewares/fullUrl.js';
 
 /**
  * Apply all global middlewares to the Express app.

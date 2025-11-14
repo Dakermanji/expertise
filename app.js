@@ -14,7 +14,7 @@ import env from './config/dotenv.js';
 import app from './config/express.js';
 import { logger } from './utils/logger.js';
 import { registerProcessHandlers } from './config/errorHandler.js';
-import { startGoogleReviewsCron } from './cron/reviewsCron.js';
+import { startGoogleReviewsCron } from './cron/reviews.js';
 import http from 'http';
 
 /**

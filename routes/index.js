@@ -1,7 +1,7 @@
-//! routes/indexRoutes.js
+//! routes/index.js
 
 import express from 'express';
-import { getHome } from '../controllers/indexController.js';
+import { getHome } from '../controllers/index.js';
 
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-//! middlewares/flashMiddleware.js
+//! middlewares/flash.js
 
 /**
  * Flash message middleware

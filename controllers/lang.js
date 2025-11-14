@@ -1,4 +1,4 @@
-//! controllers/langController.js
+//! controllers/lang.js
 
 /**
  * Language controller
@@ -12,7 +12,7 @@
  *   /lang/ar → Switches interface to Arabic
  */
 
-import { SUPPORTED_LANGS } from '../middlewares/i18nMiddleware.js';
+import { SUPPORTED_LANGS } from '../middlewares/i18n.js';
 import { logger } from '../utils/logger.js';
 
 /**
