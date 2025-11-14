@@ -45,6 +45,27 @@ nav ul li {
    ❤️ Booking Button Highlight
 --------------------------------------------------------- */
 .nav-booking {
+    position: relative;
     font-weight: 600;
-    color: var(--color-brand) !important;
+    color: var(--color-brand);
+    transition: color 0.3s ease;
+}
+
+.nav-booking::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand-hover);
+    transition: width 0.3s ease;
+}
+
+.nav-booking:hover {
+    color: var(--color-brand-hover);
+}
+
+.nav-booking:hover::after {
+    width: 100%;
 }

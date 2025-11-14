@@ -29,7 +29,7 @@ const server = http.createServer(app);
  */
 server.listen(env.PORT, () => {
 	logger.info(
-		`🟢💻 [Server] Server is running at ${env.PROTOCOL}://${env.HOST}:${env.PORT}`
+		`💻 [Server] Server is running at ${env.PROTOCOL}://${env.HOST}:${env.PORT}`
 	);
 });
 
