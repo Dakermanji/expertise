@@ -26,13 +26,14 @@
     color: white !important;
     background-color: var(--color-primary);
     border: 2px solid var(--color-primary);
-    padding: 0.85rem 2rem;
     border-radius: var(--radius-md);
-    font-size: 1.2rem;
-
-    /* ⭐ Gentle pulse until hover */
-    animation: ctaPulse 1.8s ease-in-out infinite;
     transition: all 0.3s ease;
+}
+
+.booking-btn-cta {
+    padding: 0.85rem 2rem;
+    font-size: 1.2rem;
+    animation: ctaPulse 1.8s ease-in-out infinite;
 }
 
 /* Pulse animation (subtle & professional) */
@@ -45,7 +46,7 @@
 /* Hover → Stop pulse */
 .booking-btn:hover,
 .booking-btn:focus {
-    animation: none !important;        /* Stop pulsing */
+    animation: none !important;
     color: var(--color-primary) !important;
     background-color: white;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);

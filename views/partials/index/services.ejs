@@ -1,54 +1,89 @@
-<section id="services" class="py-5 text-center container">
-	<h1 class="display-4 mb-4"><%= __('services.title') %></h1>
-	<p class="lead"><%= __('services.subtitle') %></p>
+<!-- 		 -->
+<!-- ---------------------------------------------------------
+   🚗 Services Section
+   Shows the three main service categories:
+   - Improvement Lessons
+   - Car Rental for SAAQ Exam
+   - Full Driving Courses
+--------------------------------------------------------- -->
+<section id="services" class="services-section py-5 text-center container animate-services">
+
+	<h1 class="display-5 mb-3"><%= __('services.title') %></h1>
+	<p class="lead text-muted mb-4"><%= __('services.subtitle') %></p>
 
 	<div class="row mt-4 g-4">
+
+		<!-- 🔧 Improvement Lessons -->
 		<div class="our_services col-md-4">
-			<div class="card h-100 p-3">
+			<div class="card h-100 p-3 service-card">
 				<img
 					src="/images/services/improvement_lessons.png"
+					alt="Improvement lessons"
+					loading="lazy"
 					class="mb-2"
 				/>
-				<i class="bi bi-speedometer2 display-4 text-brand mb-2"></i>
-				<h5><%= __('services.improvement_lessons') %></h5>
-				<p><%= __('services.improvement_lessons_desc') %></p>
-				<a href="/booking/improvement_lessons" class="btn btn-booking">
+				<i class="bi bi-speedometer2 display-5 text-brand mb-2"></i>
+				<h5 class="fw-bold"><%= __('services.improvement_lessons') %></h5>
+				<p class="text-muted"><%= __('services.improvement_lessons_desc') %></p>
+
+				<a href="/booking/improvement_lessons" class="btn booking-btn booking-btn-services mt-auto">
 					<i class="bi bi-calendar-check mx-1"></i>
 					<%= __('common.book_now') %>
 				</a>
 			</div>
 		</div>
+
+		<!-- 🚘 Car Rental -->
 		<div class="our_services col-md-4">
-			<div class="card h-100 p-3">
-				<img src="/images/services/car_rental.png" class="mb-2" />
-				<i class="bi bi-car-front display-4 text-brand mb-2"></i>
-				<h5><%= __('services.car_rental') %></h5>
-				<p><%= __('services.car_rental_desc') %></p>
-				<a href="/booking/car_rental" class="btn btn-booking">
+			<div class="card h-100 p-3 service-card">
+				<img
+					src="/images/services/car_rental.png"
+					alt="Car rental for SAAQ exam"
+					loading="lazy"
+					class="mb-2"
+				/>
+				<i class="bi bi-car-front display-5 text-brand mb-2"></i>
+				<h5 class="fw-bold"><%= __('services.car_rental') %></h5>
+				<p class="text-muted"><%= __('services.car_rental_desc') %></p>
+
+				<a href="/booking/car_rental" class="btn booking-btn booking-btn-services mt-auto">
 					<i class="bi bi-calendar-check mx-1"></i>
 					<%= __('common.book_now') %>
 				</a>
 			</div>
 		</div>
+
+		<!-- 📚 Full Driving Courses -->
 		<div class="our_services col-md-4">
-			<div class="card h-100 p-3">
-				<img src="/images/services/driving_courses.png" class="mb-2" />
-				<i class="bi bi-book display-4 text-brand mb-2"></i>
-				<h5><%= __('services.full_courses') %></h5>
-				<small class="fst-italic text-danger bg-light-custom"
-					><%=__('sister_school.through')%></small
-				>
-				<p><%= __('services.full_courses_desc') %></p>
+			<div class="card h-100 p-3 service-card">
+				<img
+					src="/images/services/driving_courses.png"
+					alt="Full driving courses"
+					loading="lazy"
+					class="mb-2"
+				/>
+
+				<i class="bi bi-book display-5 text-brand mb-2"></i>
+				<h5 class="fw-bold"><%= __('services.full_courses') %></h5>
+
+				<small class="fst-italic text-danger bg-light-custom px-2 py-1 rounded">
+					<%= __('sister_school.through') %>
+				</small>
+
+				<p class="text-muted mt-2"><%= __('services.full_courses_desc') %></p>
+
 				<a
 					href="https://wa.me/15145578710"
-					class="btn btn-booking"
+					class="btn booking-btn booking-btn-services mt-auto"
 					target="_blank"
 					rel="noopener"
+					aria-label="Contact via WhatsApp"
 				>
 					<i class="bi bi-whatsapp mx-1"></i>
-					<span dir="ltr"> +1 (514) 557‑8710</span>
+					<span dir="ltr">+1 (514) 557-8710</span>
 				</a>
 			</div>
 		</div>
+
 	</div>
 </section>
