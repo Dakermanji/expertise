@@ -1,33 +1,50 @@
+<!-- views/partials/index/about.ejs -->
+<!-- ---------------------------------------------------------
+   📘 About Section — Mission / Why Us / Who We Serve
+--------------------------------------------------------- -->
 <section id="about" class="text-center p-5">
+
+	<!-- 🌟 Mission -->
 	<h2 class="mb-4"><%= __('about.mission.title') %></h2>
 	<p class="lead"><%= __('about.mission.text') %></p>
+
+	<!-- 💡 Why Us -->
 	<section id="why_us" class="bg-lighter-custom py-5">
 		<div class="container">
 			<h2 class="text-center mb-4"><%= __('about.why_us.title') %></h2>
+
 			<div class="row text-center">
+
 				<div class="col-md-3 mb-4">
-					<i class="bi bi-award display-5 text-brand"></i>
+					<i class="bi bi-award display-5 text-brand" aria-hidden="true"></i>
 					<p class="mt-2"><%= __('about.why_us.certified') %></p>
 				</div>
+
 				<div class="col-md-3 mb-4">
-					<i class="bi bi-person-check display-5 text-brand"></i>
+					<i class="bi bi-person-check display-5 text-brand" aria-hidden="true"></i>
 					<p class="mt-2"><%= __('about.why_us.guidance') %></p>
 				</div>
+
 				<div class="col-md-3 mb-4">
-					<i class="bi bi-calendar2-check display-5 text-brand"></i>
+					<i class="bi bi-calendar2-check display-5 text-brand" aria-hidden="true"></i>
 					<p class="mt-2"><%= __('about.why_us.booking') %></p>
 				</div>
+
 				<div class="col-md-3 mb-4">
-					<i class="bi bi-translate display-5 text-brand"></i>
+					<i class="bi bi-translate display-5 text-brand" aria-hidden="true"></i>
 					<p class="mt-2"><%= __('about.why_us.multilingual') %></p>
 				</div>
+
 			</div>
 		</div>
 	</section>
+
+	<!-- 👥 Who We Serve -->
 	<section id="who_we_serve" class="py-5 bg-light-custom">
 		<div class="container">
 			<h2 class="text-center mb-4"><%= __('about.who_we_serve.title') %></h2>
 			<p class="text-center lead"><%= __('about.who_we_serve.text') %></p>
 		</div>
 	</section>
+
 </section>

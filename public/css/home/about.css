@@ -12,6 +12,7 @@
     line-height: 1.6;
 }
 
+/* WHY US */
 #about #why_us {
     background-color: var(--color-background-light);
     padding-top: 4rem;
@@ -38,6 +39,11 @@
     color: var(--color-brand);
 }
 
+#about #why_us .col-md-3 {
+    padding: 1rem;
+}
+
+/* WHO WE SERVE */
 #about #who_we_serve {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -49,4 +55,17 @@
     margin: 0 auto;
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    #about {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    #about p.lead,
+    #about #who_we_serve p {
+        font-size: 1rem;
+    }
 }
