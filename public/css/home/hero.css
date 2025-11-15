@@ -1,0 +1,95 @@
+/*! public/css/home/hero.css */
+
+/* ---------------------------------------------------------
+   🎛 Custom Video Controls
+--------------------------------------------------------- */
+.video-controls {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.video-controls .btn {
+    width: 50px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.video-controls i {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.form-range {
+    cursor: pointer;
+}
+
+/* Play/pause button */
+#playPauseBtn {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+#playPauseBtn:hover {
+    background-color: var(--color-primary);
+}
+
+#playPauseBtn:hover i {
+    color: #fff;
+}
+
+#playPauseBtn:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+#volumeIcon {
+    color: var(--color-primary);
+}
+
+/* Range thumbs */
+.form-range::-webkit-slider-thumb,
+.form-range::-moz-range-thumb {
+    background-color: var(--color-primary);
+}
+
+/* ---------------------------------------------------------
+   ▶️ Big Play Overlay (premium look)
+--------------------------------------------------------- */
+.big-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.55);
+    border: 2px solid #fff;
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.big-play-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.12);
+}
+
+.big-play-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .big-play-overlay {
+        width: 70px;
+        height: 70px;
+        font-size: 2.3rem;
+    }
+}

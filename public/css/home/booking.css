@@ -1,0 +1,26 @@
+/*! public/css/home/booking.css */
+
+#booking {
+    margin: 4rem;
+}
+
+#booking h2 {
+    margin-bottom: 2rem;
+}
+
+/* Booking button */
+#booking .btn {
+    font-weight: bold;
+    color: white;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    font-size: 1.125rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    transition: 0.3s ease;
+}
+
+#booking .btn:hover {
+    color: var(--color-primary);
+    background-color: white;
+}
