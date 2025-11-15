@@ -1,13 +1,14 @@
 //! public/js/home.js
 
-// Hero video controller
 const video = document.getElementById('expertiseVideo');
 const bigPlayOverlay = document.getElementById('bigPlayOverlay');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const seekBar = document.getElementById('seekBar');
 const volumeControl = document.getElementById('volumeControl');
 const volumeIcon = document.getElementById('volumeIcon');
+const cta = document.querySelector('.animate-cta');
 
+//* Hero
 if (video && bigPlayOverlay && playPauseBtn && seekBar && volumeControl && volumeIcon) {
 
     let firstInteraction = true;
@@ -125,4 +126,23 @@ if (video && bigPlayOverlay && playPauseBtn && seekBar && volumeControl && volum
         setPlayIcon();
         bigPlayOverlay.classList.remove('hidden');
     });
+}
+
+// Booking
+// ---------------------------------------------------------
+// 🔁 Reveal CTA on scroll
+// ---------------------------------------------------------
+
+if (cta) {
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            if (entries[0].isIntersecting) {
+                cta.classList.add('revealed');
+                revealObserver.disconnect();
+            }
+        },
+        { threshold: 0.25 }
+    );
+
+    revealObserver.observe(cta);
 }

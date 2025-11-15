@@ -1,26 +1,71 @@
 /*! public/css/home/booking.css */
 
-#booking {
-    margin: 4rem;
+/* ---------------------------------------------------------
+   📅 Booking CTA
+--------------------------------------------------------- */
+
+.booking-cta {
+    margin: 3rem auto;
+    max-width: 500px;
+    background-color: var(--color-background-light);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
-#booking h2 {
-    margin-bottom: 2rem;
+.booking-cta h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
 }
 
-/* Booking button */
-#booking .btn {
-    font-weight: bold;
-    color: white;
+/* ---------------------------------------------------------
+   🟦 Booking Button (Premium)
+--------------------------------------------------------- */
+.booking-btn {
+    font-weight: 600;
+    color: white !important;
     background-color: var(--color-primary);
     border: 2px solid var(--color-primary);
-    font-size: 1.125rem;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 2rem;
     border-radius: var(--radius-md);
-    transition: 0.3s ease;
+    font-size: 1.2rem;
+
+    /* ⭐ Gentle pulse until hover */
+    animation: ctaPulse 1.8s ease-in-out infinite;
+    transition: all 0.3s ease;
 }
 
-#booking .btn:hover {
-    color: var(--color-primary);
+/* Pulse animation (subtle & professional) */
+@keyframes ctaPulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}
+
+/* Hover → Stop pulse */
+.booking-btn:hover,
+.booking-btn:focus {
+    animation: none !important;        /* Stop pulsing */
+    color: var(--color-primary) !important;
     background-color: white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Button focus outline */
+.booking-btn:focus {
+    outline: 2px solid var(--color-primary);
+}
+
+/* ---------------------------------------------------------
+   📱 Mobile Responsiveness
+--------------------------------------------------------- */
+@media (max-width: 576px) {
+    .booking-cta {
+        margin: 2.5rem 2rem;
+        padding: 2rem 1rem;
+    }
+
+    .booking-btn {
+        width: 100%;
+    }
 }

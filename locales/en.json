@@ -1,160 +1,160 @@
 {
-  "about": {
-    "mission": {
-      "text": "To help drivers succeed at the SAAQ road exam and feel confident behind the wheel by offering certified car rentals and personalized improvement lessons.",
-      "title": "Our Mission"
-    },
-    "who_we_serve": {
-      "text": "We proudly serve individuals aged 16 and older across Québec who are eligible to drive with a licensed instructor. Whether you're preparing for your SAAQ exam, improving your skills with a learner’s permit, or converting a foreign license — we're here to help you gain confidence and succeed.",
-      "title": "Who We Serve"
-    },
-    "why_us": {
-      "booking": "Flexible booking by phone, WhatsApp, or through our website",
-      "certified": "Certified by the SAAQ",
-      "guidance": "Personalized coaching & local route prep",
-      "multilingual": "Training in French, English and Arabic",
-      "title": "Why Choose Us?"
-    }
-  },
-  "areas": {
-    "list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray, and more.",
-    "title": "We Serve Students Across"
-  },
-  "booking": {
-    "disclaimer": "<strong>Submitting this form does not guarantee your booking</strong>. We will contact you by phone or email to confirm. If you haven’t heard from us within 12 hours, please reach out again. During working hours, we usually respond within 60 minutes.",
-    "start_today": "Ready to start your driving journey?",
-    "title": "Please select a service"
-  },
-  "common": {
-    "book_now": "Book Now",
-    "booking": "Booking",
-    "close": "Close"
-  },
-  "contact": {
-    "description": "Call us or message us on WhatsApp to connect with an instructor directly.",
-    "text_only": "Text only",
-    "title": "Have Questions? We're Here to Help."
-  },
-  "faq": {
-    "faq_title": "Frequently Asked Questions",
-    "list": {
-      "faq_1": {
-        "a": "Yes — in Québec, you need to hold a valid learner’s permit or foreign license to take improvement lessons. This ensures you're legally allowed to drive with an instructor beside you.",
-        "q": "Do I need a learner’s permit to book lessons?"
-      },
-      "faq_10": {
-        "a": "Yes! Lessons are currently available in French, English, and Arabic — depending on instructor availability. Let us know your preference during booking and we’ll do our best to accommodate.",
-        "q": "Do you offer lessons in other languages?"
-      },
-      "faq_2": {
-        "a": "bsolutely. We encourage booking at least 5 to 7 days before your desired date, especially during peak SAAQ exam periods or weekends.",
-        "q": "Can I book in advance?"
-      },
-      "faq_3": {
-        "a": "Yes! You can rent a certified vehicle from us even without taking lessons, as long as you meet SAAQ eligibility requirements and have your exam appointment scheduled.",
-        "q": "Can I rent a car for the SAAQ exam without taking lessons?"
-      },
-      "faq_4": {
-        "a": "You must be at least 16 years old and legally allowed to drive with a certified instructor in Québec. If you're under 18, parental consent is required.",
-        "q": "What’s the minimum age to take improvement lessons?"
-      },
-      "faq_5": {
-        "a": "Absolutely. We help many drivers with international licenses prepare for their SAAQ conversion exam through targeted improvement sessions.",
-        "q": "I have a foreign license — can I still take lessons?"
-      },
-      "faq_6": {
-        "a": "Prices vary depending on the service and location. You can check base rates on our Booking page or contact us directly for a custom quote.",
-        "q": "How much do lessons or car rentals cost?"
-      },
-      "faq_7": {
-        "a": "The rental includes a certified vehicle, time for the test itself, and optional warm-up driving before the exam depending on the package.",
-        "q": "What’s included in the car rental for the SAAQ exam?"
-      },
-      "faq_8": {
-        "a": "Visit our Booking page, choose your service, and fill out the form. We’ll contact you to confirm availability and next steps. You can also call us directly to book.",
-        "q": "How do I book a service?"
-      },
-      "faq_9": {
-        "a": "We kindly ask for at least 24 hours’ notice to cancel or reschedule. Short-notice cancellations may incur a fee.",
-        "q": "Can I cancel or reschedule a booking?"
-      }
-    }
-  },
-  "flash": {
-    "booking": {
-      "error": "Something went wrong while sending your booking. Please try again or contact us directly.",
-      "sent": "Your request has been sent successfully!<br /><strong>We'll contact you shortly to confirm.</strong>"
-    }
-  },
-  "footer": {
-    "built_by": "Website by",
-    "cookies_text": "This site uses essential cookies for functionality.",
-    "privacy_content": "We only collect personal information submitted through booking forms. No tracking or third-party cookies are used. Your data is used solely to contact you regarding your request. For any concerns, contact location.que.ca@gmail.com.",
-    "privacy_title": "Privacy Policy"
-  },
-  "form": {
-    "email": "Email Address",
-    "exam_date": "Exam Date",
-    "exam_time": "Exam Time",
-    "name": "Full Name",
-    "notes": "Additional Notes",
-    "phone": "Phone Number",
-    "preferred_date": "Preferred Date",
-    "preferred_language": "Preferred Language",
-    "preferred_time": "Preferred Time",
-    "region": "Region",
-    "submit": "Submit"
-  },
-  "hero": {
-    "video_fallback": "Your browser does not support the video tag."
-  },
-  "meta": {
-    "description": "Certified car rentals and improvement lessons for your SAAQ road exam in Montreal, Laval and more",
-    "titles": {
-      "booking": "Booking",
-      "error": "ُError",
-      "home": "Home",
-      "rest": "Expertise Pro - Car Rents for SAAQ Exams and Driving Lessons Montreal"
-    }
-  },
-  "navbar": {
-    "about": "About",
-    "booking": "Booking",
-    "contact": "Contact Us",
-    "faq": "FAQ",
-    "home": "Home",
-    "leave_review": "Leave a review",
-    "reviews": "Reviews",
-    "services": "Services"
-  },
-  "regions": {
-    "ahuntsic": "Ahuntsic",
-    "dorval": "Dorval",
-    "langelier": "Langelier",
-    "lasalle": "Lasalle",
-    "laval": "Laval",
-    "montreal": "Montreal",
-    "other": "Other",
-    "saint-laurent": "Saint-Laurent",
-    "villeray": "Villeray"
-  },
-  "reviews": {
-    "none": "No reviews available at the moment.",
-    "title": "What Our Students Say"
-  },
-  "services": {
-    "book_now": "Book Now",
-    "car_rental": "Car Rental for SAAQ Exam",
-    "car_rental_desc": "Rent a certified vehicle for your road test, with optional prep support.",
-    "full_courses": "Full Driving Courses",
-    "full_courses_desc": "SAQ-accredited group lessons that prepare you from the basics to the road exam.",
-    "improvement_lessons": "Improvement Lessons",
-    "improvement_lessons_desc": "For drivers with a foreign license or learner’s permit who want to refine their skills and prepare for the SAAQ road test.",
-    "subtitle": "We offer complete driving solutions for every level.",
-    "title": "Our Services"
-  },
-  "sister_school": {
-    "call": "For full driving courses, we recommend our sister school:",
-    "through": "through a sister school"
-  }
+	"about": {
+		"mission": {
+			"text": "To help drivers succeed at the SAAQ road exam and feel confident behind the wheel by offering certified car rentals and personalized improvement lessons.",
+			"title": "Our Mission"
+		},
+		"who_we_serve": {
+			"text": "We proudly serve individuals aged 16 and older across Québec who are eligible to drive with a licensed instructor. Whether you're preparing for your SAAQ exam, improving your skills with a learner’s permit, or converting a foreign license — we're here to help you gain confidence and succeed.",
+			"title": "Who We Serve"
+		},
+		"why_us": {
+			"booking": "Flexible booking by phone, WhatsApp, or through our website",
+			"certified": "Certified by the SAAQ",
+			"guidance": "Personalized coaching & local route prep",
+			"multilingual": "Training in French, English and Arabic",
+			"title": "Why Choose Us?"
+		}
+	},
+	"areas": {
+		"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray, and more.",
+		"title": "We Serve Students Across"
+	},
+	"booking": {
+		"disclaimer": "<strong>Submitting this form does not guarantee your booking</strong>. We will contact you by phone or email to confirm. If you haven’t heard from us within 12 hours, please reach out again. During working hours, we usually respond within 60 minutes.",
+		"start_today": "Ready to start your driving journey?",
+		"title": "Please select a service"
+	},
+	"common": {
+		"book_now": "Book Now",
+		"booking": "Booking",
+		"close": "Close"
+	},
+	"contact": {
+		"description": "Call us or message us on WhatsApp to connect with an instructor directly.",
+		"text_only": "Text only",
+		"title": "Have Questions? We're Here to Help."
+	},
+	"faq": {
+		"faq_title": "Frequently Asked Questions",
+		"list": {
+			"faq_1": {
+				"a": "Yes — in Québec, you need to hold a valid learner’s permit or foreign license to take improvement lessons. This ensures you're legally allowed to drive with an instructor beside you.",
+				"q": "Do I need a learner’s permit to book lessons?"
+			},
+			"faq_10": {
+				"a": "Yes! Lessons are currently available in French, English, and Arabic — depending on instructor availability. Let us know your preference during booking and we’ll do our best to accommodate.",
+				"q": "Do you offer lessons in other languages?"
+			},
+			"faq_2": {
+				"a": "bsolutely. We encourage booking at least 5 to 7 days before your desired date, especially during peak SAAQ exam periods or weekends.",
+				"q": "Can I book in advance?"
+			},
+			"faq_3": {
+				"a": "Yes! You can rent a certified vehicle from us even without taking lessons, as long as you meet SAAQ eligibility requirements and have your exam appointment scheduled.",
+				"q": "Can I rent a car for the SAAQ exam without taking lessons?"
+			},
+			"faq_4": {
+				"a": "You must be at least 16 years old and legally allowed to drive with a certified instructor in Québec. If you're under 18, parental consent is required.",
+				"q": "What’s the minimum age to take improvement lessons?"
+			},
+			"faq_5": {
+				"a": "Absolutely. We help many drivers with international licenses prepare for their SAAQ conversion exam through targeted improvement sessions.",
+				"q": "I have a foreign license — can I still take lessons?"
+			},
+			"faq_6": {
+				"a": "Prices vary depending on the service and location. You can check base rates on our Booking page or contact us directly for a custom quote.",
+				"q": "How much do lessons or car rentals cost?"
+			},
+			"faq_7": {
+				"a": "The rental includes a certified vehicle, time for the test itself, and optional warm-up driving before the exam depending on the package.",
+				"q": "What’s included in the car rental for the SAAQ exam?"
+			},
+			"faq_8": {
+				"a": "Visit our Booking page, choose your service, and fill out the form. We’ll contact you to confirm availability and next steps. You can also call us directly to book.",
+				"q": "How do I book a service?"
+			},
+			"faq_9": {
+				"a": "We kindly ask for at least 24 hours’ notice to cancel or reschedule. Short-notice cancellations may incur a fee.",
+				"q": "Can I cancel or reschedule a booking?"
+			}
+		}
+	},
+	"flash": {
+		"booking": {
+			"error": "Something went wrong while sending your booking. Please try again or contact us directly.",
+			"sent": "Your request has been sent successfully!<br /><strong>We'll contact you shortly to confirm.</strong>"
+		}
+	},
+	"footer": {
+		"built_by": "Website by",
+		"cookies_text": "This site uses essential cookies for functionality.",
+		"privacy_content": "We only collect personal information submitted through booking forms. No tracking or third-party cookies are used. Your data is used solely to contact you regarding your request. For any concerns, contact location.que.ca@gmail.com.",
+		"privacy_title": "Privacy Policy"
+	},
+	"form": {
+		"email": "Email Address",
+		"exam_date": "Exam Date",
+		"exam_time": "Exam Time",
+		"name": "Full Name",
+		"notes": "Additional Notes",
+		"phone": "Phone Number",
+		"preferred_date": "Preferred Date",
+		"preferred_language": "Preferred Language",
+		"preferred_time": "Preferred Time",
+		"region": "Region",
+		"submit": "Submit"
+	},
+	"hero": {
+		"video_fallback": "Your browser does not support the video tag."
+	},
+	"meta": {
+		"description": "Certified car rentals and improvement lessons for your SAAQ road exam in Montreal, Laval and more",
+		"titles": {
+			"booking": "Booking",
+			"error": "ُError",
+			"home": "Home",
+			"rest": "Expertise Pro - Car Rents for SAAQ Exams and Driving Lessons Montreal"
+		}
+	},
+	"navbar": {
+		"about": "About",
+		"booking": "Booking",
+		"contact": "Contact Us",
+		"faq": "FAQ",
+		"home": "Home",
+		"leave_review": "Leave a review",
+		"reviews": "Reviews",
+		"services": "Services"
+	},
+	"regions": {
+		"ahuntsic": "Ahuntsic",
+		"dorval": "Dorval",
+		"langelier": "Langelier",
+		"lasalle": "Lasalle",
+		"laval": "Laval",
+		"montreal": "Montreal",
+		"other": "Other",
+		"saint-laurent": "Saint-Laurent",
+		"villeray": "Villeray"
+	},
+	"reviews": {
+		"none": "No reviews available at the moment.",
+		"title": "What Our Students Say"
+	},
+	"services": {
+		"book_now": "Book Now",
+		"car_rental": "Car Rental for SAAQ Exam",
+		"car_rental_desc": "Rent a certified vehicle for your road test, with optional prep support.",
+		"full_courses": "Full Driving Courses",
+		"full_courses_desc": "SAQ-accredited group lessons that prepare you from the basics to the road exam.",
+		"improvement_lessons": "Improvement Lessons",
+		"improvement_lessons_desc": "For drivers with a foreign license or learner’s permit who want to refine their skills and prepare for the SAAQ road test.",
+		"subtitle": "We offer complete driving solutions for every level.",
+		"title": "Our Services"
+	},
+	"sister_school": {
+		"call": "For full driving courses, we recommend our sister school:",
+		"through": "through a sister school"
+	}
 }

@@ -1,9 +1,18 @@
+<!-- views/partials/index/booking.ejs -->
+
+<!-- ---------------------------------------------------------
+   📅 Booking CTA Section
+--------------------------------------------------------- -->
 <section
 	id="booking"
-	class="w-50 mx-auto text-center bg-light-custom rounded-4 p-3"
+	class="booking-cta animate-cta text-center bg-light-custom rounded-4 p-3"
 >
-	<h2><%= __('booking.start_today') %></h2>
-	<a href="/booking" class="btn btn-light btn-lg mt-3">
-		<i class="bi bi-calendar-event me-1"></i> <%= __('common.book_now') %>
+	<h2 class="fw-bold">
+		<%= __('booking.start_today', 'Prêt à commencer votre parcours de conduite ?') %>
+	</h2>
+
+	<a href="/booking" class="btn booking-btn btn-lg mt-4">
+		<i class="bi bi-calendar-event me-1"></i>
+		<%= __('common.book_now') %>
 	</a>
 </section>
