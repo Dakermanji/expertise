@@ -1,12 +1,29 @@
-<section id="areas" class="bg-lighter-custom py-5 text-center">
-	<h2 class="mb-4"><%= __('areas.title') %></h2>
-	<p class="mb-0"><%= __('areas.list') %></p>
+<!-- views/partials/index/areas.ejs -->
+<!-- ---------------------------------------------------------
+   🗺 Service Areas — Map + Serviced Regions
+--------------------------------------------------------- -->
+<section id="areas" class="py-5 text-center">
+
+	<h2 class="mb-4"><%= __('areas.title', 'Nous desservons des étudiants dans tout Montréal') %></h2>
+
+	<p class="areas-desc mb-3">
+		<%= __('areas.list', 'Montréal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray et plus encore.') %>
+	</p>
+
 	<div class="map-wrapper">
 		<iframe
 			src="https://www.google.com/maps/d/embed?mid=13SXGa46KCGuPnPaaEpncQsoigw33wig&ehbc=2E312F&noprof=1"
 			loading="lazy"
 			allowfullscreen
 			referrerpolicy="no-referrer-when-downgrade"
+			title="<%= __('areas.map_title', 'Carte des zones desservies') %>"
+			aria-label="<%= __('areas.map_title', 'Carte des zones desservies') %>"
 		></iframe>
 	</div>
+
+	<noscript>
+		<p class="text-danger mt-3"><%= __('areas.map_fallback', 'Veuillez activer JavaScript pour afficher correctement la carte des zones desservies.') %></p>
+	</noscript>
+
 </section>
+

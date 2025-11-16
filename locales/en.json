@@ -12,12 +12,14 @@
 			"booking": "Flexible booking by phone, WhatsApp, or through our website",
 			"certified": "Certified by the SAAQ",
 			"guidance": "Personalized coaching & local route prep",
-			"multilingual": "Training in French, English and Arabic",
+			"multilingual": "Training in French, English, Arabic, Spanish, and German",
 			"title": "Why Choose Us?"
 		}
 	},
 	"areas": {
 		"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray, and more.",
+		"map_fallback": "Please enable JavaScript to properly display the service areas map.",
+		"map_title": "Service Areas Map",
 		"title": "We Serve Students Across"
 	},
 	"booking": {
