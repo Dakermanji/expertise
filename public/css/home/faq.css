@@ -1,13 +1,16 @@
 /*! public/css/home/faq.css */
 
+/* Titles */
 .question {
     font-weight: bold;
 }
 
+/* Answers */
 .answer {
-    margin-left: 1em;
+    padding-inline-start: 1rem;
 }
 
+/* RTL fixes */
 html[dir="rtl"] .accordion-button {
     justify-content: flex-end;
     text-align: right;
@@ -18,17 +21,34 @@ html[dir="rtl"] .accordion-button::after {
     margin-right: auto;
 }
 
+/* Button spacing and typography */
 #faq .accordion-button {
     font-size: 1.05rem;
     line-height: 1.4;
     padding: 1rem 1.25rem;
+    transition: background-color 0.25s ease;
 }
 
+/* Body text */
 #faq .accordion-body {
     font-size: 0.98rem;
     line-height: 1.6;
 }
 
+/* Hover effect */
 .accordion-button:hover {
     background-color: var(--color-background-light);
+}
+
+/* Add modern rounded corners */
+.accordion-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+/* Mobile optimization */
+@media (max-width: 576px) {
+    #faq .accordion-button {
+        padding: 0.75rem 1rem;
+    }
 }

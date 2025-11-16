@@ -1,11 +1,16 @@
+<!-- views/partials/index/faq.ejs -->
+<!-- ---------------------------------------------------------
+   ❓ FAQ Section
+--------------------------------------------------------- -->
 <section id="faq" class="py-5">
 	<div class="container">
-		<h2 class="text-center mb-4"><%= __('faq.faq_title') %></h2>
+		<h2 class="text-center mb-4"><%= __('faq.faq_title', 'Questions fréquentes') %></h2>
 
 		<div class="accordion" id="faqAccordion">
-			<% const faqList = Object.entries(__('faq.list')); %> <%
-			faqList.forEach(([key, faq], index) => { %>
-			<div class="accordion-item">
+			<% const faqList = Object.entries(__('faq.list')); %>
+
+			<% faqList.forEach(([key, faq], index) => { %>
+			<div class="accordion-item mb-2">
 				<h2 class="accordion-header" id="faq<%= index + 1 %>">
 					<button
 						class="accordion-button collapsed question"
@@ -18,12 +23,15 @@
 						<%= faq.q %>
 					</button>
 				</h2>
+
 				<div
 					id="collapse<%= index + 1 %>"
 					class="accordion-collapse collapse answer"
 					data-bs-parent="#faqAccordion"
 				>
-					<div class="accordion-body"> <%= faq.a %> </div>
+					<div class="accordion-body">
+						<%= faq.a %>
+					</div>
 				</div>
 			</div>
 			<% }) %>
