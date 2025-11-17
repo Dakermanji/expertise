@@ -52,4 +52,35 @@ const promisePool = pool.promise();
 	}
 })();
 
+/**
+ * Safe query executor — wraps all DB calls with unified try/catch.
+ * Always returns: { rows, fields, error }
+ *
+ * Usage:
+ *   const { rows, error } = await db.query('SELECT ...');
+ */
+export const db = {
+	async query(sql, params = []) {
+		try {
+			const [rows, fields] = await promisePool.query(sql, params);
+			return { rows, fields, error: null };
+		} catch (error) {
+			logger.error(`💾 [DB ERROR] ${error.message} — SQL: ${sql}`);
+			return { rows: null, fields: null, error };
+		}
+	},
+
+	async execute(sql, params = []) {
+		try {
+			const [result] = await promisePool.execute(sql, params);
+			return { result, error: null };
+		} catch (error) {
+			logger.error(`💾 [DB ERROR] ${error.message} — SQL: ${sql}`);
+			return { result: null, error };
+		}
+	},
+};
+
+
 export { pool, promisePool };
+export default db;

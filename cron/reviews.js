@@ -1,26 +1,42 @@
 //! cron/reviews.js
 
 import cron from 'node-cron';
-import { fetchGoogleReviews } from '../utils/googleReviews.js';
+import axios from 'axios';
+import env from '../config/dotenv.js';
+import { logger } from '../utils/logger.js';
 import { GoogleReview } from '../models/GoogleReview.js';
 
-export function startGoogleReviewsCron() {
-	// Every 6 hours: minute 0, hour */6
+export const startGoogleReviewsCron = () => {
+	// Runs every 6 hours
 	cron.schedule('0 */6 * * *', async () => {
-		console.log('[CRON] Fetching Google Reviews...');
+		logger.info('🌟 [Reviews - Cron] Starting Google Reviews refresh task...');
 
 		try {
-			const reviews = await fetchGoogleReviews();
+			const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${env.GOOGLE_PLACE_ID}&fields=reviews&key=${env.GOOGLE_API_KEY}`;
+			const { data } = await axios.get(url);
 
-			if (reviews.length) {
-				await GoogleReview.clearAll(); // Optional: clear old entries
-				await GoogleReview.insertMany(reviews);
-				console.log(`[CRON] Inserted ${reviews.length} reviews`);
-			} else {
-				console.log('[CRON] No reviews returned');
+			const googleReviews = data?.result?.reviews || [];
+
+			if (googleReviews.length === 0) {
+				logger.warn('🌟 [Reviews - Cron] Google returned 0 reviews.');
+				return;
 			}
+
+			//* Insert new ones (avoiding duplicates)
+			let countInserted = 0;
+
+			for (const r of googleReviews) {
+				const inserted = await GoogleReview.insertIfNotExists(r);
+				if (inserted) countInserted++;
+			}
+
+			//* Keep only the newest 10 reviews
+			await GoogleReview.prune(10);
+
+			logger.info(`🌟 [Reviews - Cron] Inserted ${countInserted} new reviews. Database pruned to 10 latest.`);
+
 		} catch (err) {
-			console.error('[CRON ERROR]', err.message);
+			logger.error(`🌟 [Reviews - Cron] Error refreshing Google reviews: ${err.message}`);
 		}
 	});
-}
+};
