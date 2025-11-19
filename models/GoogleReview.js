@@ -7,7 +7,6 @@
  * customer reviews using the new db.query() wrapper.
  *
  * This model relies on:
- *   - db.query() → centralized safe query execution with auto logger integration.
  *   - auto-timestamps for `retrieved_at` (defined in SQL schema).
  *
  * Table structure (google_reviews):
@@ -15,12 +14,12 @@
  *   author_name       VARCHAR(100)
  *   profile_photo_url TEXT
  *   rating            TINYINT
+ *   review_lang	   VARCHAR(5)
  *   text              TEXT
  *   retrieved_at      DATETIME DEFAULT CURRENT_TIMESTAMP
  */
 
 import db from '../config/database.js';
-import { logger } from '../utils/logger.js';
 
 export class GoogleReview {
 	/**
@@ -67,10 +66,11 @@ export class GoogleReview {
 			SELECT id
 			FROM google_reviews
 			WHERE author_name = ?
+			  AND rating = ?
 			  AND text = ?
 			LIMIT 1
 			`,
-			[review.author_name, review.text]
+			[review.author_name, review.rating, review.text]
 		);
 
 		// Duplicate found → skip insertion
@@ -80,13 +80,14 @@ export class GoogleReview {
 		await db.query(
 			`
 			INSERT INTO google_reviews
-			(author_name, profile_photo_url, rating, text)
-			VALUES (?, ?, ?, ?)
+			(author_name, profile_photo_url, rating, review_lang, text)
+			VALUES (?, ?, ?, ?, ?)
 			`,
 			[
 				review.author_name,
 				review.profile_photo_url,
 				review.rating,
+				review.review_lang,
 				review.text,
 			]
 		);
