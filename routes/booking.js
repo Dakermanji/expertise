@@ -3,41 +3,64 @@
 /**
  * Booking Routes
  * --------------
- * Handles all requests related to booking driving lessons or SAAQ exam car rentals.
+ * Defines all routes related to booking SAAQ exam car rentals and
+ * improvement driving lessons.
  *
- * Example:
- *   GET  /booking   → Renders the booking page
- *   POST /booking   → Submits booking form data and sends email notification
+ * Responsibilities:
+ *   - Serve the booking page with all required localized content
+ *   - Validate booking form input before processing
+ *   - Forward valid submissions to the booking controller
  *
- * The controller handles both rendering and form processing.
+ * Routes:
+ *   GET  /booking  → Render the booking page
+ *   POST /booking  → Validate and submit the booking form
+ *
+ * Notes:
+ *   - Validation logic lives in middlewares/validators/booking.js
+ *   - Processing logic (email sending) lives in controllers/booking.js
  */
 
 import express from 'express';
 import { getBooking, handleBooking } from '../controllers/booking.js';
+import { validateBooking } from '../middlewares/validators/booking.js';
 
 const router = express.Router();
 
 /**
  * Route: GET /booking
  * -------------------
- * Renders the booking page, including all localized text,
- * required CSS sections, and the Google Place ID for links.
+ * Renders the booking page using the configured view engine.
+ *
+ * Injects:
+ *   - Localized page title (meta.titles.booking)
+ *   - Section-specific CSS and JS assets
+ *   - Google Place ID for review links
  */
 router.get('/', getBooking);
 
 /**
  * Route: POST /booking
  * --------------------
- * Handles form submission from the booking page.
- * Sends the booking request to the administrative email.
+ * Processes booking form submissions.
  *
- * Expected request body:
+ * Flow:
+ *   1. validateBooking middleware:
+ *        - Sanitizes & validates all user input
+ *        - Ensures date is within allowed range
+ *        - Returns multiple localized errors if validation fails
+ *
+ *   2. handleBooking controller:
+ *        - Sends booking details via email
+ *        - Flashes success or error messages
+ *
+ * Expected request body fields:
  *   - service_type
- *   - name, phone, preferred_date, preferred_language, notes (varies)
- *
- * On success → flashes success message
- * On failure → flashes error message
+ *   - full_name
+ *   - phone
+ *   - preferred_date
+ *   - preferred_language
+ *   - notes (optional)
  */
-router.post('/', handleBooking);
+router.post('/', validateBooking, handleBooking);
 
 export default router;

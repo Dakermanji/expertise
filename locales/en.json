@@ -88,8 +88,16 @@
 	},
 	"flash": {
 		"booking": {
-			"error": "Something went wrong while sending your booking. Please try again or contact us directly.",
-			"sent": "Your request has been sent successfully!<br /><strong>We'll contact you shortly to confirm.</strong>"
+			"date_past": "The date cannot be in the past.",
+			"date_too_far": "The date cannot be more than 60 days from today.",
+			"error": "We could not submit your booking. Please try again.",
+			"invalid_date": "Please choose a valid date.",
+			"invalid_language": "Please select a valid preferred language.",
+			"invalid_name": "Your name must be between 2 and 60 characters.",
+			"invalid_phone": "Please enter a valid phone number.",
+			"invalid_service": "Please select a valid service.",
+			"not_submitted": "The form was not submitted because:",
+			"sent": "Your booking request has been sent successfully!"
 		}
 	},
 	"footer": {

@@ -88,8 +88,16 @@
 	},
 	"flash": {
 		"booking": {
-			"error": "Une erreur s'est produite lors de l'envoi de votre demande. Veuillez réessayer ou nous contacter directement.",
-			"sent": "Votre demande a été envoyée avec succès !<br /></strong>Nous vous contacterons bientôt pour confirmer.</strong>"
+			"date_past": "La date ne peut pas être dans le passé.",
+			"date_too_far": "La date ne peut pas dépasser 60 jours.",
+			"error": "Impossible de soumettre votre demande. Veuillez réessayer.",
+			"invalid_date": "Veuillez choisir une date valide.",
+			"invalid_language": "Veuillez sélectionner une langue valide.",
+			"invalid_name": "Votre nom doit comporter entre 2 et 60 caractères.",
+			"invalid_phone": "Veuillez entrer un numéro de téléphone valide.",
+			"invalid_service": "Veuillez sélectionner un service valide.",
+			"not_submitted": "Formulaire non soumis pour les raisons suivantes :",
+			"sent": "Votre demande de réservation a été envoyée avec succès !"
 		}
 	},
 	"footer": {

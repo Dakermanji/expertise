@@ -1,10 +1,9 @@
 <!-- views/partials/layout/flash.ejs -->
-<% const { success, error } = messages; %>
-<% if (success?.length || error?.length) { %>
+<% const { success, error, error_list } = messages; %>
+<% if (success?.length || error?.length || error_list?.length) { %>
 <div class="position-fixed top-50 start-50 translate-middle w-100 px-3 z-3 flash-container" style="max-width: 500px">
 
 	<%
-		// 💡 Helper: Render a Bootstrap alert block
 		const renderAlert = (type, text, live) => {
 	%>
 		<div
@@ -19,6 +18,20 @@
 				data-bs-dismiss="alert"
 				aria-label="Close"
 			></button>
+		</div>
+	<% } %>
+
+	<% if (error_list?.length) { %>
+		<div class="alert alert-danger alert-dismissible fade show" role="alert" aria-live="assertive">
+
+			<strong><%= __('flash.booking.not_submitted') %></strong>
+			<ul class="text-start mt-2">
+				<% error_list.forEach(errKey => { %>
+					<li><%= __(errKey) %></li>
+				<% }) %>
+			</ul>
+
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 	<% } %>
 
