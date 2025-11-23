@@ -87,7 +87,7 @@ export class GoogleReview {
 				review.author_name,
 				review.profile_photo_url,
 				review.rating,
-				review.review_lang,
+				review.original_language,
 				review.text,
 			]
 		);

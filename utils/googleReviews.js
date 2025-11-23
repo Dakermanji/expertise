@@ -33,7 +33,7 @@ export async function fetchGoogleReviews() {
 				author_name: r.author_name,
 				profile_photo_url: r.profile_photo_url,
 				rating: r.rating,
-				review_lang: r.language || null, // ⭐ new
+				review_lang: r.review_lang || null,
 				text: r.text,
 				time: r.time, // ⭐ unix timestamp
 			}));

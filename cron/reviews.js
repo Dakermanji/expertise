@@ -9,7 +9,9 @@ import { GoogleReview } from '../models/GoogleReview.js';
 export const startGoogleReviewsCron = () => {
 	// Runs every 6 hours
 	cron.schedule('0 */6 * * *', async () => {
-		logger.info('🌟 [Reviews - Cron] Starting Google Reviews refresh task...');
+		logger.info(
+			'🌟 [Reviews - Cron] Starting Google Reviews refresh task...'
+		);
 
 		try {
 			const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${env.GOOGLE_PLACE_ID}&fields=reviews&key=${env.GOOGLE_API_KEY}`;
@@ -33,10 +35,13 @@ export const startGoogleReviewsCron = () => {
 			//* Keep only the newest 10 reviews
 			await GoogleReview.prune(10);
 
-			logger.info(`🌟 [Reviews - Cron] Inserted ${countInserted} new reviews. Database pruned to 10 latest.`);
-
+			logger.info(
+				`🌟 [Reviews - Cron] Inserted ${countInserted} new reviews. Database pruned to 10 latest.`
+			);
 		} catch (err) {
-			logger.error(`🌟 [Reviews - Cron] Error refreshing Google reviews: ${err.message}`);
+			logger.error(
+				`🌟 [Reviews - Cron] Error refreshing Google reviews: ${err.message}`
+			);
 		}
 	});
 };

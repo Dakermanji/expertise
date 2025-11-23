@@ -29,7 +29,7 @@ import { logger } from '../utils/logger.js';
 export function getBooking(req, res) {
 	res.render('booking', {
 		title: 'booking',
-		styles: ['home/booking_page'],
+		styles: ['booking_page'],
 		scripts: ['booking'],
 		google_place_id: env.GOOGLE_PLACE_ID,
 	});
