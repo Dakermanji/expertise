@@ -1,53 +1,57 @@
 /*! public/css/booking_page.css */
 
-h1 {
-    margin-top: 100px;
-    margin-bottom: 2rem;
-}
+/* ---------------------------------------------------------
+   Booking Page Styles — Accessible, Responsive, WCAG-Friendly
+---------------------------------------------------------- */
 
+/* Card Styling */
 .service-card {
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
 }
 
 .service-card:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-
-.service-card img {
-    max-width: 350px;
-    object-fit: contain;
+	transform: translateY(-3px);
+	box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .service-card.selected {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
+	box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
-.card-img-top {
-    max-width: 350px;
-    border-radius: var(--radius-md);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    transform-style: preserve-3d;
-    margin: 0 auto;
-    display: block;
+.service-card.selected:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 10px 22px rgba(0,0,0,0.22);
 }
 
-.select-service:hover .card-img-top {
-    transform: scale(1.03) rotateX(1deg) rotateY(-1deg);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+/* Keyboard Focus (WCAG compliant) */
+.service-card:focus {
+	outline: 3px solid var(--color-primary);
+	outline-offset: 4px;
 }
 
-.booking_forms,
-.booking_forms .row .col-12 {
-    max-width: 800px;
+/* Booking Form Section */
+.booking-form {
+	animation: fadeIn 0.4s ease forwards;
 }
 
-.booking_forms .row div {
-    max-width: 400px;
-    margin: 1rem auto;
+/* Fade animation */
+@keyframes fadeIn {
+	from { opacity: 0; transform: translateY(8px); }
+	to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+	.service-card img {
+		max-width: 240px;
+	}
+	h1 {
+		font-size: 1.6rem !important;
+	}
 }

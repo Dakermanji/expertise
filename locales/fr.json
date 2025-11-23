@@ -23,7 +23,14 @@
 		"title": "Nous desservons des étudiants dans tout Montréal"
 	},
 	"booking": {
+		"car_rental_alt": "Service de location de voiture pour l’examen de la SAAQ",
+		"car_rental_desc": "Louez un véhicule certifié pour votre examen pratique SAAQ avec un instructeur professionnel.",
+		"car_rental_title": "Location de voiture pour examen SAAQ",
 		"disclaimer": "<strong>Envoyer ce formulaire ne garantit pas votre réservation</strong>. Nous vous contacterons par téléphone ou par e-mail pour confirmer. Si vous n’avez pas de nouvelles dans les 12 heures, veuillez nous recontacter. Pendant les heures de travail, nous répondons généralement en moins de 60 minutes.",
+		"form_section_title": "Complétez votre réservation",
+		"improvement_alt": "Cours d’amélioration de conduite",
+		"improvement_desc": "Améliorez vos habiletés de conduite et préparez-vous pour votre examen routier avec des moniteurs certifiés.",
+		"improvement_title": "Cours d’amélioration de conduite",
 		"start_today": "Prêt à commencer votre parcours de conduite ?",
 		"title": "Veuillez sélectionner un service"
 	},
@@ -177,5 +184,6 @@
 	"sister_school": {
 		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :",
 		"through": "par une école sœur"
-	}
+	},
+	"meta.titles.": "meta.titles."
 }

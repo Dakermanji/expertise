@@ -23,7 +23,15 @@
 		"title": "We Serve Students Across"
 	},
 	"booking": {
+		"car_rental_alt": "SAAQ exam car rental service",
+		"improvement_alt": "Driving improvement lessons",
+		"car_rental_desc": "Rent a certified vehicle for your SAAQ road test with a professional instructor.",
+		"car_rental_title": "Car Rental for SAAQ Exam",
+		"choose_service": "Choose a service",
 		"disclaimer": "<strong>Submitting this form does not guarantee your booking</strong>. We will contact you by phone or email to confirm. If you haven’t heard from us within 12 hours, please reach out again. During working hours, we usually respond within 60 minutes.",
+		"form_section_title": "Complete your booking",
+		"improvement_title": "Driving Improvement Lessons",
+		"improvement_desc": "Improve your driving skills and prepare for your road test with certified instructors.",
 		"start_today": "Ready to start your driving journey?",
 		"title": "Please select a service"
 	},

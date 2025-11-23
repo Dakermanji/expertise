@@ -1,47 +1,79 @@
-<h1 class="display-4 text-center"><%= __('booking.title') %></h1>
+<!-- ---------------------------------------------------------
+   📄 Booking Page — Car Rental & Improvement Lessons
+--------------------------------------------------------- -->
+<section class="container py-5">
 
-<div class="row justify-content-center gap-3">
-	<div class="col-md-5">
+	<!-- Main Page Heading -->
+	<h1 class="text-center mb-5"><%= __('booking.title', 'Veuillez sélectionner un service') %></h1>
+
+	<!-- Service Selection -->
+	<div class="row justify-content-center g-4">
+
+		<!-- Car Rental -->
 		<div
-			class="card service-card h-100 text-center p-3 select-service overflow-hidden"
-			data-form="rental"
+			class="col-md-5"
 		>
-			<img
-				src="/images/services/car_rental.png"
-				class="card-img-top mb-3 rounded-4 mx-auto"
-				alt="Car Rental"
-			/>
-			<h5 class="card-title"><%= __('services.car_rental') %></h5>
-			<p class="card-text"><%= __('services.car_rental_desc') %></p>
+			<div
+				class="card service-card p-3 text-center"
+				role="button"
+				tabindex="0"
+				aria-pressed="false"
+				data-form="rental"
+			>
+				<img
+					src="/images/services/car_rental.png"
+					alt="<%= __('booking.car_rental_alt', 'Service de location de voiture pour l’examen de la SAAQ') %>"
+					class="img-fluid mb-3"
+					loading="lazy"
+				/>
+				<h3 class="fs-4"><%= __('booking.car_rental_title', 'Location de voiture pour examen SAAQ') %></h3>
+				<p class="small text-muted mb-0">
+					<%= __('booking.car_rental_desc', 'Louez un véhicule certifié pour votre examen pratique SAAQ avec un instructeur professionnel.') %>
+				</p>
+			</div>
+		</div>
+
+		<!-- Improvement Lessons -->
+		<div
+			class="col-md-5"
+		>
+			<div
+				class="card service-card p-3 text-center"
+				role="button"
+				tabindex="0"
+				aria-pressed="false"
+				data-form="improvement"
+			>
+				<img
+					src="/images/services/improvement_lessons.png"
+					alt="<%= __('booking.improvement_alt', 'Cours d’amélioration de conduite') %>"
+					class="img-fluid mb-3"
+					loading="lazy"
+				/>
+				<h3 class="fs-4"><%= __('booking.improvement_title', 'Cours d’amélioration de conduite') %></h3>
+				<p class="small text-muted mb-0">
+					<%= __('booking.improvement_desc', 'Améliorez vos habiletés de conduite et préparez-vous pour votre examen routier avec des moniteurs certifiés.') %>
+				</p>
+			</div>
 		</div>
 	</div>
 
-	<div class="col-md-5">
-		<div
-			class="card service-card h-100 text-center p-3 select-service overflow-hidden"
-			data-form="improvement"
-		>
-			<img
-				src="/images/services/improvement_lessons.png"
-				class="card-img-top mb-3 rounded-4 mx-auto"
-				alt="Improvement Lessons"
-			/>
-			<h5 class="card-title"
-				><%= __('services.improvement_lessons') %></h5
-			>
-			<p class="card-text"
-				><%= __('services.improvement_lessons_desc') %></p
-			>
+	<!-- Hidden heading for form section -->
+	<h2 class="visually-hidden"><%= __('booking.form_section_title', 'Complétez votre réservation') %></h2>
+
+	<!-- Booking Forms -->
+	<div class="row mt-5 justify-content-center">
+
+		<!-- Car Rental Form -->
+		<div id="form-rental" class="col-md-7 booking-form d-none">
+			<%- include('partials/bookings/car_rental_form') %>
 		</div>
-	</div>
-</div>
 
-<div class="container booking_forms mb-2">
-	<div id="form-rental" class="booking-form mt-4 d-none">
-		<%- include('partials/bookings/car_rental_form') %>
+		<!-- Improvement Lessons Form -->
+		<div id="form-improvement" class="col-md-7 booking-form d-none">
+			<%- include('partials/bookings/improvement_lessons_form') %>
+		</div>
+
 	</div>
 
-	<div id="form-improvement" class="booking-form mt-4 d-none">
-		<%- include('partials/bookings/improvement_lessons_form') %>
-	</div>
-</div>
+</section>
