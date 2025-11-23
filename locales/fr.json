@@ -33,9 +33,13 @@
 		"close": "Fermer"
 	},
 	"contact": {
+		"call_number": "Appeler",
 		"description": "Appelez-nous ou envoyez-nous un message sur WhatsApp pour parler directement avec un instructeur.",
+		"email_to": "Envoyer un courriel à",
+		"sister_school_call": "Vous pouvez aussi contacter notre école partenaire :",
 		"text_only": "Texte seulement",
-		"title": "Des questions ? Nous sommes là pour vous aider."
+		"title": "Des questions ? Nous sommes là pour vous aider.",
+		"whatsapp_number": "Message WhatsApp à"
 	},
 	"faq": {
 		"faq_title": "Questions fréquentes",

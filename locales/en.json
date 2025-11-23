@@ -35,7 +35,11 @@
 	"contact": {
 		"description": "Call us or message us on WhatsApp to connect with an instructor directly.",
 		"text_only": "Text only",
-		"title": "Have Questions? We're Here to Help."
+		"title": "Have Questions? We're Here to Help.",
+		"call_number": "Call",
+		"whatsapp_number": "WhatsApp message to",
+		"email_to": "Email to",
+		"sister_school_call": "You may also contact our partner driving school:"
 	},
 	"faq": {
 		"faq_title": "Frequently Asked Questions",
