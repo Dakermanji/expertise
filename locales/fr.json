@@ -141,6 +141,15 @@
 		"villeray": "Villeray"
 	},
 	"reviews": {
+		"buttons": {
+			"next": "Avis suivant",
+			"previous": "Avis précédent"
+		},
+		"carousel_label": "Carrousel des avis clients Google",
+		"none": "Aucun avis disponible pour le moment.",
+		"out_of_5": "sur 5 étoiles",
+		"photo_of": "Photo de",
+		"show_review": "Afficher l’avis",
 		"title": "Ce que disent nos élèves"
 	},
 	"services": {

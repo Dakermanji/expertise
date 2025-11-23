@@ -141,7 +141,15 @@
 		"villeray": "Villeray"
 	},
 	"reviews": {
+		"buttons": {
+			"next": "Next review",
+			"previous": "Previous review"
+		},
+		"carousel_label": "Google customer reviews carousel",
 		"none": "No reviews available at the moment.",
+		"out_of_5": "out of 5 stars",
+		"photo_of": "Photo of",
+		"show_review": "Show review",
 		"title": "What Our Students Say"
 	},
 	"services": {

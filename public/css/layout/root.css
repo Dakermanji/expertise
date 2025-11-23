@@ -86,8 +86,11 @@ html[dir="rtl"] .modal-header .btn-close {
     margin-right: auto;
 }
 
-/* Optional RTL text utilities (Bootstrap handles most) */
-/*
-html[dir="rtl"] .text-start { text-align: end !important; }
-html[dir="rtl"] .text-end { text-align: start !important; }
-*/
+/* RTL text utilities (Bootstrap handles most) */
+html[dir="rtl"] .text-start {
+    text-align: right !important;
+}
+html[dir="rtl"] .text-end {
+    text-align: left !important;
+}
+

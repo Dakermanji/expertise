@@ -1,12 +1,20 @@
-<section id="reviews" class="bg-lighter-custom py-5 text-center">
+<!-- views/partials/index/reviews.ejs -->
+ <!-- ---------------------------------------------------------
+   ⭐ Customer Reviews Carousel
+--------------------------------------------------------- -->
+<section id="reviews" class="py-5">
 	<div class="container">
-		<h2 class="text-center mb-4 display-4"><%= __('reviews.title') %></h2>
+        <!-- 🟦 Section Heading -->
+		<h2 class="text-center mb-4"><%= __('reviews.title', 'Ce que disent nos élèves') %></h2>
 
+        <!-- 🟦 Carousel Wrapper -->
 		<% if (reviews && reviews.length > 0) { %>
 		<div
 			id="reviewsCarousel"
 			class="carousel slide"
 			data-bs-ride="carousel"
+            aria-label="<%= __('reviews.carousel_label', 'Ce que disent nos élèves') %>"
+			aria-roledescription="carousel"
 		>
 			<!-- Indicators -->
 			<div class="carousel-indicators">
@@ -16,52 +24,68 @@
 					data-bs-target="#reviewsCarousel"
 					data-bs-slide-to="<%= index %>"
 					class="<%= index === 0 ? 'active' : '' %>"
-					aria-label="Slide <%= index + 1 %>"
+					aria-label="<%= __('reviews.show_review') %> <%= index + 1 %>"
 				></button>
 				<% }) %>
 			</div>
 
-			<!-- Review Slides -->
-			<div class="carousel-inner">
+			<!-- Slides -->
+			<div class="carousel-inner" >
 				<% reviews.forEach((review, index) => { %>
-				<div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-					<div
-						class="card p-4 shadow-sm text-center mx-auto"
-						style="max-width: 600px"
-					>
-						<div
-							class="d-flex justify-content-center align-items-center gap-3 mb-3"
-						>
+				<div class="carousel-item rating-block <%= index === 0 ? 'active' : '' %>" role="listitem">
+
+					<div class="card review-card shadow-sm mx-auto rounded p-4">
+
+						<!-- Reviewer -->
+						<div class="d-flex align-items-center mb-3">
+							<!-- Reviewer Photo -->
 							<img
+								class="review-photo mx-3 rounded-circle"
 								src="<%= review.profile_photo_url %>"
-								alt="<%= review.author_name %>"
-								class="rounded-circle"
-								width="60"
-								height="60"
+								alt="<%= __('reviews.photo_of', 'Photo of') %> <%= review.author_name %>"
 								referrerpolicy="no-referrer"
 								loading="lazy"
 							/>
-							<div class="star-rating">
-								<% for (let i = 0; i < (review.rating || 0);
-								i++) { %>
-								<i class="bi bi-star-fill"></i>
-								<% } %>
+							<div>
+								<!-- Reviewer Name -->
+								<h5 class="mb-1 fw-bold">
+									<%= review.author_name %>
+								</h5>
+
+								<!-- Rating Stars -->
+								<div class="rating-stars <%= review.rating === 5 ? 'perfect-rating' : '' %>"
+									role="img"
+									aria-label="<%= review.rating %> <%= review.out_of_5 %>"
+									>
+									<% for (let i = 1; i <= 5; i++) { %>
+										<i class="bi <%= i <= review.rating ? 'bi-star-fill' : '' %>"></i>
+									<% } %>
+								</div>
 							</div>
 						</div>
 
-						<blockquote class="blockquote mb-2">
-							<p>“<%= review.text %>”</p>
+						<!-- Review Text -->
+						<blockquote class="review-text blockquote mb-2">
+							<p class="clamp">“<%= review.text %>”</p>
 						</blockquote>
-						<footer class="blockquote-footer">
-							<%= review.author_name %>
+
+						<!-- Google Translation and Branding -->
+						<div class="d-flex justify-content-around align-items-center g-brand">
+							<% if(review.review_lang.slice(0, 2) !== currentLang) { %>
+							<a href="https://translate.google.com/?sl=auto&tl=<%= currentLang %>&text=<%= review.text %>" target="_blank">
+								<i class="bi bi-translate"></i>
+								<%= LANG_DATA[currentLang].label %>
+							</a>
+							<% } else { %>
+								<span></span>
+							<% } %>
 							<img
-								src="/images/icons/google.svg"
+								src="images/icons/google.svg"
 								alt="Google"
-								width="16"
-								class="ms-1"
-								alt="Google logo"
+								loading="lazy"
+								referrerpolicy="no-referrer"
 							/>
-						</footer>
+						</div>
 					</div>
 				</div>
 				<% }) %>
@@ -78,7 +102,7 @@
 					class="carousel-control-prev-icon"
 					aria-hidden="true"
 				></span>
-				<span class="visually-hidden">Previous</span>
+				<span class="visually-hidden"><%= __('reviews.buttons.previous','Avis précédent') %></span>
 			</button>
 			<button
 				class="carousel-control-next"
@@ -90,7 +114,7 @@
 					class="carousel-control-next-icon"
 					aria-hidden="true"
 				></span>
-				<span class="visually-hidden">Next</span>
+				<span class="visually-hidden"><%= __('reviews.buttons.next', 'Avis suivant') %></span>
 			</button>
 		</div>
 
