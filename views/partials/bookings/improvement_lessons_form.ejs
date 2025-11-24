@@ -1,3 +1,4 @@
+<!-- views/partials/bookings/improvement_lessons_form.ejs -->
 <form action="/booking" method="POST">
 	<div class="row g-3">
 		<div class="col-md-6">
@@ -43,8 +44,8 @@
 				<%= __('form.region') %>
 			</label>
 			<select name="region" id="region" class="form-select" required>
-				<% const regions = __('regions'); for (const key in regions) {
-				%>
+				<% const regions = translations.regions; %>
+				<% for (const key in regions) { %>
 				<option value="<%= key %>"><%= regions[key] %></option>
 				<% } %>
 			</select>

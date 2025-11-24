@@ -13,7 +13,17 @@
 	cursor: pointer;
 	user-select: none;
 	outline: none;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
 }
+
+/* Make text block stretch */
+.service-card h3,
+.service-card p {
+	flex-grow: 1;
+}
+
 
 .service-card:hover {
 	transform: translateY(-3px);

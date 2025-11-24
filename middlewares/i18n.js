@@ -79,6 +79,9 @@ export function setupI18n(app) {
 			return translation === key ? fallback || key : translation;
 		};
 
+		// Full catalog for the current locale
+		res.locals.translations = i18n.getCatalog(req);
+
 		next();
 	});
 
