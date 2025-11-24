@@ -8,12 +8,13 @@
  *  - Toggle between Rental / Improvement forms
  *  - Keyboard accessibility (Enter + Space)
  *  - ARIA state updates for screen readers
- */
+*/
 
 document.addEventListener("DOMContentLoaded", () => {
 	const serviceCards = document.querySelectorAll(".service-card");
 	const forms = document.querySelectorAll(".booking-form");
-
+	const preselected =
+	document.querySelector('meta[name="preselected-service"]')?.content || "";
 
 	if (!serviceCards.length) return;
 
@@ -60,4 +61,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
+	// Auto-select if preselected route
+	if (preselected) {
+		const autoCard = document.querySelector(
+			`.service-card[data-form="${preselected}"]`
+		);
+
+		if (autoCard) {
+			selectService(autoCard);
+		}
+	}
 });

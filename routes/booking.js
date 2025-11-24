@@ -38,6 +38,16 @@ const router = express.Router();
  */
 router.get('/', getBooking);
 
+// Alias route: auto-select car rental
+router.get('/rental', (req, res) =>
+	getBooking(req, res, { preselect: 'rental' })
+);
+
+// Alias route: auto-select improvement lessons
+router.get('/improvement', (req, res) =>
+	getBooking(req, res, { preselect: 'improvement' })
+);
+
 /**
  * Route: POST /booking
  * --------------------

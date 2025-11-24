@@ -1,3 +1,4 @@
+<!-- views/booking.ejs -->
 <!-- ---------------------------------------------------------
    📄 Booking Page — Car Rental & Improvement Lessons
 --------------------------------------------------------- -->
@@ -5,6 +6,7 @@
 
 	<!-- Main Page Heading -->
 	<h1 class="text-center mb-5"><%= __('booking.title', 'Veuillez sélectionner un service') %></h1>
+	<meta name="preselected-service" content="<%= preselect || '' %>">
 
 	<!-- Service Selection -->
 	<div class="row justify-content-center g-4">
