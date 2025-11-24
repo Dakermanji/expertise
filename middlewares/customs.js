@@ -14,7 +14,7 @@
 import env from '../config/dotenv.js';
 
 export const LANG_DATA = {
-	fr: { label: "française", flag: "qc" },
+	fr: { label: "Français", flag: "qc" },
 	en: { label: "English", flag: "ca" },
 	ar: { label: "عربي", flag: "lb" }
 };
