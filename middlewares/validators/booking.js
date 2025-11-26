@@ -11,12 +11,13 @@ export function validateBooking(req, res, next) {
 
 	const {
 		service_type = '',
-		full_name = '',
+		student_name = '',
 		phone = '',
-		preferred_date = '',
 		preferred_language = '',
 		notes = '',
 	} = req.body;
+
+	const preferred_date = req.body.preferred_date || req.body.exam_date;
 
 	/** SERVICE TYPE */
 	if (!ALLOWED_SERVICES.includes(service_type)) {
@@ -24,7 +25,7 @@ export function validateBooking(req, res, next) {
 	}
 
 	/** NAME */
-	const cleanName = validator.trim(full_name);
+	const cleanName = validator.trim(student_name);
 	if (!validator.isLength(cleanName, { min: 2, max: 60 })) {
 		errors.push('flash.booking.invalid_name');
 	}
@@ -65,7 +66,7 @@ export function validateBooking(req, res, next) {
 	}
 
 	// Save sanitized values
-	req.body.full_name = cleanName;
+	req.body.student_name = cleanName;
 	req.body.phone = cleanPhone;
 
 	next();
