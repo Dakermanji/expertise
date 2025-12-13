@@ -14,9 +14,11 @@
 import env from '../config/dotenv.js';
 
 export const LANG_DATA = {
-	fr: { label: "Français", flag: "qc" },
-	en: { label: "English", flag: "ca" },
-	ar: { label: "عربي", flag: "lb" }
+	fr: { label: 'Français', flag: 'qc' },
+	en: { label: 'English', flag: 'ca' },
+	ar: { label: 'عربي', flag: 'lb' },
+	es: { label: 'Español', flag: 'es' },
+	de: { label: 'Deutsch', flag: 'de' },
 };
 
 /**
@@ -24,7 +26,9 @@ export const LANG_DATA = {
  */
 function customsMiddleware(req, res, next) {
 	// 🔗 Full URL for canonical/meta tags
-	res.locals.fullUrl = `${env.PROTOCOL}://${req.get('host')}${req.originalUrl}`;
+	res.locals.fullUrl = `${env.PROTOCOL}://${req.get('host')}${
+		req.originalUrl
+	}`;
 
 	// 🌍 Language data (for navbar + language selector)
 	res.locals.LANG_DATA = LANG_DATA;

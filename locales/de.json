@@ -1,0 +1,190 @@
+{
+	"about": {
+		"mission": {
+			"text": "Fahrerinnen und Fahrern dabei zu helfen, die praktische SAAQ-Prüfung erfolgreich zu bestehen und sich sicher hinter dem Steuer zu fühlen – durch zertifizierte Mietfahrzeuge und individuell angepasste Verbesserungskurse.",
+			"title": "Unsere Mission"
+		},
+		"who_we_serve": {
+			"text": "Wir betreuen mit Stolz Personen ab 16 Jahren in ganz Québec, die berechtigt sind, mit einem lizenzierten Fahrlehrer zu fahren. Ob Sie sich auf Ihre SAAQ-Prüfung vorbereiten, Ihre Fähigkeiten mit einem Lernfahrausweis verbessern oder einen ausländischen Führerschein umschreiben lassen möchten – wir helfen Ihnen dabei, Selbstvertrauen zu gewinnen und erfolgreich zu sein.",
+			"title": "Wen wir betreuen"
+		},
+		"why_us": {
+			"booking": "Flexible Buchung per Telefon, WhatsApp oder über unsere Website",
+			"certified": "Von der SAAQ zertifiziert",
+			"guidance": "Individuelles Coaching und Vorbereitung auf lokale Prüfungsstrecken",
+			"multilingual": "Unterricht auf Französisch, Englisch, Arabisch, Spanisch und Deutsch",
+			"title": "Warum uns wählen?"
+		}
+	},
+	"areas": {
+		"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray und weitere Gebiete.",
+		"map_fallback": "Bitte aktivieren Sie JavaScript, um die Karte der Servicegebiete korrekt anzuzeigen.",
+		"map_title": "Karte der Servicegebiete",
+		"title": "Wir betreuen Fahrschüler in"
+	},
+	"booking": {
+		"car_rental_alt": "Mietfahrzeug für die SAAQ-Fahrprüfung",
+		"car_rental_desc": "Mieten Sie ein zertifiziertes Fahrzeug für Ihre praktische SAAQ-Prüfung mit einem professionellen Fahrlehrer.",
+		"car_rental_title": "Mietfahrzeug für die SAAQ-Prüfung",
+		"choose_service": "Service auswählen",
+		"disclaimer": "<strong>Das Absenden dieses Formulars garantiert keine Buchung</strong>. Wir kontaktieren Sie telefonisch oder per E-Mail zur Bestätigung. Sollten Sie innerhalb von 12 Stunden keine Rückmeldung erhalten, kontaktieren Sie uns bitte erneut. Während der Geschäftszeiten antworten wir in der Regel innerhalb von 60 Minuten.",
+		"form_section_title": "Buchungsanfrage ausfüllen",
+		"improvement_alt": "Fahrverbesserungsunterricht",
+		"improvement_desc": "Verbessern Sie Ihre Fahrkenntnisse und bereiten Sie sich mit zertifizierten Fahrlehrern auf Ihre Fahrprüfung vor.",
+		"improvement_title": "Fahrverbesserungsunterricht",
+		"start_today": "Bereit, Ihre Fahrt in die Zukunft zu starten?",
+		"title": "Bitte wählen Sie einen Service"
+	},
+	"common": {
+		"book_now": "Jetzt buchen",
+		"booking": "Buchung",
+		"close": "Schließen"
+	},
+	"contact": {
+		"call_number": "Anrufen",
+		"description": "Rufen Sie uns an oder schreiben Sie uns über WhatsApp, um direkt mit einem Fahrlehrer Kontakt aufzunehmen.",
+		"email_to": "E-Mail senden an",
+		"sister_school_call": "Sie können auch unsere Partnerfahrschule kontaktieren:",
+		"text_only": "Nur Textnachrichten",
+		"title": "Haben Sie Fragen? Wir sind für Sie da.",
+		"whatsapp_number": "WhatsApp-Nachricht an"
+	},
+	"faq": {
+		"faq_title": "Häufig gestellte Fragen",
+		"list": {
+			"faq_1": {
+				"a": "Ja — in Québec müssen Sie einen gültigen Lernführerschein oder einen ausländischen Führerschein besitzen, um Fahrverbesserungsstunden zu nehmen. Dadurch wird sichergestellt, dass Sie legal mit einem Fahrlehrer an Ihrer Seite fahren dürfen.",
+				"q": "Benötige ich einen Lernführerschein, um Fahrstunden zu buchen?"
+			},
+			"faq_10": {
+				"a": "Ja! Der Unterricht ist derzeit auf Französisch, Englisch und Arabisch verfügbar — abhängig von der Verfügbarkeit der Fahrlehrer. Geben Sie Ihre Präferenz bei der Buchung an, und wir versuchen, diese zu berücksichtigen.",
+				"q": "Bieten Sie Fahrstunden in anderen Sprachen an?"
+			},
+			"faq_2": {
+				"a": "Auf jeden Fall. Wir empfehlen, mindestens 5 bis 7 Tage im Voraus zu buchen, insbesondere während der Stoßzeiten für SAAQ-Prüfungen oder an Wochenenden.",
+				"q": "Kann ich im Voraus buchen?"
+			},
+			"faq_3": {
+				"a": "Ja! Sie können bei uns ein zertifiziertes Fahrzeug mieten, auch ohne Fahrstunden zu nehmen, sofern Sie die Zulassungsvoraussetzungen der SAAQ erfüllen und einen Prüfungstermin haben.",
+				"q": "Kann ich ein Auto für die SAAQ-Prüfung mieten, ohne Fahrstunden zu nehmen?"
+			},
+			"faq_4": {
+				"a": "Sie müssen mindestens 16 Jahre alt sein und in Québec berechtigt sein, mit einem zertifizierten Fahrlehrer zu fahren. Wenn Sie unter 18 Jahre alt sind, ist die Zustimmung der Eltern erforderlich.",
+				"q": "Was ist das Mindestalter für Fahrverbesserungsstunden?"
+			},
+			"faq_5": {
+				"a": "Absolut. Wir unterstützen viele Fahrer mit internationalen Führerscheinen bei der Vorbereitung auf die SAAQ-Umschreibungsprüfung durch gezielte Fahrverbesserungseinheiten.",
+				"q": "Ich habe einen ausländischen Führerschein — kann ich trotzdem Fahrstunden nehmen?"
+			},
+			"faq_6": {
+				"a": "Die Preise variieren je nach Service und Standort. Sie können die Grundpreise auf unserer Buchungsseite einsehen oder uns direkt für ein individuelles Angebot kontaktieren.",
+				"q": "Wie viel kosten Fahrstunden oder Mietfahrzeuge?"
+			},
+			"faq_7": {
+				"a": "Die Miete umfasst ein zertifiziertes Fahrzeug, die Zeit für die eigentliche Prüfung sowie — je nach Paket — eine optionale Aufwärmfahrt vor der Prüfung.",
+				"q": "Was ist im Mietfahrzeug für die SAAQ-Prüfung enthalten?"
+			},
+			"faq_8": {
+				"a": "Besuchen Sie unsere Buchungsseite, wählen Sie Ihren Service aus und füllen Sie das Formular aus. Wir kontaktieren Sie, um die Verfügbarkeit und die nächsten Schritte zu bestätigen. Alternativ können Sie uns auch direkt anrufen.",
+				"q": "Wie buche ich einen Service?"
+			},
+			"faq_9": {
+				"a": "Wir bitten um eine Mitteilung von mindestens 24 Stunden im Voraus, um eine Buchung zu stornieren oder zu verschieben. Kurzfristige Stornierungen können mit einer Gebühr verbunden sein.",
+				"q": "Kann ich eine Buchung stornieren oder verschieben?"
+			}
+		}
+	},
+	"flash": {
+		"booking": {
+			"date_past": "Das Datum darf nicht in der Vergangenheit liegen.",
+			"date_too_far": "Das Datum darf nicht mehr als 60 Tage in der Zukunft liegen.",
+			"error": "Ihre Buchungsanfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+			"invalid_date": "Bitte wählen Sie ein gültiges Datum.",
+			"invalid_language": "Bitte wählen Sie eine gültige bevorzugte Sprache aus.",
+			"invalid_name": "Ihr Name muss zwischen 2 und 60 Zeichen lang sein.",
+			"invalid_phone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+			"invalid_service": "Bitte wählen Sie einen gültigen Service aus.",
+			"not_submitted": "Das Formular wurde aus folgenden Gründen nicht gesendet:",
+			"sent": "Ihre Buchungsanfrage wurde erfolgreich gesendet!"
+		}
+	},
+	"footer": {
+		"built_by": "Website erstellt von",
+		"cookies_text": "Diese Website verwendet essenzielle Cookies für ihre Funktionalität.",
+		"privacy_content": "Wir erfassen ausschließlich personenbezogene Daten, die über Buchungsformulare übermittelt werden. Es werden keine Tracking-Tools oder Cookies von Drittanbietern verwendet. Ihre Daten werden ausschließlich dazu genutzt, Sie bezüglich Ihrer Anfrage zu kontaktieren. Bei Fragen wenden Sie sich bitte an location.que.ca@gmail.com.",
+		"privacy_title": "Datenschutzerklärung"
+	},
+	"form": {
+		"email": "E-Mail-Adresse",
+		"exam_date": "Prüfungsdatum",
+		"exam_time": "Prüfungszeit",
+		"name": "Vollständiger Name",
+		"notes": "Zusätzliche Hinweise",
+		"phone": "Telefonnummer",
+		"preferred_date": "Bevorzugtes Datum",
+		"preferred_language": "Bevorzugte Sprache",
+		"preferred_time": "Bevorzugte Uhrzeit",
+		"region": "Region",
+		"submit": "Senden"
+	},
+	"hero": {
+		"video_fallback": "Ihr Browser unterstützt die Videowiedergabe nicht."
+	},
+	"meta": {
+		"description": "Zertifizierte Mietfahrzeuge und Fahrverbesserungsunterricht für Ihre SAAQ-Fahrprüfung in Montreal, Laval und weiteren Regionen.",
+		"titles": {
+			"booking": "Buchung",
+			"error": "Fehler",
+			"home": "Startseite",
+			"rest": "Expertise Pro - Mietfahrzeuge für SAAQ-Prüfungen und Fahrunterricht in Montreal"
+		}
+	},
+	"navbar": {
+		"about": "Über uns",
+		"booking": "Buchung",
+		"contact": "Kontakt",
+		"faq": "FAQ",
+		"home": "Startseite",
+		"leave_review": "Bewertung abgeben",
+		"reviews": "Bewertungen",
+		"services": "Services"
+	},
+	"regions": {
+		"ahuntsic": "Ahuntsic",
+		"dorval": "Dorval",
+		"langelier": "Langelier",
+		"lasalle": "Lasalle",
+		"laval": "Laval",
+		"montreal": "Montreal",
+		"other": "Andere Region",
+		"saint-laurent": "Saint-Laurent",
+		"villeray": "Villeray"
+	},
+	"reviews": {
+		"buttons": {
+			"next": "Nächste Bewertung",
+			"previous": "Vorherige Bewertung"
+		},
+		"carousel_label": "Karussell mit Google-Kundenbewertungen",
+		"none": "Derzeit sind keine Bewertungen verfügbar.",
+		"out_of_5": "von 5 Sternen",
+		"photo_of": "Foto von",
+		"show_review": "Bewertung anzeigen",
+		"title": "Was unsere Fahrschüler sagen"
+	},
+	"services": {
+		"book_now": "Jetzt buchen",
+		"car_rental": "Mietfahrzeug für die SAAQ-Prüfung",
+		"car_rental_desc": "Mieten Sie ein zertifiziertes Fahrzeug für Ihre Fahrprüfung, mit optionaler Vorbereitung.",
+		"full_courses": "Komplette Fahrkurse",
+		"full_courses_desc": "Von der SAAQ anerkannte Gruppenkurse, die Sie von den Grundlagen bis zur Fahrprüfung vorbereiten.",
+		"improvement_lessons": "Fahrverbesserungsunterricht",
+		"improvement_lessons_desc": "Für Fahrer mit ausländischem Führerschein oder Lernführerschein, die ihre Fähigkeiten verbessern und sich auf die SAAQ-Fahrprüfung vorbereiten möchten.",
+		"subtitle": "Wir bieten umfassende Fahrdienstleistungen für jedes Niveau.",
+		"title": "Unsere Services"
+	},
+	"sister_school": {
+		"call": "Für vollständige Fahrkurse empfehlen wir unsere Partnerschule:",
+		"through": "über eine Partnerschule"
+	}
+}

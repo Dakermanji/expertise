@@ -1,0 +1,190 @@
+{
+	"about": {
+		"mission": {
+			"text": "Ayudar a los conductores a aprobar el examen práctico de la SAAQ y a sentirse seguros al volante, ofreciendo alquiler de vehículos certificados y lecciones de mejora personalizadas.",
+			"title": "Nuestra misión"
+		},
+		"who_we_serve": {
+			"text": "Atendemos con orgullo a personas de 16 años o más en todo Québec que estén autorizadas a conducir con un instructor con licencia. Ya sea que esté preparándose para su examen de la SAAQ, mejorando sus habilidades con un permiso de aprendiz o convirtiendo una licencia extranjera, estamos aquí para ayudarle a ganar confianza y tener éxito.",
+			"title": "A quién servimos"
+		},
+		"why_us": {
+			"booking": "Reservas flexibles por teléfono, WhatsApp o a través de nuestro sitio web",
+			"certified": "Certificados por la SAAQ",
+			"guidance": "Acompañamiento personalizado y preparación de rutas locales",
+			"multilingual": "Formación en francés, inglés, árabe, español y alemán",
+			"title": "¿Por qué elegirnos?"
+		}
+	},
+	"areas": {
+		"list": "Montreal, Laval, Dorval, Langelier, Saint-Laurent, Ahuntsic, Villeray y más.",
+		"map_fallback": "Por favor, habilite JavaScript para mostrar correctamente el mapa de las áreas de servicio.",
+		"map_title": "Mapa de áreas de servicio",
+		"title": "Atendemos a estudiantes en"
+	},
+	"booking": {
+		"car_rental_alt": "Servicio de alquiler de vehículo para el examen SAAQ",
+		"car_rental_desc": "Alquile un vehículo certificado para su examen práctico de la SAAQ con un instructor profesional.",
+		"car_rental_title": "Alquiler de vehículo para el examen SAAQ",
+		"choose_service": "Elija un servicio",
+		"disclaimer": "<strong>Enviar este formulario no garantiza su reserva</strong>. Nos pondremos en contacto con usted por teléfono o correo electrónico para confirmarla. Si no recibe respuesta dentro de 12 horas, por favor contáctenos nuevamente. Durante el horario laboral, normalmente respondemos en un plazo de 60 minutos.",
+		"form_section_title": "Complete su solicitud de reserva",
+		"improvement_alt": "Clases de mejora de conducción",
+		"improvement_desc": "Mejore sus habilidades de conducción y prepárese para su examen práctico con instructores certificados.",
+		"improvement_title": "Clases de mejora de conducción",
+		"start_today": "¿Listo para comenzar su camino en la conducción?",
+		"title": "Por favor seleccione un servicio"
+	},
+	"common": {
+		"book_now": "Reservar ahora",
+		"booking": "Reserva",
+		"close": "Cerrar"
+	},
+	"contact": {
+		"call_number": "Llamar",
+		"description": "Llámenos o envíenos un mensaje por WhatsApp para comunicarse directamente con un instructor.",
+		"email_to": "Enviar correo electrónico a",
+		"sister_school_call": "También puede contactar a nuestra escuela de conducción asociada:",
+		"text_only": "Solo mensajes",
+		"title": "¿Tiene preguntas? Estamos aquí para ayudarle.",
+		"whatsapp_number": "Mensaje de WhatsApp a"
+	},
+	"faq": {
+		"faq_title": "Preguntas frecuentes",
+		"list": {
+			"faq_1": {
+				"a": "Sí — en Québec, debe tener un permiso de aprendiz válido o una licencia extranjera para tomar clases de mejora. Esto garantiza que esté legalmente autorizado a conducir con un instructor a su lado.",
+				"q": "¿Necesito un permiso de aprendiz para reservar clases?"
+			},
+			"faq_10": {
+				"a": "¡Sí! Actualmente las clases están disponibles en francés, inglés y árabe, según la disponibilidad de los instructores. Indíquenos su preferencia al reservar y haremos todo lo posible por adaptarnos.",
+				"q": "¿Ofrecen clases en otros idiomas?"
+			},
+			"faq_2": {
+				"a": "Por supuesto. Recomendamos reservar con al menos 5 a 7 días de anticipación, especialmente durante los períodos de alta demanda de exámenes de la SAAQ o los fines de semana.",
+				"q": "¿Puedo reservar con anticipación?"
+			},
+			"faq_3": {
+				"a": "¡Sí! Puede alquilar un vehículo certificado con nosotros incluso sin tomar clases, siempre que cumpla con los requisitos de elegibilidad de la SAAQ y tenga su cita de examen programada.",
+				"q": "¿Puedo alquilar un auto para el examen SAAQ sin tomar clases?"
+			},
+			"faq_4": {
+				"a": "Debe tener al menos 16 años y estar legalmente autorizado a conducir con un instructor certificado en Québec. Si es menor de 18 años, se requiere el consentimiento de los padres.",
+				"q": "¿Cuál es la edad mínima para tomar clases de mejora?"
+			},
+			"faq_5": {
+				"a": "Absolutamente. Ayudamos a muchos conductores con licencias internacionales a prepararse para el examen de conversión de la SAAQ mediante sesiones de mejora específicas.",
+				"q": "Tengo una licencia extranjera — ¿puedo tomar clases?"
+			},
+			"faq_6": {
+				"a": "Los precios varían según el servicio y la ubicación. Puede consultar las tarifas base en nuestra página de Reservas o contactarnos directamente para obtener un presupuesto personalizado.",
+				"q": "¿Cuánto cuestan las clases o el alquiler de autos?"
+			},
+			"faq_7": {
+				"a": "El alquiler incluye un vehículo certificado, el tiempo del examen en sí y, según el paquete, una conducción de calentamiento antes del examen.",
+				"q": "¿Qué incluye el alquiler del auto para el examen SAAQ?"
+			},
+			"faq_8": {
+				"a": "Visite nuestra página de Reservas, elija su servicio y complete el formulario. Nos pondremos en contacto para confirmar la disponibilidad y los próximos pasos. También puede llamarnos directamente para reservar.",
+				"q": "¿Cómo reservo un servicio?"
+			},
+			"faq_9": {
+				"a": "Solicitamos amablemente un aviso de al menos 24 horas para cancelar o reprogramar. Las cancelaciones con poca antelación pueden generar un cargo.",
+				"q": "¿Puedo cancelar o reprogramar una reserva?"
+			}
+		}
+	},
+	"flash": {
+		"booking": {
+			"date_past": "La fecha no puede estar en el pasado.",
+			"date_too_far": "La fecha no puede ser posterior a más de 60 días a partir de hoy.",
+			"error": "No pudimos enviar su solicitud de reserva. Por favor, inténtelo de nuevo.",
+			"invalid_date": "Por favor, elija una fecha válida.",
+			"invalid_language": "Por favor, seleccione un idioma preferido válido.",
+			"invalid_name": "Su nombre debe tener entre 2 y 60 caracteres.",
+			"invalid_phone": "Por favor, introduzca un número de teléfono válido.",
+			"invalid_service": "Por favor, seleccione un servicio válido.",
+			"not_submitted": "El formulario no fue enviado por las siguientes razones:",
+			"sent": "¡Su solicitud de reserva ha sido enviada con éxito!"
+		}
+	},
+	"footer": {
+		"built_by": "Sitio web creado por",
+		"cookies_text": "Este sitio utiliza cookies esenciales para su correcto funcionamiento.",
+		"privacy_content": "Solo recopilamos la información personal enviada a través de los formularios de reserva. No se utilizan herramientas de seguimiento ni cookies de terceros. Sus datos se utilizan únicamente para contactarle en relación con su solicitud. Para cualquier consulta, contáctenos en location.que.ca@gmail.com.",
+		"privacy_title": "Política de privacidad"
+	},
+	"form": {
+		"email": "Correo electrónico",
+		"exam_date": "Fecha del examen",
+		"exam_time": "Hora del examen",
+		"name": "Nombre completo",
+		"notes": "Notas adicionales",
+		"phone": "Número de teléfono",
+		"preferred_date": "Fecha preferida",
+		"preferred_language": "Idioma preferido",
+		"preferred_time": "Hora preferida",
+		"region": "Región",
+		"submit": "Enviar"
+	},
+	"hero": {
+		"video_fallback": "Su navegador no admite la reproducción de video."
+	},
+	"meta": {
+		"description": "Alquiler de vehículos certificados y clases de mejora para su examen práctico de la SAAQ en Montreal, Laval y más.",
+		"titles": {
+			"booking": "Reserva",
+			"error": "Error",
+			"home": "Inicio",
+			"rest": "Expertise Pro - Alquiler de vehículos para exámenes SAAQ y clases de conducción en Montreal"
+		}
+	},
+	"navbar": {
+		"about": "Sobre nosotros",
+		"booking": "Reserva",
+		"contact": "Contáctenos",
+		"faq": "Preguntas frecuentes",
+		"home": "Inicio",
+		"leave_review": "Dejar una reseña",
+		"reviews": "Reseñas",
+		"services": "Servicios"
+	},
+	"regions": {
+		"ahuntsic": "Ahuntsic",
+		"dorval": "Dorval",
+		"langelier": "Langelier",
+		"lasalle": "Lasalle",
+		"laval": "Laval",
+		"montreal": "Montreal",
+		"other": "Otra zona",
+		"saint-laurent": "Saint-Laurent",
+		"villeray": "Villeray"
+	},
+	"reviews": {
+		"buttons": {
+			"next": "Reseña siguiente",
+			"previous": "Reseña anterior"
+		},
+		"carousel_label": "Carrusel de reseñas de clientes de Google",
+		"none": "No hay reseñas disponibles en este momento.",
+		"out_of_5": "de 5 estrellas",
+		"photo_of": "Foto de",
+		"show_review": "Mostrar reseña",
+		"title": "Lo que dicen nuestros estudiantes"
+	},
+	"services": {
+		"book_now": "Reservar ahora",
+		"car_rental": "Alquiler de vehículo para el examen SAAQ",
+		"car_rental_desc": "Alquile un vehículo certificado para su examen práctico, con apoyo de preparación opcional.",
+		"full_courses": "Cursos completos de conducción",
+		"full_courses_desc": "Clases grupales acreditadas por la SAAQ que lo preparan desde lo básico hasta el examen práctico.",
+		"improvement_lessons": "Clases de mejora",
+		"improvement_lessons_desc": "Para conductores con licencia extranjera o permiso de aprendiz que desean perfeccionar sus habilidades y prepararse para el examen práctico de la SAAQ.",
+		"subtitle": "Ofrecemos soluciones completas de conducción para todos los niveles.",
+		"title": "Nuestros servicios"
+	},
+	"sister_school": {
+		"call": "Para cursos completos de conducción, recomendamos nuestra escuela asociada:",
+		"through": "a través de una escuela asociada"
+	}
+}

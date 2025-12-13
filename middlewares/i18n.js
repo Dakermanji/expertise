@@ -19,7 +19,7 @@ import { fileURLToPath } from 'url';
 import { logger } from '../utils/logger.js';
 
 // Supported locales
-export const SUPPORTED_LANGS = ['en', 'fr', 'ar'];
+export const SUPPORTED_LANGS = ['en', 'fr', 'ar', 'es', 'de'];
 
 // Setup __dirname since ES Modules don’t support it natively
 const __filename = fileURLToPath(import.meta.url);
@@ -47,7 +47,7 @@ export function setupI18n(app) {
 		objectNotation: true,
 
 		// Fallbacks to French if key or language missing
-		fallbacks: { en: 'fr', ar: 'fr' },
+		fallbacks: { en: 'fr', ar: 'fr', es: 'fr', de: 'fr' },
 	});
 
 	app.use(i18n.init);
