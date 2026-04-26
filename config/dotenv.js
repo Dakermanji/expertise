@@ -38,6 +38,10 @@ function optionalEnv(variable, defaultValue) {
 	return process.env[variable] || defaultValue;
 }
 
+function silentOptionalEnv(variable, defaultValue = '') {
+	return process.env[variable] || defaultValue;
+}
+
 /**
  * Main environment configuration object.
  * Centralizes access to all application-level variables.
@@ -64,6 +68,15 @@ const env = {
 	EMAIL_SERVICE: optionalEnv('EMAIL_SERVICE', 'gmail'),
 	EMAIL_USER: requireEnv('EMAIL_USER'),
 	EMAIL_PASS: requireEnv('EMAIL_PASS'),
+
+	// Payments
+	STRIPE_SECRET_KEY: silentOptionalEnv('STRIPE_SECRET_KEY'),
+	STRIPE_WEBHOOK_SECRET: silentOptionalEnv('STRIPE_WEBHOOK_SECRET'),
+	PUBLIC_BASE_URL: silentOptionalEnv('PUBLIC_BASE_URL'),
+	PAYMENT_CURRENCY: optionalEnv('PAYMENT_CURRENCY', 'cad'),
+	MONTREAL_CAR_RENTAL_PRICE_CENTS: Number(
+		optionalEnv('MONTREAL_CAR_RENTAL_PRICE_CENTS', 5600)
+	),
 
 	// Sentry
 	SENTRY_DSN: optionalEnv('SENTRY_DSN', ''),
