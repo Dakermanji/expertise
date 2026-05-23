@@ -15,6 +15,7 @@ import { sendBookingEmail } from '../utils/bookingMailer.js';
 import { logger } from '../utils/logger.js';
 import {
 	createMontrealCarRentalCheckoutSession,
+	createMontrealCarRentalPayPalOrder,
 	getMontrealCarRentalPaymentSummary,
 	requiresMontrealCarRentalPayment,
 } from '../utils/payments.js';
@@ -80,10 +81,22 @@ export async function handleBooking(req, res) {
 
 	if (requiresMontrealCarRentalPayment(req.body)) {
 		try {
+			if (req.body.payment_provider === 'paypal') {
+				const { order, approvalUrl } =
+					await createMontrealCarRentalPayPalOrder(req, req.body);
+
+				req.session.pendingPayPalBookings = {
+					...(req.session.pendingPayPalBookings || {}),
+					[order.id]: req.body,
+				};
+
+				return res.redirect(303, approvalUrl);
+			}
+
 			const session = await createMontrealCarRentalCheckoutSession(req, req.body);
 			return res.redirect(303, session.url);
 		} catch (err) {
-			logger.error(`💳 [Booking] Failed to start Stripe Checkout: ${err}`);
+			logger.error(`💳 [Booking] Failed to start payment checkout: ${err}`);
 			req.flash('error', 'flash.payment.error');
 			return res.redirect('/booking');
 		}

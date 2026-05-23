@@ -45,6 +45,12 @@ function optionalEnv(variable, defaultValue) {
 const nodeEnv = optionalEnv('NODE_ENV', 'development');
 const stripeSecretKeyName =
 	nodeEnv === 'development' ? 'STRIPE_SECRET_KEY_TEST' : 'STRIPE_SECRET_KEY';
+const paypalClientIdName =
+	nodeEnv === 'development' ? 'PAYPAL_CLIENT_ID_TEST' : 'PAYPAL_CLIENT_ID';
+const paypalClientSecretName =
+	nodeEnv === 'development'
+		? 'PAYPAL_CLIENT_SECRET_TEST'
+		: 'PAYPAL_CLIENT_SECRET';
 
 const env = {
 	// Server
@@ -75,6 +81,16 @@ const env = {
 	STRIPE_SECRET_KEY: requireEnv(stripeSecretKeyName),
 	STRIPE_SECRET_KEY_NAME: stripeSecretKeyName,
 	STRIPE_WEBHOOK_SECRET: requireEnv('STRIPE_WEBHOOK_SECRET'),
+	PAYPAL_CLIENT_ID: optionalEnv(paypalClientIdName, ''),
+	PAYPAL_CLIENT_ID_NAME: paypalClientIdName,
+	PAYPAL_CLIENT_SECRET: optionalEnv(paypalClientSecretName, ''),
+	PAYPAL_CLIENT_SECRET_NAME: paypalClientSecretName,
+	PAYPAL_BASE_URL: optionalEnv(
+		'PAYPAL_BASE_URL',
+		nodeEnv === 'development'
+			? 'https://api-m.sandbox.paypal.com'
+			: 'https://api-m.paypal.com',
+	),
 	PAYMENT_CURRENCY: optionalEnv('PAYMENT_CURRENCY', 'cad'),
 	MONTREAL_CAR_RENTAL_PRICE_CENTS: Number(
 		optionalEnv('MONTREAL_CAR_RENTAL_PRICE_CENTS', 5600),

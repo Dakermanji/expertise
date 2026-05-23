@@ -110,6 +110,38 @@ function buildBookingMetadata(data) {
 	};
 }
 
+function requirePayPalConfig() {
+	if (!env.PAYPAL_CLIENT_ID || !env.PAYPAL_CLIENT_SECRET) {
+		throw new Error(
+			`PayPal is not configured. Missing ${env.PAYPAL_CLIENT_ID_NAME} or ${env.PAYPAL_CLIENT_SECRET_NAME}.`
+		);
+	}
+}
+
+async function getPayPalAccessToken() {
+	requirePayPalConfig();
+
+	const credentials = Buffer.from(
+		`${env.PAYPAL_CLIENT_ID}:${env.PAYPAL_CLIENT_SECRET}`
+	).toString('base64');
+
+	const response = await fetch(`${env.PAYPAL_BASE_URL}/v1/oauth2/token`, {
+		method: 'POST',
+		headers: {
+			Authorization: `Basic ${credentials}`,
+			'Content-Type': 'application/x-www-form-urlencoded',
+		},
+		body: 'grant_type=client_credentials',
+	});
+
+	if (!response.ok) {
+		throw new Error(`PayPal token request failed with ${response.status}.`);
+	}
+
+	const data = await response.json();
+	return data.access_token;
+}
+
 export function buildPaidBookingEmailData(session) {
 	const metadata = session.metadata || {};
 
@@ -118,6 +150,18 @@ export function buildPaidBookingEmailData(session) {
 		payment_status: session.payment_status,
 		stripe_checkout_session_id: session.id,
 		stripe_payment_intent_id: session.payment_intent || '',
+	};
+}
+
+export function buildPaidPayPalBookingEmailData(order, bookingData) {
+	const capture =
+		order.purchase_units?.[0]?.payments?.captures?.[0] || {};
+
+	return {
+		...buildBookingMetadata(bookingData),
+		payment_status: capture.status || order.status,
+		paypal_order_id: order.id,
+		paypal_capture_id: capture.id || '',
 	};
 }
 
@@ -182,4 +226,113 @@ export async function createMontrealCarRentalCheckoutSession(req, data) {
 			receipt_email: data.email || undefined,
 		},
 	});
+}
+
+export async function createMontrealCarRentalPayPalOrder(req, data) {
+	const accessToken = await getPayPalAccessToken();
+	const baseUrl = getBaseUrl(req);
+	const metadata = buildBookingMetadata(data);
+	const total = (MONTREAL_CAR_RENTAL_PAYMENT.totalCents / 100).toFixed(2);
+	const subtotal = (MONTREAL_CAR_RENTAL_PAYMENT.subtotalCents / 100).toFixed(2);
+	const gst = (MONTREAL_CAR_RENTAL_PAYMENT.gstCents / 100).toFixed(2);
+	const qst = (MONTREAL_CAR_RENTAL_PAYMENT.qstCents / 100).toFixed(2);
+
+	const response = await fetch(`${env.PAYPAL_BASE_URL}/v2/checkout/orders`, {
+		method: 'POST',
+		headers: {
+			Authorization: `Bearer ${accessToken}`,
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			intent: 'CAPTURE',
+			purchase_units: [
+				{
+					description: 'Montreal SAAQ car rental booking',
+					custom_id: metadata.email || metadata.phone,
+					amount: {
+						currency_code: MONTREAL_CAR_RENTAL_PAYMENT.currency.toUpperCase(),
+						value: total,
+						breakdown: {
+							item_total: {
+								currency_code: MONTREAL_CAR_RENTAL_PAYMENT.currency.toUpperCase(),
+								value: total,
+							},
+						},
+					},
+					items: [
+						{
+							name: 'Montreal SAAQ car rental',
+							quantity: '1',
+							unit_amount: {
+								currency_code: MONTREAL_CAR_RENTAL_PAYMENT.currency.toUpperCase(),
+								value: subtotal,
+							},
+						},
+						{
+							name: 'GST (5%)',
+							quantity: '1',
+							unit_amount: {
+								currency_code: MONTREAL_CAR_RENTAL_PAYMENT.currency.toUpperCase(),
+								value: gst,
+							},
+						},
+						{
+							name: 'QST (9.975%)',
+							quantity: '1',
+							unit_amount: {
+								currency_code: MONTREAL_CAR_RENTAL_PAYMENT.currency.toUpperCase(),
+								value: qst,
+							},
+						},
+					],
+				},
+			],
+			payment_source: {
+				paypal: {
+					experience_context: {
+						brand_name: 'Expertise Pro',
+						shipping_preference: 'NO_SHIPPING',
+						user_action: 'PAY_NOW',
+						return_url: `${baseUrl}/payments/paypal/return`,
+						cancel_url: `${baseUrl}/payments/paypal/cancel`,
+					},
+				},
+			},
+		}),
+	});
+
+	if (!response.ok) {
+		throw new Error(`PayPal order request failed with ${response.status}.`);
+	}
+
+	const order = await response.json();
+	const approvalLink = order.links?.find((link) => link.rel === 'payer-action')
+		|| order.links?.find((link) => link.rel === 'approve');
+
+	if (!approvalLink?.href) {
+		throw new Error('PayPal order did not include an approval link.');
+	}
+
+	return { order, approvalUrl: approvalLink.href };
+}
+
+export async function capturePayPalOrder(orderId) {
+	const accessToken = await getPayPalAccessToken();
+
+	const response = await fetch(
+		`${env.PAYPAL_BASE_URL}/v2/checkout/orders/${orderId}/capture`,
+		{
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${accessToken}`,
+				'Content-Type': 'application/json',
+			},
+		}
+	);
+
+	if (!response.ok) {
+		throw new Error(`PayPal capture request failed with ${response.status}.`);
+	}
+
+	return response.json();
 }

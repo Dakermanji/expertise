@@ -4,7 +4,9 @@ import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';
 import { logger } from '../utils/logger.js';
 import {
+	buildPaidPayPalBookingEmailData,
 	buildPaidBookingEmailData,
+	capturePayPalOrder,
 	getStripeClient,
 } from '../utils/payments.js';
 
@@ -75,6 +77,59 @@ export async function getPaymentSuccess(req, res) {
 export function getPaymentCancel(req, res) {
 	req.flash('error', 'flash.payment.cancelled');
 	res.redirect('/booking');
+}
+
+export async function getPayPalReturn(req, res) {
+	const orderId = req.query.token;
+
+	if (!orderId) {
+		req.flash('error', 'flash.payment.error');
+		return res.redirect('/booking');
+	}
+
+	const pendingBookings = req.session.pendingPayPalBookings || {};
+	const bookingData = pendingBookings[orderId];
+
+	if (!bookingData) {
+		req.flash('error', 'flash.payment.error');
+		return res.redirect('/booking');
+	}
+
+	try {
+		const order = await capturePayPalOrder(orderId);
+		const capture = order.purchase_units?.[0]?.payments?.captures?.[0];
+
+		if (order.status !== 'COMPLETED' && capture?.status !== 'COMPLETED') {
+			req.flash('error', 'flash.payment.error');
+			return res.redirect('/booking');
+		}
+
+		await sendBookingEmail({
+			serviceType: bookingData.service_type,
+			data: buildPaidPayPalBookingEmailData(order, bookingData),
+		});
+
+		delete pendingBookings[orderId];
+		req.session.pendingPayPalBookings = pendingBookings;
+
+		req.flash('success', 'flash.payment.success');
+		return res.redirect('/');
+	} catch (err) {
+		logger.error(`💳 [PayPal] Failed to capture order ${orderId}: ${err}`);
+		req.flash('error', 'flash.payment.error');
+		return res.redirect('/booking');
+	}
+}
+
+export function getPayPalCancel(req, res) {
+	const orderId = req.query.token;
+
+	if (orderId && req.session.pendingPayPalBookings) {
+		delete req.session.pendingPayPalBookings[orderId];
+	}
+
+	req.flash('error', 'flash.payment.cancelled');
+	return res.redirect('/booking');
 }
 
 export async function handleStripeWebhook(req, res) {
