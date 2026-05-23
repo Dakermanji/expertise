@@ -37,6 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		?.addEventListener("click", () => saveChoice("all"));
 
 	banner
+		.querySelector("[data-cookie-details-toggle]")
+		?.addEventListener("click", (event) => {
+			const details = banner.querySelector("#cookieConsentDetails");
+			if (!details) return;
+
+			const isHidden = details.hidden;
+			details.hidden = !isHidden;
+			event.currentTarget.setAttribute("aria-expanded", String(isHidden));
+		});
+
+	banner
 		.querySelector("[data-cookie-language-select]")
 		?.addEventListener("change", (event) => {
 			window.location.href = `/lang/${event.target.value}`;

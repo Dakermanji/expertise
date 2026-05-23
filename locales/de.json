@@ -217,6 +217,12 @@
 			"language": "Sprache",
 			"essential_only": "Nur essenzielle",
 			"accept_all": "Alle akzeptieren"
+		},
+		"details": {
+			"title": "Welche Cookies verwenden wir?",
+			"essential": "Essenzielle Cookies halten die Website funktionsfähig: Spracheinstellung, Sitzungsnachrichten, Wiederherstellung des Buchungsformulars und Zahlungsrückkehr.",
+			"third_party": "Stripe, PayPal, Google Maps oder andere Drittanbieter können eigene Cookies verwenden, wenn Sie mit ihnen interagieren.",
+			"non_essential": "Wir laden derzeit keine Analyse- oder Marketing-Cookies. Falls sich das ändert, sollten nicht essenzielle Cookies deaktiviert bleiben, bis Sie sie akzeptieren."
 		}
 	}
 }

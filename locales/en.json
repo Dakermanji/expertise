@@ -217,6 +217,12 @@
 			"language": "Language",
 			"essential_only": "Essential only",
 			"accept_all": "Accept all"
+		},
+		"details": {
+			"title": "What cookies do we use?",
+			"essential": "Essential cookies keep the site working: language preference, session messages, booking form recovery, and payment return flows.",
+			"third_party": "Stripe, PayPal, Google Maps, or other third-party services may use their own cookies when you interact with them.",
+			"non_essential": "We do not currently load analytics or marketing cookies. If that changes, non-essential cookies should stay off until you accept them."
 		}
 	}
 }

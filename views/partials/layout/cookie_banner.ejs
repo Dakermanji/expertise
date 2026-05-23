@@ -36,15 +36,35 @@
 			</select>
 		</div>
 		<div class="cookie-consent__actions">
-			<a class="btn btn-outline-secondary" href="/legal/cookies">
+			<button
+				class="btn btn-outline-secondary"
+				type="button"
+				data-cookie-details-toggle
+				aria-expanded="false"
+				aria-controls="cookieConsentDetails"
+			>
 				<%= __('cookies.banner.learn_more', 'Learn more') %>
-			</a>
+			</button>
 			<button class="btn btn-outline-primary" type="button" data-cookie-essential>
 				<%= __('cookies.banner.essential_only', 'Essential only') %>
 			</button>
+			<!--
 			<button class="btn btn-primary" type="button" data-cookie-accept>
 				<%= __('cookies.banner.accept_all', 'Accept all') %>
 			</button>
+			-->
+		</div>
+		<div class="cookie-consent__details" id="cookieConsentDetails" hidden>
+			<h3><%= __('cookies.details.title', 'What cookies do we use?') %></h3>
+			<p>
+				<%= __('cookies.details.essential', 'Essential cookies keep the site working: language preference, session messages, booking form recovery, and payment return flows.') %>
+			</p>
+			<p>
+				<%= __('cookies.details.third_party', 'Stripe, PayPal, Google Maps, or other third-party services may use their own cookies when you interact with them.') %>
+			</p>
+			<p>
+				<%= __('cookies.details.non_essential', 'We do not currently load analytics or marketing cookies. If that changes, non-essential cookies should stay off until you accept them.') %>
+			</p>
 		</div>
 	</div>
 </div>
