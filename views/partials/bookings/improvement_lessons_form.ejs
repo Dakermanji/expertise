@@ -1,5 +1,6 @@
 <!-- views/partials/bookings/improvement_lessons_form.ejs -->
 <form action="/booking" method="POST">
+	<% const improvementInput = bookingInput?.service_type === 'improvement_lessons' ? bookingInput : {}; %>
 	<div class="row g-3">
 		<div class="col-md-6">
 			<input
@@ -15,6 +16,7 @@
 				name="student_name"
 				id="student_name"
 				class="form-control"
+				value="<%= improvementInput.student_name || '' %>"
 				required
 			/>
 		</div>
@@ -28,6 +30,7 @@
 				name="phone"
 				id="phone"
 				class="form-control"
+				value="<%= improvementInput.phone || '' %>"
 				required
 			/>
 		</div>
@@ -36,7 +39,13 @@
 			<label for="email" class="form-label fw-bold">
 				<%= __('form.email') %>
 			</label>
-			<input type="email" name="email" id="email" class="form-control" />
+			<input
+				type="email"
+				name="email"
+				id="email"
+				class="form-control"
+				value="<%= improvementInput.email || '' %>"
+			/>
 		</div>
 
 		<div class="col-md-6">
@@ -46,7 +55,9 @@
 			<select name="region" id="region" class="form-select" required>
 				<% const regions = translations.regions; %>
 				<% for (const key in regions) { %>
-				<option value="<%= key %>"><%= regions[key] %></option>
+				<option value="<%= key %>" <%= improvementInput.region === key ? 'selected' : '' %>>
+					<%= regions[key] %>
+				</option>
 				<% } %>
 			</select>
 		</div>
@@ -60,6 +71,7 @@
 				name="preferred_date"
 				id="preferred_date"
 				class="form-control"
+				value="<%= improvementInput.preferred_date || '' %>"
 				required
 			/>
 		</div>
@@ -73,6 +85,7 @@
 				name="preferred_time"
 				id="preferred_time"
 				class="form-control"
+				value="<%= improvementInput.preferred_time || '' %>"
 			/>
 		</div>
 
@@ -85,11 +98,11 @@
 				id="preferred_language"
 				class="form-select"
 			>
-				<option value="en">English</option>
-				<option value="fr">Français</option>
-				<option value="ar">العربية</option>
-				<option value="es">Español</option>
-				<option value="de">Deutsch</option>
+				<option value="en" <%= improvementInput.preferred_language === 'en' ? 'selected' : '' %>>English</option>
+				<option value="fr" <%= improvementInput.preferred_language === 'fr' ? 'selected' : '' %>>Français</option>
+				<option value="ar" <%= improvementInput.preferred_language === 'ar' ? 'selected' : '' %>>العربية</option>
+				<option value="es" <%= improvementInput.preferred_language === 'es' ? 'selected' : '' %>>Español</option>
+				<option value="de" <%= improvementInput.preferred_language === 'de' ? 'selected' : '' %>>Deutsch</option>
 			</select>
 		</div>
 
@@ -102,7 +115,7 @@
 				id="notes"
 				class="form-control"
 				rows="3"
-			></textarea>
+			><%= improvementInput.notes || '' %></textarea>
 		</div>
 	</div>
 

@@ -5,6 +5,46 @@ import { logger } from '../../utils/logger.js';
 
 const ALLOWED_SERVICES = ['car_rental', 'improvement_lessons'];
 const ALLOWED_LANGS = ['en', 'fr', 'ar', 'de', 'es'];
+const BOOKING_FIELD_NAMES = [
+	'service_type',
+	'student_name',
+	'phone',
+	'email',
+	'region',
+	'exam_date',
+	'exam_time',
+	'preferred_date',
+	'preferred_time',
+	'preferred_language',
+	'notes',
+	'payment_provider',
+];
+
+function preserveBookingInput(req) {
+	const preservedInput = {};
+
+	BOOKING_FIELD_NAMES.forEach((field) => {
+		if (req.body[field] !== undefined) {
+			preservedInput[field] = String(req.body[field]);
+		}
+	});
+
+	req.flash('booking_input', JSON.stringify(preservedInput));
+}
+
+function parseDateOnly(value) {
+	const [year, month, day] = String(value).split('-').map(Number);
+
+	if (!year || !month || !day) return null;
+
+	return new Date(year, month - 1, day);
+}
+
+function startOfToday() {
+	const today = new Date();
+	today.setHours(0, 0, 0, 0);
+	return today;
+}
 
 export function validateBooking(req, res, next) {
 	const errors = [];
@@ -40,14 +80,19 @@ export function validateBooking(req, res, next) {
 	if (!preferred_date || !validator.isDate(preferred_date)) {
 		errors.push('flash.booking.invalid_date');
 	} else {
-		const today = new Date();
-		const chosen = new Date(preferred_date);
+		const today = startOfToday();
+		const chosen = parseDateOnly(preferred_date);
 
 		const max = new Date();
+		max.setHours(0, 0, 0, 0);
 		max.setDate(max.getDate() + 60);
 
-		if (chosen < today) errors.push('flash.booking.date_past');
-		if (chosen > max) errors.push('flash.booking.date_too_far');
+		if (!chosen) {
+			errors.push('flash.booking.invalid_date');
+		} else {
+			if (chosen < today) errors.push('flash.booking.date_past');
+			if (chosen > max) errors.push('flash.booking.date_too_far');
+		}
 	}
 
 	/** LANGUAGE */
@@ -61,6 +106,7 @@ export function validateBooking(req, res, next) {
 	/** HANDLE ERRORS */
 	if (errors.length > 0) {
 		logger.warn(`📋 [Booking] Validation failed with ${errors.length} error(s).`);
+		preserveBookingInput(req);
 		req.flash('error_list', errors);
 		return res.redirect('/booking');
 	}

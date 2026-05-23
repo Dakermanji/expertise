@@ -43,7 +43,8 @@ import {
  * @param {string|null} [extra.preselect]  Pre-selected service identifier
  */
 export function getBooking(req, res, extra = {}) {
-	const { preselect = null } = extra;
+	const bookingInput = getPreservedBookingInput(req);
+	const preselect = extra.preselect || getPreselectedService(bookingInput);
 
 	res.render('booking', {
 		title: 'booking',
@@ -51,10 +52,34 @@ export function getBooking(req, res, extra = {}) {
 		scripts: ['booking'],
 		google_place_id: env.GOOGLE_PLACE_ID,
 		preselect,
+		bookingInput,
 		montrealCarRentalPayment: getMontrealCarRentalPaymentSummary(
 			req.getLocale()
 		),
 	});
+}
+
+function getPreservedBookingInput(req) {
+	const [bookingInput] = req.flash('booking_input');
+
+	if (!bookingInput) return {};
+
+	try {
+		return JSON.parse(bookingInput);
+	} catch (err) {
+		logger.warn(`📋 [Booking] Failed to parse preserved input: ${err}`);
+		return {};
+	}
+}
+
+function getPreselectedService(bookingInput) {
+	if (bookingInput.service_type === 'car_rental') return 'rental';
+	if (bookingInput.service_type === 'improvement_lessons') return 'improvement';
+	return null;
+}
+
+function preserveBookingInput(req) {
+	req.flash('booking_input', JSON.stringify(req.body));
 }
 
 /**
@@ -97,6 +122,7 @@ export async function handleBooking(req, res) {
 			return res.redirect(303, session.url);
 		} catch (err) {
 			logger.error(`💳 [Booking] Failed to start payment checkout: ${err}`);
+			preserveBookingInput(req);
 			req.flash('error', 'flash.payment.error');
 			return res.redirect('/booking');
 		}
@@ -109,6 +135,7 @@ export async function handleBooking(req, res) {
 		logger.info('📧 [Booking] Booking email sent successfully.');
 	} catch (err) {
 		logger.error(`📧 [Booking] Failed to send booking email: ${err}`);
+		preserveBookingInput(req);
 		req.flash('error', 'flash.booking.error');
 	}
 
