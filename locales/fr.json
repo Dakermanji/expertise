@@ -154,6 +154,7 @@
 			"booking": "Réservation",
 			"error": "Erreur",
 			"home": "Accueil",
+			"legal": "Mentions légales",
 			"payment_success": "Paiement reçu",
 			"rest": "Expertise Pro - Location de voitures pour examens SAAQ et cours de conduite à Montréal"
 		}
@@ -205,5 +206,15 @@
 		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :",
 		"through": "par une école sœur"
 	},
-	"meta.titles.": "meta.titles."
+	"meta.titles.": "meta.titles.",
+	"cookies": {
+		"banner": {
+			"title": "Préférences de cookies",
+			"description": "Nous utilisons des cookies essentiels pour les sessions, la préférence de langue et les paiements. Nous n’utilisons actuellement aucun cookie d’analyse ou de marketing.",
+			"learn_more": "En savoir plus",
+			"language": "Langue",
+			"essential_only": "Essentiels seulement",
+			"accept_all": "Tout accepter"
+		}
+	}
 }

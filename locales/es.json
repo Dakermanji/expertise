@@ -155,6 +155,7 @@
 			"booking": "Reserva",
 			"error": "Error",
 			"home": "Inicio",
+			"legal": "Legal",
 			"payment_success": "Pago recibido",
 			"rest": "Expertise Pro - Alquiler de vehículos para exámenes SAAQ y clases de conducción en Montreal"
 		}
@@ -207,5 +208,15 @@
 		"call": "Para cursos completos de conducción, recomendamos nuestra escuela asociada:",
 		"through": "a través de una escuela asociada"
 	},
-	"meta.titles.": "meta.titles."
+	"meta.titles.": "meta.titles.",
+	"cookies": {
+		"banner": {
+			"title": "Preferencias de cookies",
+			"description": "Usamos cookies esenciales para sesiones, preferencia de idioma y pagos. Actualmente no usamos cookies de análisis ni de marketing.",
+			"learn_more": "Más información",
+			"language": "Idioma",
+			"essential_only": "Solo esenciales",
+			"accept_all": "Aceptar todo"
+		}
+	}
 }

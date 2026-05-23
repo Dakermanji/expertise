@@ -155,6 +155,7 @@
 			"booking": "Buchung",
 			"error": "Fehler",
 			"home": "Startseite",
+			"legal": "Rechtliches",
 			"payment_success": "Zahlung erhalten",
 			"rest": "Expertise Pro - Mietfahrzeuge für SAAQ-Prüfungen und Fahrunterricht in Montreal"
 		}
@@ -207,5 +208,15 @@
 		"call": "Für vollständige Fahrkurse empfehlen wir unsere Partnerschule:",
 		"through": "über eine Partnerschule"
 	},
-	"meta.titles.": "meta.titles."
+	"meta.titles.": "meta.titles.",
+	"cookies": {
+		"banner": {
+			"title": "Cookie-Einstellungen",
+			"description": "Wir verwenden essenzielle Cookies für Sitzungen, Spracheinstellungen und Zahlungsabläufe. Derzeit verwenden wir keine Analyse- oder Marketing-Cookies.",
+			"learn_more": "Mehr erfahren",
+			"language": "Sprache",
+			"essential_only": "Nur essenzielle",
+			"accept_all": "Alle akzeptieren"
+		}
+	}
 }

@@ -1,0 +1,50 @@
+<!-- views/partials/layout/cookie_banner.ejs -->
+<div class="cookie-consent-shell" data-cookie-consent hidden>
+	<div class="cookie-consent-backdrop"></div>
+	<div
+		class="cookie-consent"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="cookieConsentTitle"
+		aria-describedby="cookieConsentDescription"
+	>
+		<div class="cookie-consent__content">
+			<i class="bi bi-shield-check cookie-consent__icon" aria-hidden="true"></i>
+			<div>
+				<div class="cookie-consent__header">
+					<h2 id="cookieConsentTitle"><%= __('cookies.banner.title', 'Cookie preferences') %></h2>
+				</div>
+				<p id="cookieConsentDescription">
+					<%= __('cookies.banner.description', 'We use essential cookies for sessions, language preference, and payment flows. We do not currently use analytics or marketing cookies.') %>
+				</p>
+			</div>
+		</div>
+		<div class="cookie-consent__language">
+			<label class="visually-hidden" for="cookieLanguageSelect">
+				<%= __('cookies.banner.language', 'Language') %>
+			</label>
+			<select
+				id="cookieLanguageSelect"
+				class="form-select form-select-sm"
+				data-cookie-language-select
+			>
+				<% Object.entries(LANG_DATA).forEach(([code, lang]) => { %>
+					<option value="<%= code %>" <%= currentLang === code ? 'selected' : '' %>>
+						<%= lang.label %>
+					</option>
+				<% }) %>
+			</select>
+		</div>
+		<div class="cookie-consent__actions">
+			<a class="btn btn-outline-secondary" href="/legal/cookies">
+				<%= __('cookies.banner.learn_more', 'Learn more') %>
+			</a>
+			<button class="btn btn-outline-primary" type="button" data-cookie-essential>
+				<%= __('cookies.banner.essential_only', 'Essential only') %>
+			</button>
+			<button class="btn btn-primary" type="button" data-cookie-accept>
+				<%= __('cookies.banner.accept_all', 'Accept all') %>
+			</button>
+		</div>
+	</div>
+</div>
