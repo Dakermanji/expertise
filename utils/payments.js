@@ -110,6 +110,17 @@ function buildBookingMetadata(data) {
 	};
 }
 
+export function buildPaidBookingEmailData(session) {
+	const metadata = session.metadata || {};
+
+	return {
+		...metadata,
+		payment_status: session.payment_status,
+		stripe_checkout_session_id: session.id,
+		stripe_payment_intent_id: session.payment_intent || '',
+	};
+}
+
 export async function createMontrealCarRentalCheckoutSession(req, data) {
 	if (!stripe) {
 		throw new Error('Stripe is not configured. Missing configured secret key.');
@@ -125,6 +136,13 @@ export async function createMontrealCarRentalCheckoutSession(req, data) {
 		submit_type: 'pay',
 		success_url: `${baseUrl}/payments/success?session_id={CHECKOUT_SESSION_ID}`,
 		cancel_url: `${baseUrl}/payments/cancel`,
+		invoice_creation: {
+			enabled: true,
+			invoice_data: {
+				description: 'Montreal SAAQ car rental booking',
+				metadata,
+			},
+		},
 		line_items: [
 			{
 				quantity: 1,
@@ -158,6 +176,10 @@ export async function createMontrealCarRentalCheckoutSession(req, data) {
 			},
 		],
 		metadata,
-		payment_intent_data: { metadata },
+		payment_intent_data: {
+			description: 'Montreal SAAQ car rental booking',
+			metadata,
+			receipt_email: data.email || undefined,
+		},
 	});
 }

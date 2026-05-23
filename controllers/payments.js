@@ -3,7 +3,40 @@
 import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';
 import { logger } from '../utils/logger.js';
-import { getStripeClient } from '../utils/payments.js';
+import {
+	buildPaidBookingEmailData,
+	getStripeClient,
+} from '../utils/payments.js';
+
+async function sendPaidBookingEmailOnce(stripe, session, source) {
+	const latestSession = await stripe.checkout.sessions.retrieve(session.id);
+	const metadata = latestSession.metadata || {};
+
+	if (metadata.admin_booking_email_sent === 'true') {
+		logger.info(
+			`💳 [Stripe] Paid booking email already sent for ${latestSession.id}.`
+		);
+		return;
+	}
+
+	await sendBookingEmail({
+		serviceType: metadata.service_type,
+		data: buildPaidBookingEmailData(latestSession),
+	});
+
+	await stripe.checkout.sessions.update(latestSession.id, {
+		metadata: {
+			...metadata,
+			admin_booking_email_sent: 'true',
+			admin_booking_email_source: source,
+			admin_booking_email_sent_at: new Date().toISOString(),
+		},
+	});
+
+	logger.info(
+		`💳 [Stripe] Paid booking email sent for ${latestSession.id} from ${source}.`
+	);
+}
 
 export async function getPaymentSuccess(req, res) {
 	const stripe = getStripeClient();
@@ -20,6 +53,14 @@ export async function getPaymentSuccess(req, res) {
 		if (session.payment_status !== 'paid') {
 			req.flash('error', 'flash.payment.error');
 			return res.redirect('/booking');
+		}
+
+		try {
+			await sendPaidBookingEmailOnce(stripe, session, 'success_redirect');
+		} catch (err) {
+			logger.error(
+				`💳 [Payment] Payment succeeded but admin email failed for ${session.id}: ${err}`
+			);
 		}
 
 		req.flash('success', 'flash.payment.success');
@@ -61,18 +102,8 @@ export async function handleStripeWebhook(req, res) {
 		const session = event.data.object;
 
 		if (session.payment_status === 'paid') {
-			const metadata = session.metadata || {};
-
 			try {
-				await sendBookingEmail({
-					serviceType: metadata.service_type,
-					data: {
-						...metadata,
-						payment_status: 'paid',
-						stripe_checkout_session_id: session.id,
-					},
-				});
-				logger.info(`💳 [Stripe] Paid booking email sent for ${session.id}.`);
+				await sendPaidBookingEmailOnce(stripe, session, 'webhook');
 			} catch (err) {
 				logger.error(`💳 [Stripe] Failed to send paid booking email: ${err}`);
 				return res.sendStatus(500);
