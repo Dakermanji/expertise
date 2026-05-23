@@ -122,12 +122,25 @@
 		<button
 			type="submit"
 			class="btn btn-primary mt-3"
+			name="payment_provider"
+			value="stripe"
 			data-region-submit-button
-			data-payment-label="<%= __('payment.pay_or_submit', 'Pay now for Montreal') %>"
+			data-payment-label="<%= __('payment.pay_with_stripe', 'Pay with card / wallet') %>"
 			data-submit-label="<%= __('form.submit') %>"
 		>
 			<i class="bi bi-credit-card me-1" data-submit-icon></i>
-			<span data-submit-label-text><%= __('payment.pay_or_submit', 'Pay now for Montreal') %></span>
+			<span data-submit-label-text><%= __('payment.pay_with_stripe', 'Pay with card / wallet') %></span>
+		</button>
+
+		<button
+			type="submit"
+			class="btn btn-dark mt-3 ms-sm-2"
+			name="payment_provider"
+			value="paypal"
+			data-paypal-submit-button
+		>
+			<i class="bi bi-paypal me-1"></i>
+			<span><%= __('payment.pay_with_paypal', 'Pay with PayPal') %></span>
 		</button>
 	</div>
 </form>

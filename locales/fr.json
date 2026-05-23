@@ -140,6 +140,8 @@
 		"gst": "TPS",
 		"montreal_price_label": "Prix fixe Montréal",
 		"pay_or_submit": "Payer maintenant pour Montréal",
+		"pay_with_paypal": "Payer avec PayPal",
+		"pay_with_stripe": "Payer par carte / portefeuille",
 		"qst": "TVQ",
 		"success_message": "Merci. Votre paiement pour la location de voiture à Montréal a été reçu.",
 		"success_next_steps": "Nous vous contacterons pour confirmer les détails de la réservation.",

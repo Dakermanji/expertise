@@ -141,6 +141,8 @@
 		"gst": "GST",
 		"montreal_price_label": "Festpreis Montreal",
 		"pay_or_submit": "Jetzt für Montreal bezahlen",
+		"pay_with_paypal": "Mit PayPal bezahlen",
+		"pay_with_stripe": "Mit Karte / Wallet bezahlen",
 		"qst": "QST",
 		"success_message": "Vielen Dank. Ihre Zahlung für das Mietfahrzeug in Montreal ist eingegangen.",
 		"success_next_steps": "Wir kontaktieren Sie, um die Buchungsdetails zu bestätigen.",

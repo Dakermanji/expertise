@@ -141,6 +141,8 @@
 		"gst": "GST",
 		"montreal_price_label": "السعر الثابت لمونتريال",
 		"pay_or_submit": "ادفع الآن لمونتريال",
+		"pay_with_paypal": "الدفع عبر PayPal",
+		"pay_with_stripe": "الدفع بالبطاقة / المحفظة",
 		"qst": "QST",
 		"success_message": "شكرًا لك. تم استلام دفعة تأجير السيارة في مونتريال.",
 		"success_next_steps": "سنتواصل معك لتأكيد تفاصيل الحجز.",

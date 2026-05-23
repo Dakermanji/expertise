@@ -141,6 +141,8 @@
 		"gst": "GST",
 		"montreal_price_label": "Montreal fixed price",
 		"pay_or_submit": "Pay now for Montreal",
+		"pay_with_paypal": "Pay with PayPal",
+		"pay_with_stripe": "Pay with card / wallet",
 		"qst": "QST",
 		"success_message": "Thank you. Your Montreal car rental payment has been received.",
 		"success_next_steps": "We will contact you to confirm the booking details.",
