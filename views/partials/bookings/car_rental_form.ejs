@@ -45,6 +45,18 @@
 			</select>
 		</div>
 
+		<div class="col-12" data-montreal-payment-summary>
+			<div class="alert alert-info small mb-0" role="status">
+				<strong><%= __('payment.montreal_price_label', 'Montreal fixed price') %>:</strong>
+				<%= montrealCarRentalPayment.subtotal %>
+				<span class="text-muted">
+					(<%= __('payment.gst', 'GST') %> <%= montrealCarRentalPayment.gst %>,
+					<%= __('payment.qst', 'QST') %> <%= montrealCarRentalPayment.qst %>)
+				</span>
+				<strong><%= __('payment.total', 'Total') %>: <%= montrealCarRentalPayment.total %></strong>
+			</div>
+		</div>
+
 		<div class="col-md-4">
 			<label for="exam_date" class="form-label fw-bold">
 				<%= __('form.exam_date') %>
@@ -107,8 +119,15 @@
 	</div>
 
 	<div class="text-center mb-4">
-		<button type="submit" class="btn btn-primary mt-3">
-			<i class="bi bi-send me-1"></i> <%= __('form.submit') %>
+		<button
+			type="submit"
+			class="btn btn-primary mt-3"
+			data-region-submit-button
+			data-payment-label="<%= __('payment.pay_or_submit', 'Pay now for Montreal') %>"
+			data-submit-label="<%= __('form.submit') %>"
+		>
+			<i class="bi bi-credit-card me-1" data-submit-icon></i>
+			<span data-submit-label-text><%= __('payment.pay_or_submit', 'Pay now for Montreal') %></span>
 		</button>
 	</div>
 </form>

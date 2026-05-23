@@ -18,6 +18,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	if (!serviceCards.length) return;
 
+	function updateCarRentalPaymentState() {
+		const rentalForm = document.querySelector("#form-rental form");
+		if (!rentalForm) return;
+
+		const regionSelect = rentalForm.querySelector('select[name="region"]');
+		const paymentSummary = rentalForm.querySelector(
+			"[data-montreal-payment-summary]"
+		);
+		const submitButton = rentalForm.querySelector("[data-region-submit-button]");
+		const submitIcon = rentalForm.querySelector("[data-submit-icon]");
+		const submitLabel = rentalForm.querySelector("[data-submit-label-text]");
+
+		if (!regionSelect || !paymentSummary || !submitButton || !submitLabel) {
+			return;
+		}
+
+		const isMontreal = regionSelect.value === "montreal";
+
+		paymentSummary.classList.toggle("d-none", !isMontreal);
+		submitLabel.textContent = isMontreal
+			? submitButton.dataset.paymentLabel
+			: submitButton.dataset.submitLabel;
+
+		if (submitIcon) {
+			submitIcon.classList.toggle("bi-credit-card", isMontreal);
+			submitIcon.classList.toggle("bi-send", !isMontreal);
+		}
+	}
+
 	// Helper: select a booking service
 	function selectService(card) {
 		const selectedForm = card.dataset.form;
@@ -39,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const targetForm = document.getElementById(`form-${selectedForm}`);
 		if (targetForm) {
 			targetForm.classList.remove("d-none");
+			updateCarRentalPaymentState();
 
 			// Smooth scroll to the form
 			targetForm.scrollIntoView({
@@ -61,6 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
+	const rentalRegionSelect = document.querySelector(
+		'#form-rental select[name="region"]'
+	);
+
+	if (rentalRegionSelect) {
+		rentalRegionSelect.addEventListener("change", updateCarRentalPaymentState);
+		updateCarRentalPaymentState();
+	}
 
 	// Auto-select if preselected route
 	if (preselected) {

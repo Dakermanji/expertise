@@ -106,6 +106,11 @@
 			"invalid_service": "Por favor, seleccione un servicio válido.",
 			"not_submitted": "El formulario no fue enviado por las siguientes razones:",
 			"sent": "¡Su solicitud de reserva ha sido enviada con éxito!"
+		},
+		"payment": {
+			"cancelled": "El pago fue cancelado. No se realizó ningún cargo.",
+			"error": "No pudimos iniciar o confirmar el pago. Por favor, inténtelo de nuevo.",
+			"success": "Pago recibido. Gracias. Nos pondremos en contacto para confirmar los detalles de la reserva."
 		}
 	},
 	"footer": {
@@ -130,12 +135,25 @@
 	"hero": {
 		"video_fallback": "Su navegador no admite la reproducción de video."
 	},
+	"payment": {
+		"cancelled": "El pago fue cancelado. No se realizó ningún cargo.",
+		"error": "No pudimos iniciar o confirmar el pago. Por favor, inténtelo de nuevo.",
+		"gst": "GST",
+		"montreal_price_label": "Precio fijo Montreal",
+		"pay_or_submit": "Pagar ahora para Montreal",
+		"qst": "QST",
+		"success_message": "Gracias. Hemos recibido su pago por el alquiler de vehículo en Montreal.",
+		"success_next_steps": "Nos pondremos en contacto para confirmar los detalles de la reserva.",
+		"success_title": "Pago recibido",
+		"total": "Total"
+	},
 	"meta": {
 		"description": "Alquiler de vehículos certificados y clases de mejora para su examen práctico de la SAAQ en Montreal, Laval y más.",
 		"titles": {
 			"booking": "Reserva",
 			"error": "Error",
 			"home": "Inicio",
+			"payment_success": "Pago recibido",
 			"rest": "Expertise Pro - Alquiler de vehículos para exámenes SAAQ y clases de conducción en Montreal"
 		}
 	},
@@ -186,5 +204,6 @@
 	"sister_school": {
 		"call": "Para cursos completos de conducción, recomendamos nuestra escuela asociada:",
 		"through": "a través de una escuela asociada"
-	}
+	},
+	"meta.titles.": "meta.titles."
 }

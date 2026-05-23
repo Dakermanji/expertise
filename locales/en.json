@@ -106,6 +106,11 @@
 			"invalid_service": "Please select a valid service.",
 			"not_submitted": "The form was not submitted because:",
 			"sent": "Your booking request has been sent successfully!"
+		},
+		"payment": {
+			"cancelled": "Payment was cancelled. No charge was made.",
+			"error": "We could not start or confirm the payment. Please try again.",
+			"success": "Payment received. Thank you! We will contact you to confirm the booking details."
 		}
 	},
 	"footer": {
@@ -130,12 +135,25 @@
 	"hero": {
 		"video_fallback": "Your browser does not support the video tag."
 	},
+	"payment": {
+		"cancelled": "Payment was cancelled. No charge was made.",
+		"error": "We could not start or confirm the payment. Please try again.",
+		"gst": "GST",
+		"montreal_price_label": "Montreal fixed price",
+		"pay_or_submit": "Pay now for Montreal",
+		"qst": "QST",
+		"success_message": "Thank you. Your Montreal car rental payment has been received.",
+		"success_next_steps": "We will contact you to confirm the booking details.",
+		"success_title": "Payment received",
+		"total": "Total"
+	},
 	"meta": {
 		"description": "Certified car rentals and improvement lessons for your SAAQ road exam in Montreal, Laval and more",
 		"titles": {
 			"booking": "Booking",
 			"error": "ُError",
 			"home": "Home",
+			"payment_success": "Payment received",
 			"rest": "Expertise Pro - Car Rents for SAAQ Exams and Driving Lessons Montreal"
 		}
 	},
@@ -186,5 +204,6 @@
 	"sister_school": {
 		"call": "For full driving courses, we recommend our sister school:",
 		"through": "through a sister school"
-	}
+	},
+	"meta.titles.": "meta.titles."
 }

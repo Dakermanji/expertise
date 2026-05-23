@@ -13,6 +13,11 @@
 import env from '../config/dotenv.js';
 import { sendBookingEmail } from '../utils/bookingMailer.js';
 import { logger } from '../utils/logger.js';
+import {
+	createMontrealCarRentalCheckoutSession,
+	getMontrealCarRentalPaymentSummary,
+	requiresMontrealCarRentalPayment,
+} from '../utils/payments.js';
 
 /**
  * Booking Controller
@@ -45,6 +50,9 @@ export function getBooking(req, res, extra = {}) {
 		scripts: ['booking'],
 		google_place_id: env.GOOGLE_PLACE_ID,
 		preselect,
+		montrealCarRentalPayment: getMontrealCarRentalPaymentSummary(
+			req.getLocale()
+		),
 	});
 }
 
@@ -69,6 +77,17 @@ export function getBooking(req, res, extra = {}) {
  */
 export async function handleBooking(req, res) {
 	const { service_type, ...data } = req.body;
+
+	if (requiresMontrealCarRentalPayment(req.body)) {
+		try {
+			const session = await createMontrealCarRentalCheckoutSession(req, req.body);
+			return res.redirect(303, session.url);
+		} catch (err) {
+			logger.error(`💳 [Booking] Failed to start Stripe Checkout: ${err}`);
+			req.flash('error', 'flash.payment.error');
+			return res.redirect('/booking');
+		}
+	}
 
 	try {
 		await sendBookingEmail({ serviceType: service_type, data });
