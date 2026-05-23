@@ -1,0 +1,21 @@
+<!-- views/payment_success.ejs -->
+<section class="container py-5">
+	<div class="row justify-content-center">
+		<div class="col-md-7">
+			<div class="text-center">
+				<i class="bi bi-check-circle-fill text-success display-4"></i>
+				<h1 class="mt-3"><%= __('payment.success_title', 'Payment received') %></h1>
+				<p class="lead mb-2">
+					<%= __('payment.success_message', 'Thank you. Your Montreal car rental payment has been received.') %>
+				</p>
+				<p class="fw-bold"><%= amount %></p>
+				<p class="text-muted">
+					<%= __('payment.success_next_steps', 'We will contact you to confirm the booking details.') %>
+				</p>
+				<a href="/" class="btn btn-primary mt-3">
+					<%= __('common.close', 'Close') %>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

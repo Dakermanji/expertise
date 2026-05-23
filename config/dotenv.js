@@ -32,13 +32,9 @@ function requireEnv(variable) {
 function optionalEnv(variable, defaultValue) {
 	if (!process.env[variable]) {
 		logger.warn(
-			`⚙️ [Default Env]: ${variable} not found, using ${defaultValue}`
+			`⚙️ [Default Env]: ${variable} not found, using ${defaultValue}`,
 		);
 	}
-	return process.env[variable] || defaultValue;
-}
-
-function silentOptionalEnv(variable, defaultValue = '') {
 	return process.env[variable] || defaultValue;
 }
 
@@ -46,12 +42,18 @@ function silentOptionalEnv(variable, defaultValue = '') {
  * Main environment configuration object.
  * Centralizes access to all application-level variables.
  */
+const nodeEnv = optionalEnv('NODE_ENV', 'development');
+const stripeSecretKeyName =
+	nodeEnv === 'development' ? 'STRIPE_SECRET_KEY_TEST' : 'STRIPE_SECRET_KEY';
+
 const env = {
 	// Server
+	NODE_ENV: nodeEnv,
 	PROTOCOL: optionalEnv('PROTOCOL', 'http'),
 	PORT: optionalEnv('PORT', 3000),
 	HOST: optionalEnv('HOST', 'localhost'),
 	SESSION_SECRET: requireEnv('SESSION_SECRET'),
+	PUBLIC_BASE_URL: optionalEnv('PUBLIC_BASE_URL'),
 
 	// Database
 	DB_HOST: optionalEnv('DB_HOST', 'localhost'),
@@ -70,12 +72,12 @@ const env = {
 	EMAIL_PASS: requireEnv('EMAIL_PASS'),
 
 	// Payments
-	STRIPE_SECRET_KEY: silentOptionalEnv('STRIPE_SECRET_KEY'),
-	STRIPE_WEBHOOK_SECRET: silentOptionalEnv('STRIPE_WEBHOOK_SECRET'),
-	PUBLIC_BASE_URL: silentOptionalEnv('PUBLIC_BASE_URL'),
+	STRIPE_SECRET_KEY: requireEnv(stripeSecretKeyName),
+	STRIPE_SECRET_KEY_NAME: stripeSecretKeyName,
+	STRIPE_WEBHOOK_SECRET: requireEnv('STRIPE_WEBHOOK_SECRET'),
 	PAYMENT_CURRENCY: optionalEnv('PAYMENT_CURRENCY', 'cad'),
 	MONTREAL_CAR_RENTAL_PRICE_CENTS: Number(
-		optionalEnv('MONTREAL_CAR_RENTAL_PRICE_CENTS', 5600)
+		optionalEnv('MONTREAL_CAR_RENTAL_PRICE_CENTS', 5600),
 	),
 
 	// Sentry

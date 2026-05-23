@@ -17,6 +17,7 @@
 import indexRoutes from '../routes/index.js';
 import langRoutes from '../routes/lang.js';
 import bookingRoutes from '../routes/booking.js';
+import paymentRoutes from '../routes/payments.js';
 
 /**
  * Registers all route groups on the provided Express app instance.
@@ -31,4 +32,7 @@ export default function setupRoutes(app) {
 
 	// Booking system routes (driving lessons, rentals, etc.)
 	app.use('/booking', bookingRoutes);
+
+	// Payment confirmation and cancellation routes
+	app.use('/payments', paymentRoutes);
 }

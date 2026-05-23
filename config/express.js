@@ -20,6 +20,7 @@ import setupRoutes from './routes.js';
 import { initSentry } from './sentry.js';
 import { registerErrorHandlers } from './errorHandler.js';
 import env from './dotenv.js';
+import { handleStripeWebhook } from '../controllers/payments.js';
 
 /**
  * Create an Express application instance.
@@ -43,6 +44,12 @@ if (env.PROTOCOL === 'https') {
  * Will only activate if SENTRY_DSN is provided in .env.
  */
 initSentry(app);
+
+app.post(
+	'/payments/stripe/webhook',
+	express.raw({ type: 'application/json' }),
+	handleStripeWebhook
+);
 
 /**
  * Apply all middleware functions to the app.
