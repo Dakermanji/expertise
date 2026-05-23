@@ -26,3 +26,21 @@ footer {
     text-decoration: none;
     font-weight: normal;
 }
+
+.footer-legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+}
+
+.footer-legal-links a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+.footer-legal-links a:hover {
+    color: #dc3545;
+    text-decoration: underline;
+}
