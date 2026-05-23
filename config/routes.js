@@ -18,6 +18,7 @@ import indexRoutes from '../routes/index.js';
 import langRoutes from '../routes/lang.js';
 import bookingRoutes from '../routes/booking.js';
 import paymentRoutes from '../routes/payments.js';
+import legalRoutes from '../routes/legal.js';
 
 /**
  * Registers all route groups on the provided Express app instance.
@@ -35,4 +36,7 @@ export default function setupRoutes(app) {
 
 	// Payment confirmation and cancellation routes
 	app.use('/payments', paymentRoutes);
+
+	// Legal and policy pages
+	app.use('/legal', legalRoutes);
 }

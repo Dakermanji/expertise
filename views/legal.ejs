@@ -1,0 +1,23 @@
+<!-- views/legal.ejs -->
+<section class="legal-page">
+	<div class="container">
+		<div class="legal-document mx-auto">
+			<p class="legal-updated mb-2">Last updated: <%= page.updated %></p>
+			<h1><%= page.title %></h1>
+			<p class="legal-intro"><%= page.intro %></p>
+
+			<% page.sections.forEach(section => { %>
+				<section class="legal-section">
+					<h2><%= section.heading %></h2>
+					<% section.body.forEach(paragraph => { %>
+						<p><%= paragraph %></p>
+					<% }) %>
+				</section>
+			<% }) %>
+
+			<p class="legal-note">
+				This page is provided for general website transparency and should be reviewed by a qualified legal professional before launch.
+			</p>
+		</div>
+	</div>
+</section>
