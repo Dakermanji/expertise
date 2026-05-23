@@ -36,12 +36,10 @@
 	<% } %>
 
 	<% if (error?.length) { %>
-		// 🔴 Error
 		<% renderAlert("danger", error[0], "assertive"); %>
 	<% } %>
 
 	<% if (success?.length) { %>
-		// 🟢 Success
 		<% renderAlert("success", success[0], "polite"); %>
 	<% } %>
 
