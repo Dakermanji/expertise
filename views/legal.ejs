@@ -2,7 +2,7 @@
 <section class="legal-page">
 	<div class="container">
 		<div class="legal-document mx-auto">
-			<p class="legal-updated mb-2">Last updated: <%= page.updated %></p>
+			<p class="legal-updated mb-2"><%= __('legal.last_updated', 'Last updated') %>: <%= page.updated %></p>
 			<h1><%= page.title %></h1>
 			<p class="legal-intro"><%= page.intro %></p>
 
@@ -14,10 +14,6 @@
 					<% }) %>
 				</section>
 			<% }) %>
-
-			<p class="legal-note">
-				This page is provided for general website transparency and should be reviewed by a qualified legal professional before launch.
-			</p>
 		</div>
 	</div>
 </section>

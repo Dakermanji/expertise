@@ -33,6 +33,13 @@ function customsMiddleware(req, res, next) {
 	// 🌍 Language data (for navbar + language selector)
 	res.locals.LANG_DATA = LANG_DATA;
 
+	// ⭐ Shared Google review link used by the global navbar
+	res.locals.google_place_id = env.GOOGLE_PLACE_ID;
+
+	// 🎨 Optional per-page assets default to empty lists
+	res.locals.styles = [];
+	res.locals.scripts = [];
+
 	next();
 }
 
