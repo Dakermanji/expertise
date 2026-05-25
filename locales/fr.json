@@ -206,6 +206,131 @@
 		"call": "Pour les cours de conduite complets, nous vous recommandons notre école sœur :",
 		"through": "par une école sœur"
 	},
+	"legal": {
+		"last_updated": "Dernière mise à jour",
+		"not_found": "Page introuvable",
+		"review_note": "Cette page est fournie pour la transparence générale du site web et devrait être vérifiée par un professionnel juridique qualifié avant le lancement.",
+		"footer": {
+			"privacy": "Politique de confidentialité",
+			"cookies": "Politique relative aux cookies",
+			"terms": "Conditions",
+			"cancellation_refund": "Annulations et remboursements"
+		},
+		"pages": {
+			"privacy": {
+				"title": "Politique de confidentialité",
+				"updated": "23 mai 2026",
+				"intro": "Cette politique explique comment Expertise Pro collecte, utilise, conserve et protège les renseignements personnels transmis par ce site web.",
+				"sections": [
+					{
+						"heading": "Renseignements que nous collectons",
+						"body": [
+							"Les détails de réservation comme le nom, le numéro de téléphone, l’adresse e-mail, le service choisi, la région, la date d’examen, la langue préférée et les notes.",
+							"Le statut du paiement et les références de transaction provenant de Stripe ou PayPal après un paiement complété.",
+							"Les renseignements techniques nécessaires au fonctionnement du site, comme les cookies de session, la préférence de langue et les journaux de serveur de base."
+						]
+					},
+					{
+						"heading": "Utilisation des renseignements",
+						"body": [
+							"Pour répondre aux demandes de réservation, traiter les paiements, confirmer les rendez-vous, offrir du soutien à la clientèle et tenir nos dossiers commerciaux.",
+							"Nous ne vendons pas les renseignements personnels. Nous n’utilisons pas les renseignements de réservation à des fins de marketing, sauf si vous acceptez séparément de recevoir des messages marketing."
+						]
+					},
+					{
+						"heading": "Fournisseurs de paiement",
+						"body": ["Les paiements sont traités par des fournisseurs tiers comme Stripe et PayPal. Les détails de carte ou de portefeuille sont gérés par ces fournisseurs et ne sont pas stockés par Expertise Pro."]
+					},
+					{
+						"heading": "Conservation et accès",
+						"body": [
+							"Nous conservons les dossiers de réservation et de paiement seulement aussi longtemps que raisonnablement nécessaire pour le service à la clientèle, la comptabilité, la prévention de la fraude et les obligations légales.",
+							"Vous pouvez nous contacter pour demander l’accès, la correction ou la suppression de vos renseignements personnels, sous réserve des obligations légales et des exigences de conservation des dossiers commerciaux."
+						]
+					},
+					{
+						"heading": "Contact",
+						"body": ["Pour toute question liée à la confidentialité, contactez-nous à location.que.ca@gmail.com."]
+					}
+				]
+			},
+			"cookies": {
+				"title": "Politique relative aux cookies",
+				"updated": "23 mai 2026",
+				"intro": "Cette page explique quels cookies et technologies de stockage similaires sont utilisés sur ce site web.",
+				"sections": [
+					{
+						"heading": "Cookies essentiels",
+						"body": ["Le site utilise des cookies essentiels pour les sessions, les messages flash, la préférence de langue et les retours de paiement. Ils sont nécessaires au bon fonctionnement du site."]
+					},
+					{
+						"heading": "Stockage du consentement",
+						"body": ["Votre choix de cookies est conservé dans votre navigateur avec localStorage afin d’éviter d’afficher la bannière à chaque visite."]
+					},
+					{
+						"heading": "Cookies d’analyse et de marketing",
+						"body": ["Nous n’utilisons actuellement aucun cookie d’analyse ou de marketing. Si ces cookies sont ajoutés plus tard, la bannière devra être mise à jour afin que les visiteurs puissent refuser les cookies non essentiels avant leur chargement."]
+					},
+					{
+						"heading": "Services tiers",
+						"body": ["Stripe, PayPal, Google Maps ou d’autres services tiers peuvent utiliser leurs propres cookies ou technologies de stockage lorsque vous interagissez avec leurs services."]
+					}
+				]
+			},
+			"terms": {
+				"title": "Conditions d’utilisation",
+				"updated": "23 mai 2026",
+				"intro": "Ces conditions décrivent les règles d’utilisation du site web Expertise Pro et des services de réservation.",
+				"sections": [
+					{
+						"heading": "Demandes de réservation",
+						"body": ["L’envoi d’un formulaire de réservation ou d’un paiement ne garantit pas automatiquement la disponibilité d’un rendez-vous. Nous vous contacterons pour confirmer les détails de la réservation."]
+					},
+					{
+						"heading": "Responsabilités du client",
+						"body": [
+							"Vous êtes responsable de fournir des renseignements exacts concernant vos coordonnées, votre examen, votre emplacement et votre permis.",
+							"Vous devez respecter toutes les exigences de la SAAQ et les exigences légales applicables au service demandé."
+						]
+					},
+					{
+						"heading": "Paiements",
+						"body": ["Les paiements en ligne peuvent être traités par Stripe, PayPal ou un autre fournisseur affiché au paiement. Les conditions du fournisseur de paiement peuvent aussi s’appliquer."]
+					},
+					{
+						"heading": "Contenu du site",
+						"body": ["Nous faisons de notre mieux pour garder les renseignements exacts, mais les prix, les zones desservies, la disponibilité des rendez-vous et les politiques peuvent changer."]
+					}
+				]
+			},
+			"cancellation-refund": {
+				"title": "Politique d’annulation et de remboursement",
+				"updated": "23 mai 2026",
+				"intro": "Cette politique explique comment les annulations, les reports et les remboursements sont traités pour les demandes de réservation.",
+				"sections": [
+					{
+						"heading": "Confirmation du rendez-vous",
+						"body": ["Le paiement confirme que nous avons reçu votre demande. Les détails finaux du rendez-vous sont confirmés par téléphone, e-mail ou message après vérification de la disponibilité."]
+					},
+					{
+						"heading": "Annulations et reports",
+						"body": ["Veuillez nous contacter le plus tôt possible si vous devez annuler ou reporter. Nous demandons généralement un préavis d’au moins 24 heures."]
+					},
+					{
+						"heading": "Remboursements",
+						"body": [
+							"Si nous ne pouvons pas fournir le service demandé, nous offrirons un report ou un remboursement lorsque cela est approprié.",
+							"Les frais du processeur de paiement, les annulations tardives, les absences ou les renseignements incorrects fournis par le client peuvent affecter l’admissibilité au remboursement."
+						]
+					},
+					{
+						"heading": "Contact",
+						"body": ["Pour toute question concernant une annulation ou un remboursement, contactez-nous à location.que.ca@gmail.com."]
+					}
+				]
+			}
+		}
+	},
 	"meta.titles.": "meta.titles.",
 	"cookies": {
 		"banner": {

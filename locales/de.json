@@ -208,6 +208,131 @@
 		"call": "Für vollständige Fahrkurse empfehlen wir unsere Partnerschule:",
 		"through": "über eine Partnerschule"
 	},
+	"legal": {
+		"last_updated": "Zuletzt aktualisiert",
+		"not_found": "Seite nicht gefunden",
+		"review_note": "Diese Seite dient der allgemeinen Transparenz der Website und sollte vor dem Start von einer qualifizierten Rechtsfachperson geprüft werden.",
+		"footer": {
+			"privacy": "Datenschutzerklärung",
+			"cookies": "Cookie-Richtlinie",
+			"terms": "Bedingungen",
+			"cancellation_refund": "Stornierungen und Rückerstattungen"
+		},
+		"pages": {
+			"privacy": {
+				"title": "Datenschutzerklärung",
+				"updated": "23. Mai 2026",
+				"intro": "Diese Richtlinie erklärt, wie Expertise Pro personenbezogene Daten, die über diese Website übermittelt werden, erhebt, verwendet, speichert und schützt.",
+				"sections": [
+					{
+						"heading": "Welche Informationen wir erfassen",
+						"body": [
+							"Buchungsdaten wie Name, Telefonnummer, E-Mail-Adresse, ausgewählter Service, Region, Prüfungsdatum, bevorzugte Sprache und Hinweise.",
+							"Zahlungsstatus und Transaktionsreferenzen von Stripe oder PayPal nach Abschluss einer Zahlung.",
+							"Technische Informationen, die für den Betrieb der Website erforderlich sind, wie Sitzungscookies, Spracheinstellung und grundlegende Serverprotokolle."
+						]
+					},
+					{
+						"heading": "Wie wir Informationen verwenden",
+						"body": [
+							"Zur Bearbeitung von Buchungsanfragen, Zahlungsabwicklung, Terminbestätigung, Kundenbetreuung und Führung geschäftlicher Aufzeichnungen.",
+							"Wir verkaufen keine personenbezogenen Daten. Wir verwenden Buchungsinformationen nicht für Marketing, es sei denn, Sie stimmen dem Erhalt von Marketingnachrichten separat zu."
+						]
+					},
+					{
+						"heading": "Zahlungsanbieter",
+						"body": ["Zahlungen werden von Drittanbietern wie Stripe und PayPal verarbeitet. Karten- oder Wallet-Daten werden von diesen Anbietern verarbeitet und nicht von Expertise Pro gespeichert."]
+					},
+					{
+						"heading": "Aufbewahrung und Zugriff",
+						"body": [
+							"Wir bewahren Buchungs- und Zahlungsunterlagen nur so lange auf, wie es für Kundenservice, Buchhaltung, Betrugsprävention und gesetzliche Verpflichtungen angemessen erforderlich ist.",
+							"Sie können uns kontaktieren, um Zugriff, Berichtigung oder Löschung Ihrer personenbezogenen Daten zu verlangen, vorbehaltlich gesetzlicher und geschäftlicher Aufbewahrungspflichten."
+						]
+					},
+					{
+						"heading": "Kontakt",
+						"body": ["Bei Datenschutzfragen kontaktieren Sie uns unter location.que.ca@gmail.com."]
+					}
+				]
+			},
+			"cookies": {
+				"title": "Cookie-Richtlinie",
+				"updated": "23. Mai 2026",
+				"intro": "Diese Seite erklärt, welche Cookies und ähnliche Browserspeicher auf dieser Website verwendet werden.",
+				"sections": [
+					{
+						"heading": "Essenzielle Cookies",
+						"body": ["Die Website verwendet essenzielle Cookies für Sitzungen, Flash-Nachrichten, Spracheinstellungen und Zahlungsrückleitungen. Diese sind erforderlich, damit die Website ordnungsgemäß funktioniert."]
+					},
+					{
+						"heading": "Speicherung der Einwilligung",
+						"body": ["Ihre Cookie-Auswahl wird mit localStorage in Ihrem Browser gespeichert. Dadurch wird das Banner nicht bei jedem Besuch erneut angezeigt."]
+					},
+					{
+						"heading": "Analyse- und Marketing-Cookies",
+						"body": ["Wir verwenden derzeit keine Analyse- oder Marketing-Cookies. Wenn diese später hinzugefügt werden, sollte das Banner aktualisiert werden, damit Besucher nicht essenzielle Cookies ablehnen können, bevor sie geladen werden."]
+					},
+					{
+						"heading": "Drittanbieter-Dienste",
+						"body": ["Stripe, PayPal, Google Maps oder andere Drittanbieter-Dienste können eigene Cookies oder Browserspeicher verwenden, wenn Sie mit ihren Diensten interagieren."]
+					}
+				]
+			},
+			"terms": {
+				"title": "Nutzungsbedingungen",
+				"updated": "23. Mai 2026",
+				"intro": "Diese Bedingungen beschreiben die Voraussetzungen für die Nutzung der Expertise Pro Website und der Buchungsdienste.",
+				"sections": [
+					{
+						"heading": "Buchungsanfragen",
+						"body": ["Das Absenden eines Buchungsformulars oder einer Zahlung garantiert nicht automatisch die Verfügbarkeit eines Termins. Wir kontaktieren Sie, um die Buchungsdetails zu bestätigen."]
+					},
+					{
+						"heading": "Pflichten des Kunden",
+						"body": [
+							"Sie sind dafür verantwortlich, genaue Kontakt-, Prüfungs-, Standort- und Führerscheininformationen bereitzustellen.",
+							"Sie müssen alle SAAQ- und gesetzlichen Anforderungen für den angefragten Service erfüllen."
+						]
+					},
+					{
+						"heading": "Zahlungen",
+						"body": ["Online-Zahlungen können durch Stripe, PayPal oder einen anderen beim Checkout angezeigten Anbieter verarbeitet werden. Es können zusätzlich die Bedingungen des Zahlungsanbieters gelten."]
+					},
+					{
+						"heading": "Website-Inhalte",
+						"body": ["Wir bemühen uns um korrekte Informationen, aber Preise, Servicegebiete, Terminverfügbarkeit und Richtlinien können sich ändern."]
+					}
+				]
+			},
+			"cancellation-refund": {
+				"title": "Stornierungs- und Rückerstattungsrichtlinie",
+				"updated": "23. Mai 2026",
+				"intro": "Diese Richtlinie erklärt, wie Stornierungen, Terminverschiebungen und Rückerstattungen für Buchungsanfragen behandelt werden.",
+				"sections": [
+					{
+						"heading": "Terminbestätigung",
+						"body": ["Die Zahlung bestätigt, dass wir Ihre Anfrage erhalten haben. Die endgültigen Termindetails werden nach Prüfung der Verfügbarkeit telefonisch, per E-Mail oder Nachricht bestätigt."]
+					},
+					{
+						"heading": "Stornierungen und Terminverschiebungen",
+						"body": ["Bitte kontaktieren Sie uns so früh wie möglich, wenn Sie stornieren oder verschieben müssen. In der Regel benötigen wir mindestens 24 Stunden Vorlaufzeit."]
+					},
+					{
+						"heading": "Rückerstattungen",
+						"body": [
+							"Wenn wir den angefragten Service nicht anbieten können, bieten wir gegebenenfalls eine Terminverschiebung oder Rückerstattung an.",
+							"Gebühren des Zahlungsabwicklers, kurzfristige Stornierungen, Nichterscheinen oder falsche Angaben des Kunden können die Rückerstattungsberechtigung beeinflussen."
+						]
+					},
+					{
+						"heading": "Kontakt",
+						"body": ["Bei Fragen zu Stornierungen oder Rückerstattungen kontaktieren Sie uns unter location.que.ca@gmail.com."]
+					}
+				]
+			}
+		}
+	},
 	"meta.titles.": "meta.titles.",
 	"cookies": {
 		"banner": {

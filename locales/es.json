@@ -208,6 +208,131 @@
 		"call": "Para cursos completos de conducción, recomendamos nuestra escuela asociada:",
 		"through": "a través de una escuela asociada"
 	},
+	"legal": {
+		"last_updated": "Última actualización",
+		"not_found": "Página no encontrada",
+		"review_note": "Esta página se proporciona para la transparencia general del sitio web y debe ser revisada por un profesional jurídico calificado antes del lanzamiento.",
+		"footer": {
+			"privacy": "Política de privacidad",
+			"cookies": "Política de cookies",
+			"terms": "Términos",
+			"cancellation_refund": "Cancelaciones y reembolsos"
+		},
+		"pages": {
+			"privacy": {
+				"title": "Política de privacidad",
+				"updated": "23 de mayo de 2026",
+				"intro": "Esta política explica cómo Expertise Pro recopila, usa, conserva y protege la información personal enviada a través de este sitio web.",
+				"sections": [
+					{
+						"heading": "Información que recopilamos",
+						"body": [
+							"Datos de reserva como nombre, teléfono, correo electrónico, servicio seleccionado, región, fecha del examen, idioma preferido y notas.",
+							"Estado del pago y referencias de transacción de Stripe o PayPal después de completarse un pago.",
+							"Información técnica necesaria para operar el sitio, como cookies de sesión, preferencia de idioma y registros básicos del servidor."
+						]
+					},
+					{
+						"heading": "Cómo usamos la información",
+						"body": [
+							"Para responder solicitudes de reserva, procesar pagos, confirmar citas, brindar atención al cliente y mantener registros comerciales.",
+							"No vendemos información personal. No usamos la información de reserva para marketing salvo que usted acepte recibir mensajes de marketing por separado."
+						]
+					},
+					{
+						"heading": "Proveedores de pago",
+						"body": ["Los pagos son procesados por proveedores externos como Stripe y PayPal. Los datos de tarjeta o billetera son gestionados por esos proveedores y no se almacenan en Expertise Pro."]
+					},
+					{
+						"heading": "Conservación y acceso",
+						"body": [
+							"Conservamos los registros de reserva y pago solo durante el tiempo razonablemente necesario para atención al cliente, contabilidad, prevención de fraude y obligaciones legales.",
+							"Puede contactarnos para solicitar acceso, corrección o eliminación de su información personal, sujeto a requisitos legales y de conservación de registros comerciales."
+						]
+					},
+					{
+						"heading": "Contacto",
+						"body": ["Para preguntas sobre privacidad, contáctenos en location.que.ca@gmail.com."]
+					}
+				]
+			},
+			"cookies": {
+				"title": "Política de cookies",
+				"updated": "23 de mayo de 2026",
+				"intro": "Esta página explica qué cookies y tecnologías similares de almacenamiento del navegador se usan en este sitio web.",
+				"sections": [
+					{
+						"heading": "Cookies esenciales",
+						"body": ["El sitio usa cookies esenciales para sesiones, mensajes flash, preferencia de idioma y flujos de retorno de pago. Son necesarias para que el sitio funcione correctamente."]
+					},
+					{
+						"heading": "Almacenamiento del consentimiento",
+						"body": ["Su elección de cookies se guarda en su navegador usando localStorage. Esto evita mostrar la barra en cada visita."]
+					},
+					{
+						"heading": "Cookies de análisis y marketing",
+						"body": ["Actualmente no usamos cookies de análisis ni de marketing. Si se agregan más adelante, la barra debe actualizarse para que los visitantes puedan rechazar las cookies no esenciales antes de que se carguen."]
+					},
+					{
+						"heading": "Servicios de terceros",
+						"body": ["Stripe, PayPal, Google Maps u otros servicios de terceros pueden usar sus propias cookies o almacenamiento del navegador cuando usted interactúa con sus servicios."]
+					}
+				]
+			},
+			"terms": {
+				"title": "Términos de servicio",
+				"updated": "23 de mayo de 2026",
+				"intro": "Estos términos describen las condiciones para usar el sitio web de Expertise Pro y los servicios de reserva.",
+				"sections": [
+					{
+						"heading": "Solicitudes de reserva",
+						"body": ["Enviar un formulario de reserva o realizar un pago no garantiza automáticamente la disponibilidad de una cita. Nos pondremos en contacto para confirmar los detalles de la reserva."]
+					},
+					{
+						"heading": "Responsabilidades del cliente",
+						"body": [
+							"Usted es responsable de proporcionar información exacta de contacto, examen, ubicación y licencia.",
+							"Debe cumplir todos los requisitos legales y de la SAAQ aplicables al servicio solicitado."
+						]
+					},
+					{
+						"heading": "Pagos",
+						"body": ["Los pagos en línea pueden ser procesados por Stripe, PayPal u otro proveedor mostrado durante el pago. También pueden aplicarse los términos del proveedor de pago."]
+					},
+					{
+						"heading": "Contenido del sitio",
+						"body": ["Intentamos mantener la información actualizada, pero los precios, áreas de servicio, disponibilidad de citas y políticas pueden cambiar."]
+					}
+				]
+			},
+			"cancellation-refund": {
+				"title": "Política de cancelación y reembolso",
+				"updated": "23 de mayo de 2026",
+				"intro": "Esta política explica cómo se manejan las cancelaciones, reprogramaciones y reembolsos de las solicitudes de reserva.",
+				"sections": [
+					{
+						"heading": "Confirmación de cita",
+						"body": ["El pago confirma que recibimos su solicitud. Los detalles finales de la cita se confirman por teléfono, correo electrónico o mensaje después de revisar la disponibilidad."]
+					},
+					{
+						"heading": "Cancelaciones y reprogramaciones",
+						"body": ["Contáctenos lo antes posible si necesita cancelar o reprogramar. Generalmente requerimos un aviso mínimo de 24 horas."]
+					},
+					{
+						"heading": "Reembolsos",
+						"body": [
+							"Si no podemos proporcionar el servicio solicitado, ofreceremos una reprogramación o un reembolso cuando corresponda.",
+							"Las comisiones del procesador de pago, cancelaciones con poca antelación, ausencias o información incorrecta proporcionada por el cliente pueden afectar la elegibilidad para un reembolso."
+						]
+					},
+					{
+						"heading": "Contacto",
+						"body": ["Para preguntas sobre cancelaciones o reembolsos, contáctenos en location.que.ca@gmail.com."]
+					}
+				]
+			}
+		}
+	},
 	"meta.titles.": "meta.titles.",
 	"cookies": {
 		"banner": {
