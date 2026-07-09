@@ -21,6 +21,14 @@ export const LANG_DATA = {
 	de: { label: 'Deutsch', flag: 'de' },
 };
 
+export const BUSINESS_ADDRESS = {
+	streetAddress: '1510 Henri Bourassa Blvd W #205',
+	addressLocality: 'Montreal',
+	addressRegion: 'QC',
+	addressCountry: 'CA',
+	postalCode: 'H3M 3E3',
+};
+
 /**
  * Attaches useful values to res.locals for all views.
  */
@@ -35,6 +43,9 @@ function customsMiddleware(req, res, next) {
 
 	// ⭐ Shared Google review link used by the global navbar
 	res.locals.google_place_id = env.GOOGLE_PLACE_ID;
+
+	// Shared business address for schema and customer-facing instructions
+	res.locals.businessAddress = BUSINESS_ADDRESS;
 
 	// 🎨 Optional per-page assets default to empty lists
 	res.locals.styles = [];

@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const paymentSummary = rentalForm.querySelector(
 			"[data-montreal-payment-summary]"
 		);
+		const officeInfo = rentalForm.querySelector("[data-montreal-office-info]");
 		const submitButton = rentalForm.querySelector("[data-region-submit-button]");
 		const paypalButton = rentalForm.querySelector("[data-paypal-submit-button]");
 		const submitIcon = rentalForm.querySelector("[data-submit-icon]");
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const isMontreal = regionSelect.value === "montreal";
 
 		paymentSummary.classList.toggle("d-none", !isMontreal);
+		officeInfo?.classList.toggle("d-none", !isMontreal);
 		paypalButton?.classList.toggle("d-none", !isMontreal);
 
 		submitLabel.textContent = isMontreal

@@ -31,9 +31,13 @@
 	"url": "https://expertise-pro.ca",
 	"telephone": "+1-514-246-4688",
 	"address": {
-		"addressLocality": "Montreal",
-		"addressRegion": "QC",
-		"addressCountry": "CA"
+		"streetAddress": "<%= businessAddress.streetAddress %>",
+		"addressLocality": "<%= businessAddress.addressLocality %>",
+		"addressRegion": "<%= businessAddress.addressRegion %>",
+		"addressCountry": "<%= businessAddress.addressCountry %>"
+		<% if (businessAddress.postalCode) { %>,
+		"postalCode": "<%= businessAddress.postalCode %>"
+		<% } %>
 	}
 }
 </script>

@@ -1,6 +1,15 @@
 <!-- views/partials/bookings/car_rental_form.ejs -->
 <form action="/booking" method="POST">
 	<% const rentalInput = bookingInput?.service_type === 'car_rental' ? bookingInput : {}; %>
+	<%
+		const officeAddressParts = [
+			businessAddress.streetAddress,
+			businessAddress.addressLocality,
+			businessAddress.addressRegion,
+			businessAddress.postalCode || businessAddress.addressCountry,
+		].filter(Boolean);
+		const officeAddress = officeAddressParts.join(', ');
+	%>
 	<div class="row g-3">
 		<div class="col-md-6">
 			<input type="hidden" name="serviceType" value="car_rental" />
@@ -67,6 +76,17 @@
 					<%= __('payment.qst', 'QST') %> <%= montrealCarRentalPayment.qst %>)
 				</span>
 				<strong><%= __('payment.total', 'Total') %>: <%= montrealCarRentalPayment.total %></strong>
+			</div>
+		</div>
+
+		<div class="col-12" data-montreal-office-info>
+			<div class="alert alert-primary small mb-0" role="note">
+				<strong><%= __('booking.montreal_exam_arrival_title', 'Important for Montreal SAAQ exam car rental') %>:</strong>
+				<%= __('booking.montreal_exam_arrival_notice', 'Please be at our office 40 minutes before your exam. We will take you to the SAAQ exam with the car.') %>
+				<span class="d-block mt-1">
+					<strong><%= __('booking.office_label', 'Office') %>:</strong>
+					<%= officeAddress %>
+				</span>
 			</div>
 		</div>
 
