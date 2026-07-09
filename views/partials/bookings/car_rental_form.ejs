@@ -9,6 +9,7 @@
 			businessAddress.postalCode || businessAddress.addressCountry,
 		].filter(Boolean);
 		const officeAddress = officeAddressParts.join(', ');
+		const officeDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(officeAddress)}`;
 	%>
 	<div class="row g-3">
 		<div class="col-md-6">
@@ -87,6 +88,15 @@
 					<strong><%= __('booking.office_label', 'Office') %>:</strong>
 					<%= officeAddress %>
 				</span>
+				<a
+					href="<%= officeDirectionsUrl %>"
+					class="btn btn-outline-primary btn-sm mt-2"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<i class="bi bi-geo-alt me-1" aria-hidden="true"></i>
+					<%= __('booking.open_google_maps_directions', 'Get directions') %>
+				</a>
 			</div>
 		</div>
 
