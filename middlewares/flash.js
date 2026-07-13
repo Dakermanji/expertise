@@ -26,20 +26,25 @@ export function initializeFlash(app) {
 	app.use(flash());
 
 	/**
-	 * Attach flash messages to res.locals for all GET requests.
+	 * Attach flash messages to res.locals for all requests.
 	 * This makes them accessible in EJS templates as:
 	 *   messages.success, messages.error, messages.error_list
 	 *
-	 * The logic intentionally runs on GET only to avoid unnecessary
-	 * template rendering for POST/AJAX requests.
+	 * Flash messages are consumed on GET only; non-GET renders still need
+	 * the default object because the shared layout always includes flash.ejs.
 	 */
 	app.use((req, res, next) => {
+		res.locals.messages = {
+			success: [],
+			error: [],
+			error_list: [],
+		};
+
 		if (req.method === 'GET') {
 			const success = req.flash('success');
 			const error = req.flash('error');
 			const error_list = req.flash('error_list');
 
-			// Attach to response locals for easy access in all views
 			res.locals.messages = {
 				success: success || [],
 				error: error || [],
